@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radar Marca — Vigilância de Marca em Portugal</title>
+  <meta name="description" content="Monitorize novos pedidos de registo de marca em Portugal e proteja a sua marca contra imitações. Serviço de vigilância do Boletim da Propriedade Industrial.">
+  <meta property="og:title" content="Radar Marca — Vigilância de Marca em Portugal">
+  <meta property="og:description" content="Monitorizamos o BPI semanalmente e alertamo-lo quando alguém tenta registar uma marca semelhante à sua.">
+  <meta property="og:image" content="logo-white.png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0F2044;
+      --navy-mid: #162d5a;
+      --gold: #C8973A;
+      --gold-light: #e0aa4a;
+      --white: #ffffff;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-500: #64748B;
+      --gray-600: #475569;
+      --gray-800: #1E293B;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, Arial, sans-serif;
+      color: var(--gray-800);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      background: var(--navy);
+      padding: 1.1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 12px rgba(0,0,0,0.3);
+    }
+
+    nav img { height: 60px; }
+
+    .hero-logo {
+      display: block;
+      margin: 0 auto 2.5rem;
+      height: 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (min-width: 600px) {
+      .hero-logo { height: 110px; }
+    }
+
+    .nav-link {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin-left: 1.5rem;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      padding: 6rem 2rem 7rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(200,151,58,0.12);
+      pointer-events: none;
+    }
+
+    .hero::before { width: 700px; height: 700px; top: -250px; right: -150px; }
+    .hero::after  { width: 500px; height: 500px; bottom: -200px; left: -100px; }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(200,151,58,0.15);
+      color: var(--gold-light);
+      border: 1px solid rgba(200,151,58,0.3);
+      padding: 0.3rem 1rem;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 700;
+      line-height: 1.15;
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.65);
+      font-size: 1.1rem;
+      max-width: 540px;
+      margin: 0 auto 2.75rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      color: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 0.875rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,0.5);
+      color: var(--white);
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--navy-mid);
+      padding: 1.75rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .stat { text-align: center; }
+
+    .stat strong {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .stat span {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── SHARED SECTION ── */
+    section { padding: 5rem 2rem; }
+
+    .container { max-width: 1060px; margin: 0 auto; }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.6rem;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+      color: var(--navy);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.85rem;
+    }
+
+    .section-intro {
+      color: var(--gray-600);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin-bottom: 3rem;
+    }
+
+    /* ── COMO FUNCIONA ── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      counter-reset: steps;
+    }
+
+    .step {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 2rem 1.75rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .step:hover {
+      box-shadow: 0 8px 24px rgba(15,32,68,0.08);
+      transform: translateY(-2px);
+    }
+
+    .step-num {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .step h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .step p {
+      color: var(--gray-600);
+      font-size: 0.92rem;
+    }
+
+    /* ── VANTAGENS ── */
+    .section-alt { background: var(--gray-50); }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .feature {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    .feature:hover { border-color: var(--gold); }
+
+    .feature-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature h3 {
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.35rem;
+    }
+
+    .feature p {
+      color: var(--gray-600);
+      font-size: 0.88rem;
+    }
+
+    /* ── PREÇO ── */
+    .pricing-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .pricing-card {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      color: var(--white);
+      max-width: 460px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(15,32,68,0.25);
+    }
+
+    .pricing-card .pill {
+      display: inline-block;
+      background: rgba(200,151,58,0.2);
+      color: var(--gold-light);
+      border: 1px solid rgba(200,151,58,0.35);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.85rem;
+      border-radius: 100px;
+      margin-bottom: 1.75rem;
+    }
+
+    .price-amount {
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .price-note {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.875rem;
+      margin-top: 0.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .price-total {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .price-total strong { color: var(--white); }
+
+    .pricing-card ul {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 2.25rem;
+    }
+
+    .pricing-card li {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.6rem 0;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.93rem;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .pricing-card li:last-child { border-bottom: none; }
+
+    .check { color: var(--gold); font-size: 1rem; }
+
+    .btn-gold {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 0.9rem 2.5rem;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.15s;
+      width: 100%;
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    /* ── CONTACTO ── */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-cards { display: flex; flex-direction: column; gap: 1rem; }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 4px 16px rgba(200,151,58,0.1);
+    }
+
+    .contact-icon {
+      width: 46px;
+      height: 46px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-card small {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--gray-500);
+      margin-bottom: 0.15rem;
+    }
+
+    .contact-card span {
+      font-size: 0.97rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.82rem;
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--gold); }
+
+    footer .divider { margin: 0 0.5rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      nav { padding: 1rem; }
+      .nav-link:not(.nav-cta) { display: none; }
+      .stats-bar { gap: 1.5rem; }
+      .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
+      .pricing-card { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <img src="logo-white.png" alt="Radar Marca">
+  <div style="display:flex;align-items:center;gap:1.5rem;">
+    <a href="#como-funciona" class="nav-link">Como funciona</a>
+    <a href="#preco" class="nav-link">Preço</a>
+    <a href="mailto:geral@radarmarca.pt" class="nav-link nav-cta">Contactar</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="logo-white.png" alt="Radar Marca" class="hero-logo">
+  <div class="hero-badge">Serviço de Vigilância de Marca · Portugal</div>
+  <h1>A sua marca protegida,<br><em>semana após semana.</em></h1>
+  <p class="hero-sub">Monitorizamos o Boletim da Propriedade Industrial e alertamo-lo quando alguém tenta registar uma marca semelhante à sua — antes que seja tarde.</p>
+  <div class="hero-ctas">
+    <a href="mailto:geral@radarmarca.pt" class="btn-primary">Solicitar informações</a>
+    <a href="#como-funciona" class="btn-ghost">Saber mais →</a>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat">
+    <strong>Semanal</strong>
+    <span>Monitorização BPI</span>
+  </div>
+  <div class="stat">
+    <strong>10 anos</strong>
+    <span>Cobertura do serviço</span>
+  </div>
+  <div class="stat">
+    <strong>48h</strong>
+    <span>Tempo máximo de alerta</span>
+  </div>
+  <div class="stat">
+    <strong>INPI</strong>
+    <span>Fonte oficial nacional</span>
+  </div>
+</div>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="container">
+    <div class="section-label">Como funciona</div>
+    <h2>Simples, automático e eficaz.</h2>
+    <p class="section-intro">O nosso sistema analisa cada edição semanal do Boletim da Propriedade Industrial sem que tenha de fazer nada.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Monitorização automática</h3>
+        <p>Todas as semanas analisamos o Boletim da Propriedade Industrial publicado pelo INPI com todos os novos pedidos de registo de marca em Portugal.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Análise de conflitos</h3>
+        <p>Verificamos se algum dos novos pedidos apresenta semelhanças fonéticas, gráficas ou conceptuais com a sua marca registada que possam representar risco.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Alerta imediato</h3>
+        <p>Em caso de conflito potencial, notificamo-lo de imediato com todos os detalhes do pedido para que possa agir dentro do prazo legal de oposição.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VANTAGENS -->
+<section class="section-alt">
+  <div class="container">
+    <div class="section-label">Porquê a Radar Marca</div>
+    <h2>Vigilância profissional, sem complicações.</h2>
+    <p class="section-intro">Tecnologia própria para automatizar o que antes exigia horas de trabalho manual — a um preço que qualquer empresa consegue pagar.</p>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">🔍</div>
+        <h3>Cobertura total do BPI</h3>
+        <p>Analisamos todos os pedidos publicados semanalmente, sem nenhuma exceção.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Alertas em 48 horas</h3>
+        <p>Notificação rápida para que possa exercer o direito de oposição dentro do prazo legal.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📋</div>
+        <h3>Relatório detalhado</h3>
+        <p>Informação completa sobre o pedido conflituante: titular, classes e data de depósito.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🛡️</div>
+        <h3>10 anos de proteção</h3>
+        <p>Serviço contínuo ao longo de toda a vigência do registo da sua marca no INPI.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏛️</div>
+        <h3>Fonte oficial</h3>
+        <p>Dados diretamente do INPI — a única fonte oficial de registo de marcas em Portugal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREÇO -->
+<section id="preco">
+  <div class="container">
+    <div class="section-label" style="text-align:center">Preço</div>
+    <h2 style="text-align:center;margin:0 auto 0.85rem;">Investimento único, proteção duradoura.</h2>
+    <p class="section-intro" style="text-align:center;margin:0 auto 3rem;">Sem mensalidades nem renovações. Um pagamento único por 10 anos completos de vigilância.</p>
+    <div class="pricing-wrap">
+      <div class="pricing-card">
+        <div class="pill">Preço único · 10 anos</div>
+        <div class="price-amount">€240</div>
+        <div class="price-note">+ IVA 23%</div>
+        <div class="price-total">Total: <strong>€295,20</strong> com IVA incluído</div>
+        <ul>
+          <li><span class="check">✓</span> Monitorização semanal do BPI</li>
+          <li><span class="check">✓</span> Alertas de conflito garantidos</li>
+          <li><span class="check">✓</span> Relatório detalhado de cada conflito</li>
+          <li><span class="check">✓</span> Cobertura de 10 anos completos</li>
+          <li><span class="check">✓</span> Suporte em caso de dúvidas</li>
+        </ul>
+        <a href="mailto:geral@radarmarca.pt?subject=Pedido%20de%20informa%C3%A7%C3%B5es%20Radar%20Marca" class="btn-gold">
+          Solicitar informações
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section-alt">
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <div class="section-label">Contacto</div>
+        <h2>Fale connosco.</h2>
+        <p style="color:var(--gray-600);font-size:1.05rem;margin-top:0.5rem;">
+          Tem dúvidas sobre o serviço ou quer saber se a sua marca está coberta?<br>
+          Respondemos em menos de 24 horas.
+        </p>
+      </div>
+      <div class="contact-cards">
+        <a href="mailto:geral@radarmarca.pt" class="contact-card">
+          <div class="contact-icon">✉</div>
+          <div>
+            <small>Email</small>
+            <span>geral@radarmarca.pt</span>
+          </div>
+        </a>
+        <a href="tel:+351910422309" class="contact-card">
+          <div class="contact-icon">📞</div>
+          <div>
+            <small>Telefone</small>
+            <span>910 422 309</span>
+          </div>
+        </a>
+        <div class="contact-card">
+          <div class="contact-icon">🏢</div>
+          <div>
+            <small>Empresa</small>
+            <span>Cosmic Oasis, Unipessoal Lda · NIF 517071800</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    © 2026 Radar Marca
+    <span class="divider">·</span>
+    Cosmic Oasis, Unipessoal Lda
+    <span class="divider">·</span>
+    NIF 517071800
+  </p>
+  <p style="margin-top:0.4rem;">
+    <a href="mailto:geral@radarmarca.pt">geral@radarmarca.pt</a>
+    <span class="divider">·</span>
+    <a href="tel:+351910422309">910 422 309</a>
+  </p>
+</footer>
+
+</body>
+</html>
