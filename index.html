@@ -45,6 +45,14 @@
       top: 0;
       z-index: 100;
       box-shadow: 0 1px 12px rgba(0,0,0,0.3);
+      transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(15, 32, 68, 0.78);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.07), 0 4px 24px rgba(0,0,0,0.4);
     }
 
     nav img { height: 60px; }
@@ -54,7 +62,7 @@
       margin: 0 auto 2.5rem;
       height: 80px;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
     @media (min-width: 600px) {
@@ -79,10 +87,13 @@
       font-weight: 600;
       font-size: 0.875rem;
       margin-left: 1.5rem;
-      transition: background 0.2s;
+      transition: background 0.2s, box-shadow 0.2s;
     }
 
-    .nav-cta:hover { background: var(--gold-light) !important; }
+    .nav-cta:hover {
+      background: var(--gold-light) !important;
+      box-shadow: 0 4px 16px rgba(200,151,58,0.35);
+    }
 
     /* ── HERO ── */
     .hero {
@@ -93,21 +104,108 @@
       overflow: hidden;
     }
 
-    .hero::before,
-    .hero::after {
-      content: '';
+    /* Fundo: grid de linhas douradas */
+    .hero-grid {
       position: absolute;
-      border-radius: 50%;
-      border: 1px solid rgba(200,151,58,0.12);
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200,151,58,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,151,58,0.045) 1px, transparent 1px);
+      background-size: 48px 48px;
       pointer-events: none;
+      z-index: 0;
     }
 
-    .hero::before { width: 700px; height: 700px; top: -250px; right: -150px; }
-    .hero::after  { width: 500px; height: 500px; bottom: -200px; left: -100px; }
+    /* Orbs de luz */
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-orb-1 {
+      width: 420px; height: 420px;
+      background: rgba(200,151,58,0.09);
+      top: -140px; right: -100px;
+    }
+    .hero-orb-2 {
+      width: 300px; height: 300px;
+      background: rgba(79,70,229,0.07);
+      bottom: -100px; left: -80px;
+    }
+
+    /* Radar: camada de animação */
+    .radar-bg {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .radar-sweep {
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        rgba(200,151,58,0.055) 55deg,
+        transparent 55deg
+      );
+      animation: radar-sweep 5s linear infinite;
+    }
+
+    @keyframes radar-sweep {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .radar-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(200,151,58,0.2);
+      animation: radar-expand 4s ease-out infinite;
+    }
+    .radar-ring:nth-child(2) { width:  90px; height:  90px; animation-delay: 0.0s; }
+    .radar-ring:nth-child(3) { width: 200px; height: 200px; animation-delay: 0.7s; }
+    .radar-ring:nth-child(4) { width: 320px; height: 320px; animation-delay: 1.4s; }
+    .radar-ring:nth-child(5) { width: 460px; height: 460px; animation-delay: 2.1s; }
+    .radar-ring:nth-child(6) { width: 620px; height: 620px; animation-delay: 2.8s; }
+
+    @keyframes radar-expand {
+      0%   { opacity: 0.7; transform: scale(0.25); }
+      100% { opacity: 0;   transform: scale(1); }
+    }
+
+    .radar-dot {
+      position: absolute;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 14px 5px rgba(200,151,58,0.55);
+      animation: radar-dot-pulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes radar-dot-pulse {
+      0%, 100% { transform: scale(1);   opacity: 1; }
+      50%       { transform: scale(1.5); opacity: 0.6; }
+    }
+
+    /* Conteúdo do hero acima das animações */
+    .hero > *:not(.hero-grid):not(.hero-orb):not(.radar-bg) {
+      position: relative;
+      z-index: 2;
+    }
 
     .hero-badge {
-      display: inline-block;
-      background: rgba(200,151,58,0.15);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(200,151,58,0.14);
       color: var(--gold-light);
       border: 1px solid rgba(200,151,58,0.3);
       padding: 0.3rem 1rem;
@@ -119,6 +217,18 @@
       margin-bottom: 1.75rem;
     }
 
+    .badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: badge-blink 1.6s ease-in-out infinite;
+    }
+
+    @keyframes badge-blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.25; }
+    }
+
     .hero h1 {
       color: var(--white);
       font-size: clamp(2rem, 5vw, 3.25rem);
@@ -126,8 +236,6 @@
       line-height: 1.15;
       max-width: 680px;
       margin: 0 auto 1.5rem;
-      position: relative;
-      z-index: 1;
     }
 
     .hero h1 em {
@@ -140,8 +248,6 @@
       font-size: 1.1rem;
       max-width: 540px;
       margin: 0 auto 2.75rem;
-      position: relative;
-      z-index: 1;
     }
 
     .hero-ctas {
@@ -149,8 +255,6 @@
       gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
     }
 
     .btn-primary {
@@ -162,12 +266,13 @@
       font-weight: 700;
       text-decoration: none;
       font-size: 1rem;
-      transition: background 0.2s, transform 0.15s;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
     }
 
     .btn-primary:hover {
       background: var(--gold-light);
       transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(200,151,58,0.38);
     }
 
     .btn-ghost {
@@ -179,12 +284,13 @@
       font-weight: 500;
       text-decoration: none;
       font-size: 1rem;
-      transition: border-color 0.2s, color 0.2s;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
     }
 
     .btn-ghost:hover {
       border-color: rgba(255,255,255,0.5);
       color: var(--white);
+      background: rgba(255,255,255,0.05);
     }
 
     /* ── STATS BAR ── */
@@ -252,14 +358,16 @@
     .step {
       background: var(--gray-50);
       border: 1px solid var(--gray-200);
+      border-left: 3px solid transparent;
       border-radius: 12px;
       padding: 2rem 1.75rem;
-      transition: box-shadow 0.2s, transform 0.2s;
+      transition: box-shadow 0.25s, transform 0.25s, border-left-color 0.25s;
     }
 
     .step:hover {
-      box-shadow: 0 8px 24px rgba(15,32,68,0.08);
-      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(15,32,68,0.1);
+      transform: translateY(-3px);
+      border-left-color: var(--gold);
     }
 
     .step-num {
@@ -301,12 +409,18 @@
     .feature {
       background: var(--white);
       border: 1px solid var(--gray-200);
+      border-left: 3px solid transparent;
       border-radius: 10px;
       padding: 1.5rem;
-      transition: border-color 0.2s;
+      transition: border-color 0.25s, border-left-color 0.25s, box-shadow 0.25s, transform 0.25s;
     }
 
-    .feature:hover { border-color: var(--gold); }
+    .feature:hover {
+      border-color: var(--gold);
+      border-left-color: var(--gold);
+      box-shadow: 0 6px 20px rgba(200,151,58,0.1);
+      transform: translateY(-2px);
+    }
 
     .feature-icon {
       font-size: 1.4rem;
@@ -340,6 +454,12 @@
       max-width: 460px;
       width: 100%;
       box-shadow: 0 20px 60px rgba(15,32,68,0.25);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .pricing-card:hover {
+      box-shadow: 0 28px 80px rgba(15,32,68,0.35), 0 0 60px rgba(200,151,58,0.1);
+      transform: translateY(-4px);
     }
 
     .pricing-card .pill {
@@ -407,13 +527,14 @@
       font-weight: 700;
       text-decoration: none;
       font-size: 1rem;
-      transition: background 0.2s, transform 0.15s;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
       width: 100%;
     }
 
     .btn-gold:hover {
       background: var(--gold-light);
       transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(200,151,58,0.38);
     }
 
     /* ── CONTACTO ── */
@@ -436,12 +557,13 @@
       border-radius: 10px;
       text-decoration: none;
       color: inherit;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
     }
 
     .contact-card:hover {
       border-color: var(--gold);
-      box-shadow: 0 4px 16px rgba(200,151,58,0.1);
+      box-shadow: 0 6px 20px rgba(200,151,58,0.12);
+      transform: translateX(4px);
     }
 
     .contact-icon {
@@ -492,6 +614,18 @@
 
     footer .divider { margin: 0 0.5rem; }
 
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 700px) {
       nav { padding: 1rem; }
@@ -500,12 +634,23 @@
       .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
       .pricing-card { padding: 2rem 1.5rem; }
     }
+
+    /* ── PREFERS REDUCED MOTION ── */
+    @media (prefers-reduced-motion: reduce) {
+      .radar-sweep,
+      .radar-ring,
+      .radar-dot,
+      .badge-dot { animation: none !important; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      nav, .btn-primary, .btn-ghost, .btn-gold,
+      .step, .feature, .contact-card, .pricing-card { transition: none; }
+    }
   </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav>
+<nav id="main-nav">
   <img src="logo-white.png" alt="Radar Marca">
   <div style="display:flex;align-items:center;gap:1.5rem;">
     <a href="#como-funciona" class="nav-link">Como funciona</a>
@@ -516,8 +661,26 @@
 
 <!-- HERO -->
 <div class="hero">
+  <!-- Camadas de fundo animadas -->
+  <div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="radar-bg">
+    <div class="radar-sweep"></div>
+    <div class="radar-ring"></div>
+    <div class="radar-ring"></div>
+    <div class="radar-ring"></div>
+    <div class="radar-ring"></div>
+    <div class="radar-ring"></div>
+    <div class="radar-dot"></div>
+  </div>
+
+  <!-- Conteúdo -->
   <img src="logo-white.png" alt="Radar Marca" class="hero-logo">
-  <div class="hero-badge">Serviço de Vigilância de Marca · Portugal</div>
+  <div class="hero-badge">
+    <div class="badge-dot"></div>
+    Serviço de Vigilância de Marca · Portugal
+  </div>
   <h1>A sua marca protegida,<br><em>semana após semana.</em></h1>
   <p class="hero-sub">Monitorizamos o Boletim da Propriedade Industrial e alertamo-lo quando alguém tenta registar uma marca semelhante à sua — antes que seja tarde.</p>
   <div class="hero-ctas">
@@ -527,17 +690,17 @@
 </div>
 
 <!-- STATS BAR -->
-<div class="stats-bar">
+<div class="stats-bar" id="stats-bar">
   <div class="stat">
     <strong>Semanal</strong>
     <span>Monitorização BPI</span>
   </div>
   <div class="stat">
-    <strong>10 anos</strong>
+    <strong><span class="counter" data-target="10" data-suffix=" anos">10 anos</span></strong>
     <span>Cobertura do serviço</span>
   </div>
   <div class="stat">
-    <strong>48h</strong>
+    <strong><span class="counter" data-target="48" data-suffix="h">48h</span></strong>
     <span>Tempo máximo de alerta</span>
   </div>
   <div class="stat">
@@ -549,21 +712,21 @@
 <!-- COMO FUNCIONA -->
 <section id="como-funciona">
   <div class="container">
-    <div class="section-label">Como funciona</div>
-    <h2>Simples, automático e eficaz.</h2>
-    <p class="section-intro">O nosso sistema analisa cada edição semanal do Boletim da Propriedade Industrial sem que tenha de fazer nada.</p>
+    <div class="section-label reveal">Como funciona</div>
+    <h2 class="reveal">Simples, automático e eficaz.</h2>
+    <p class="section-intro reveal">O nosso sistema analisa cada edição semanal do Boletim da Propriedade Industrial sem que tenha de fazer nada.</p>
     <div class="steps">
-      <div class="step">
+      <div class="step reveal" style="transition-delay:0.05s">
         <div class="step-num">1</div>
         <h3>Monitorização automática</h3>
         <p>Todas as semanas analisamos o Boletim da Propriedade Industrial publicado pelo INPI com todos os novos pedidos de registo de marca em Portugal.</p>
       </div>
-      <div class="step">
+      <div class="step reveal" style="transition-delay:0.15s">
         <div class="step-num">2</div>
         <h3>Análise de conflitos</h3>
         <p>Verificamos se algum dos novos pedidos apresenta semelhanças fonéticas, gráficas ou conceptuais com a sua marca registada que possam representar risco.</p>
       </div>
-      <div class="step">
+      <div class="step reveal" style="transition-delay:0.25s">
         <div class="step-num">3</div>
         <h3>Alerta imediato</h3>
         <p>Em caso de conflito potencial, notificamo-lo de imediato com todos os detalhes do pedido para que possa agir dentro do prazo legal de oposição.</p>
@@ -575,31 +738,31 @@
 <!-- VANTAGENS -->
 <section class="section-alt">
   <div class="container">
-    <div class="section-label">Porquê a Radar Marca</div>
-    <h2>Vigilância profissional, sem complicações.</h2>
-    <p class="section-intro">Tecnologia própria para automatizar o que antes exigia horas de trabalho manual — a um preço que qualquer empresa consegue pagar.</p>
+    <div class="section-label reveal">Porquê a Radar Marca</div>
+    <h2 class="reveal">Vigilância profissional, sem complicações.</h2>
+    <p class="section-intro reveal">Tecnologia própria para automatizar o que antes exigia horas de trabalho manual — a um preço que qualquer empresa consegue pagar.</p>
     <div class="features-grid">
-      <div class="feature">
+      <div class="feature reveal" style="transition-delay:0.05s">
         <div class="feature-icon">🔍</div>
         <h3>Cobertura total do BPI</h3>
         <p>Analisamos todos os pedidos publicados semanalmente, sem nenhuma exceção.</p>
       </div>
-      <div class="feature">
+      <div class="feature reveal" style="transition-delay:0.12s">
         <div class="feature-icon">⚡</div>
         <h3>Alertas em 48 horas</h3>
         <p>Notificação rápida para que possa exercer o direito de oposição dentro do prazo legal.</p>
       </div>
-      <div class="feature">
+      <div class="feature reveal" style="transition-delay:0.19s">
         <div class="feature-icon">📋</div>
         <h3>Relatório detalhado</h3>
         <p>Informação completa sobre o pedido conflituante: titular, classes e data de depósito.</p>
       </div>
-      <div class="feature">
+      <div class="feature reveal" style="transition-delay:0.26s">
         <div class="feature-icon">🛡️</div>
         <h3>10 anos de proteção</h3>
         <p>Serviço contínuo ao longo de toda a vigência do registo da sua marca no INPI.</p>
       </div>
-      <div class="feature">
+      <div class="feature reveal" style="transition-delay:0.33s">
         <div class="feature-icon">🏛️</div>
         <h3>Fonte oficial</h3>
         <p>Dados diretamente do INPI — a única fonte oficial de registo de marcas em Portugal.</p>
@@ -611,11 +774,11 @@
 <!-- PREÇO -->
 <section id="preco">
   <div class="container">
-    <div class="section-label" style="text-align:center">Preço</div>
-    <h2 style="text-align:center;margin:0 auto 0.85rem;">Investimento único, proteção duradoura.</h2>
-    <p class="section-intro" style="text-align:center;margin:0 auto 3rem;">Sem mensalidades nem renovações. Um pagamento único por 10 anos completos de vigilância.</p>
+    <div class="section-label reveal" style="text-align:center">Preço</div>
+    <h2 class="reveal" style="text-align:center;margin:0 auto 0.85rem;">Investimento único, proteção duradoura.</h2>
+    <p class="section-intro reveal" style="text-align:center;margin:0 auto 3rem;">Sem mensalidades nem renovações. Um pagamento único por 10 anos completos de vigilância.</p>
     <div class="pricing-wrap">
-      <div class="pricing-card">
+      <div class="pricing-card reveal">
         <div class="pill">Preço único · 10 anos</div>
         <div class="price-amount">€240</div>
         <div class="price-note">+ IVA 23%</div>
@@ -640,29 +803,29 @@
   <div class="container">
     <div class="contact-layout">
       <div>
-        <div class="section-label">Contacto</div>
-        <h2>Fale connosco.</h2>
-        <p style="color:var(--gray-600);font-size:1.05rem;margin-top:0.5rem;">
+        <div class="section-label reveal">Contacto</div>
+        <h2 class="reveal">Fale connosco.</h2>
+        <p class="reveal" style="color:var(--gray-600);font-size:1.05rem;margin-top:0.5rem;">
           Tem dúvidas sobre o serviço ou quer saber se a sua marca está coberta?<br>
           Respondemos em menos de 24 horas.
         </p>
       </div>
       <div class="contact-cards">
-        <a href="mailto:geral@radarmarca.pt" class="contact-card">
+        <a href="mailto:geral@radarmarca.pt" class="contact-card reveal" style="transition-delay:0.1s">
           <div class="contact-icon">✉</div>
           <div>
             <small>Email</small>
             <span>geral@radarmarca.pt</span>
           </div>
         </a>
-        <a href="tel:+351910422309" class="contact-card">
+        <a href="tel:+351910422309" class="contact-card reveal" style="transition-delay:0.2s">
           <div class="contact-icon">📞</div>
           <div>
             <small>Telefone</small>
             <span>910 422 309</span>
           </div>
         </a>
-        <div class="contact-card">
+        <div class="contact-card reveal" style="transition-delay:0.3s">
           <div class="contact-icon">🏢</div>
           <div>
             <small>Empresa</small>
@@ -689,6 +852,68 @@
     <a href="tel:+351910422309">910 422 309</a>
   </p>
 </footer>
+
+<script>
+  // ── Navbar glassmorphism ao scroll
+  (function () {
+    var nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', function () {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+  })();
+
+  // ── Contadores animados (stats bar)
+  (function () {
+    var counters = document.querySelectorAll('.counter');
+    if (!counters.length) return;
+
+    function animateCounter(el) {
+      var target = parseInt(el.dataset.target, 10);
+      var suffix = el.dataset.suffix || '';
+      var duration = 1200;
+      var start = performance.now();
+
+      function step(now) {
+        var elapsed = Math.min(now - start, duration);
+        var progress = elapsed / duration;
+        // ease-out cubic
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var value = Math.round(eased * target);
+        el.textContent = value + suffix;
+        if (elapsed < duration) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    var statsBar = document.getElementById('stats-bar');
+    var counted = false;
+    var obs = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting && !counted) {
+        counted = true;
+        counters.forEach(function (el) { animateCounter(el); });
+        obs.disconnect();
+      }
+    }, { threshold: 0.4 });
+    obs.observe(statsBar);
+  })();
+
+  // ── Scroll reveal
+  (function () {
+    var items = document.querySelectorAll('.reveal');
+    if (!items.length) return;
+
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    items.forEach(function (el) { obs.observe(el); });
+  })();
+</script>
 
 </body>
 </html>
