@@ -81,15 +81,16 @@ body::before{
   border-bottom-color:var(--line);
 }
 
-.nav-brand{display:flex;align-items:center;gap:0.65rem}
-.nav-brand .symbol{height:30px;width:auto;display:block}
+.nav-brand{display:flex;align-items:center;gap:0.75rem}
+.nav-brand .symbol{height:42px;width:auto;display:block}
 .nav-brand .wordmark{
   font-family:var(--sans);
-  font-size:15px;
+  font-size:22px;
   font-weight:700;
-  letter-spacing:-0.015em;
+  letter-spacing:-0.02em;
   color:var(--cream);
   text-transform:none;
+  line-height:1;
 }
 .nav-brand .wordmark span{font-weight:400}
 
@@ -187,6 +188,7 @@ body::before{
   text-transform:uppercase;
   color:var(--cream-faint);
   display:flex;align-items:center;gap:14px;
+  margin-bottom:2rem;
 }
 .hero-eyebrow .bar{flex:0 0 36px;height:1px;background:var(--gold)}
 .hero-eyebrow .live{color:var(--gold);display:inline-flex;align-items:center;gap:7px}
@@ -199,7 +201,7 @@ body::before{
 .hero-title{
   font-family:var(--serif);
   font-weight:400;
-  font-size:clamp(2.6rem, 8vw, 8rem);
+  font-size:clamp(3rem, 10.5vw, 10.5rem);
   line-height:0.95;
   letter-spacing:-0.025em;
   margin-bottom:0;
@@ -525,6 +527,175 @@ section{
   from{opacity:0;transform:translateY(-6px);background:rgba(212,160,56,0.15)}
   to{opacity:1;transform:translateY(0)}
 }
+
+/* ─── VIDEO ─── */
+.video-section{
+  padding:8rem 2rem;
+  position:relative;
+  overflow:hidden;
+}
+.video-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3rem;
+  align-items:end;
+  margin-bottom:3rem;
+}
+.video-head .lede{color:var(--cream-dim);font-size:1.05rem;max-width:46ch;padding-bottom:0.4rem}
+
+.video-poster{
+  position:relative;
+  aspect-ratio:16/9;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:radial-gradient(ellipse at center, var(--ink-3) 0%, var(--ink) 70%);
+  overflow:hidden;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  isolation:isolate;
+  transition:border-color 0.3s, transform 0.3s;
+}
+.video-poster:hover{border-color:var(--gold);transform:translateY(-3px)}
+.video-poster::before{
+  content:'';
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(250,249,246,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250,249,246,0.025) 1px, transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse 80% 70% at center, black 20%, transparent 80%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at center, black 20%, transparent 80%);
+  z-index:0;
+}
+.video-poster .poster-radar{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  z-index:0;
+  opacity:0.55;
+}
+.video-poster .poster-radar svg{width:80%;height:80%;max-width:600px;max-height:600px}
+
+.video-poster .poster-meta{
+  position:absolute;
+  top:1.25rem;left:1.5rem;right:1.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--cream-faint);
+  z-index:2;
+}
+.video-poster .poster-meta .live{color:var(--gold);display:inline-flex;align-items:center;gap:7px}
+.video-poster .poster-meta .live::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);animation:pulse 1.4s infinite}
+
+.video-poster .poster-title{
+  position:absolute;
+  bottom:1.5rem;left:1.5rem;right:1.5rem;
+  display:flex;justify-content:space-between;align-items:end;
+  z-index:2;
+  gap:2rem;
+}
+.video-poster .poster-title h3{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(1.6rem, 3.2vw, 2.8rem);
+  line-height:1;
+  letter-spacing:-0.015em;
+  color:var(--cream);
+  max-width:14ch;
+}
+.video-poster .poster-title h3 em{font-style:italic;color:var(--gold)}
+.video-poster .poster-title .dur{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--cream-faint);
+  white-space:nowrap;
+}
+
+.play-btn{
+  position:relative;
+  z-index:2;
+  width:clamp(90px, 13vw, 140px);
+  height:clamp(90px, 13vw, 140px);
+  border-radius:50%;
+  background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s, transform 0.2s, box-shadow 0.3s;
+  box-shadow:0 0 0 0 rgba(212,160,56,0.4);
+}
+.video-poster:hover .play-btn{
+  background:var(--gold-bright);
+  transform:scale(1.06);
+  box-shadow:0 20px 60px rgba(212,160,56,0.4);
+}
+.play-btn::before{
+  content:'';
+  width:0;height:0;
+  border-style:solid;
+  border-width:18px 0 18px 28px;
+  border-color:transparent transparent transparent var(--ink);
+  margin-left:8px;
+}
+.play-btn::after{
+  content:'';
+  position:absolute;inset:-1px;
+  border-radius:50%;
+  border:1px solid var(--gold);
+  animation:playPulse 2.4s ease-out infinite;
+}
+@keyframes playPulse{
+  0%{transform:scale(1);opacity:1}
+  100%{transform:scale(1.4);opacity:0}
+}
+
+/* Modal */
+.video-modal{
+  position:fixed;inset:0;
+  z-index:500;
+  background:rgba(11,31,58,0.92);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  display:none;
+  align-items:center;justify-content:center;
+  padding:2rem;
+  opacity:0;
+  transition:opacity 0.3s;
+}
+.video-modal.open{display:flex;opacity:1}
+.video-modal-frame{
+  width:100%;
+  max-width:1100px;
+  aspect-ratio:16/9;
+  background:#000;
+  border-radius:14px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 40px 100px rgba(0,0,0,0.6);
+}
+.video-modal-frame iframe{
+  width:100%;height:100%;border:0;display:block;
+}
+#video-mount{
+  width:100%;
+  height:100%;
+}
+.video-close{
+  position:absolute;
+  top:-3.5rem;right:0;
+  background:transparent;
+  border:1px solid var(--line-strong);
+  color:var(--cream);
+  width:44px;height:44px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  font-family:var(--sans);
+  font-size:18px;
+  transition:background 0.2s, border-color 0.2s, color 0.2s;
+}
+.video-close:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-soft)}
 
 /* ─── HOW IT WORKS ─── */
 .how-section{
@@ -1002,7 +1173,7 @@ footer{
   .nav-links a:not(.nav-cta){display:none}
   .hero-bottom{grid-template-columns:1fr;gap:2rem;align-items:start}
   .hero-stats{text-align:left}
-  .feed-head, .how-head, .threat-grid, .pricing-grid, .faq-grid, .contact-head{
+  .feed-head, .how-head, .video-head, .threat-grid, .pricing-grid, .faq-grid, .contact-head{
     grid-template-columns:1fr;
     gap:2.5rem;
   }
@@ -1037,6 +1208,7 @@ footer{
   </a>
   <div class="nav-links">
     <a href="#feed">Feed</a>
+    <a href="#video">Vídeo</a>
     <a href="#metodo">Método</a>
     <a href="#preco">Preço</a>
     <a href="#faq">FAQ</a>
@@ -1141,17 +1313,10 @@ footer{
   </div>
 
   <div class="hero-content">
-    <div class="hero-mark">
-      <img src="brand/lockup-horizontal-on-navy.svg" alt="Radar Marca" class="lockup">
-      <div class="eyebrow-row">
-        <div class="hero-eyebrow">
-          <span class="bar"></span>
-          <span>Vigilância de Marca · Portugal</span>
-        </div>
-        <div class="hero-eyebrow">
-          <span class="live">A monitorizar agora</span>
-        </div>
-      </div>
+    <div class="hero-eyebrow">
+      <span class="bar"></span>
+      <span>Vigilância de Marca · Portugal</span>
+      <span class="live">A monitorizar agora</span>
     </div>
     <h1 class="hero-title">
       <span class="line">Vigiamos</span>
@@ -1340,12 +1505,65 @@ footer{
   </div>
 </section>
 
+<!-- ─── VIDEO ─── -->
+<section class="video-section" id="video">
+  <div class="wide">
+    <div class="video-head">
+      <div>
+        <div class="eyebrow reveal">02 · Em 90 segundos</div>
+        <h2 class="h-display reveal">Veja o radar<br>em <em>movimento.</em></h2>
+      </div>
+      <p class="lede reveal">
+        Do registo no INPI ao alerta na sua caixa de entrada — explicado em menos de dois minutos, sem jargão jurídico.
+      </p>
+    </div>
+
+    <div class="video-poster reveal" id="video-poster" role="button" tabindex="0" aria-label="Reproduzir vídeo explicativo">
+      <div class="poster-radar" aria-hidden="true">
+        <svg viewBox="-200 -200 400 400">
+          <g fill="none" stroke="rgba(212,160,56,0.18)" stroke-width="1">
+            <circle r="60"/><circle r="120"/><circle r="180"/>
+          </g>
+          <g stroke="rgba(212,160,56,0.1)" stroke-width="1">
+            <line x1="-200" y1="0" x2="200" y2="0"/>
+            <line x1="0" y1="-200" x2="0" y2="200"/>
+          </g>
+          <path d="M0,0 L180,0 A180,180 0 0,1 127,127 Z" fill="rgba(212,160,56,0.18)">
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
+          </path>
+          <circle r="4" fill="#D4A038"/>
+        </svg>
+      </div>
+
+      <div class="poster-meta">
+        <span>radarmarca.pt / film</span>
+        <span class="live">Play</span>
+      </div>
+
+      <div class="play-btn" aria-hidden="true"></div>
+
+      <div class="poster-title">
+        <h3>Perceba em <em>2 minutos</em> como protegemos a sua marca.</h3>
+        <span class="dur">02:14</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video Modal -->
+<div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Vídeo explicativo Radar Marca">
+  <div class="video-modal-frame">
+    <button class="video-close" id="video-close" aria-label="Fechar vídeo">✕</button>
+    <div id="video-mount"></div>
+  </div>
+</div>
+
 <!-- ─── HOW IT WORKS ─── -->
 <section class="how-section" id="metodo">
   <div class="container">
     <div class="how-head">
       <div>
-        <div class="eyebrow reveal">02 · Método</div>
+        <div class="eyebrow reveal">03 · Método</div>
         <h2 class="h-section reveal">Três passos.<br>Zero <em>trabalho</em><br>do seu lado.</h2>
       </div>
       <p class="lede reveal">
@@ -1381,7 +1599,7 @@ footer{
   <div class="container">
     <div class="threat-grid">
       <div>
-        <div class="eyebrow reveal" style="color:var(--red)">03 · Prazo legal</div>
+        <div class="eyebrow reveal" style="color:var(--red)">04 · Prazo legal</div>
         <h2 class="threat-quote reveal">
           <em>2 meses.</em><br>
           Depois,<br>
@@ -1427,7 +1645,7 @@ footer{
 <!-- ─── COMPARE ─── -->
 <section class="compare-section">
   <div class="container">
-    <div class="eyebrow reveal" style="text-align:center;justify-content:center;display:flex">04 · Comparação</div>
+    <div class="eyebrow reveal" style="text-align:center;justify-content:center;display:flex">05 · Comparação</div>
     <h2 class="h-section reveal" style="text-align:center;margin-bottom:3rem">
       Não somos um <em>advogado</em>.<br>Somos a vigilância que ele não dá.
     </h2>
@@ -1472,7 +1690,7 @@ footer{
   <div class="wide">
     <div class="pricing-grid">
       <div>
-        <div class="eyebrow reveal">05 · Preço</div>
+        <div class="eyebrow reveal">06 · Preço</div>
         <div class="price-display reveal">
           <span class="currency">€</span>
           <span class="amount">240</span>
@@ -1508,7 +1726,7 @@ footer{
   <div class="wide">
     <div class="faq-grid">
       <div class="faq-side">
-        <div class="eyebrow reveal">06 · FAQ</div>
+        <div class="eyebrow reveal">07 · FAQ</div>
         <h2 class="h-section reveal">Dúvidas <em>frequentes.</em></h2>
         <p class="reveal">Se algo aqui não responde, escreva-nos. Respondemos em menos de 24 horas.</p>
       </div>
@@ -1584,7 +1802,7 @@ footer{
   <div class="wide">
     <div class="contact-head">
       <div>
-        <div class="eyebrow reveal">07 · Fale connosco</div>
+        <div class="eyebrow reveal">08 · Fale connosco</div>
         <h2 class="h-section reveal">Pronto para <em>dormir</em><br>descansado?</h2>
       </div>
       <div class="contact-list">
@@ -1637,6 +1855,37 @@ footer{
 </footer>
 
 <script>
+// also renumber sections so video is 02 and rest shift if needed
+// (left as 02 on video, 03 on método etc.)
+
+// ── video modal
+const poster = document.getElementById('video-poster');
+const modal = document.getElementById('video-modal');
+const modalClose = document.getElementById('video-close');
+const mount = document.getElementById('video-mount');
+const YT_ID = 'FU3jllXgXwA';
+const USE_HTML_EXPLAINER = true;
+
+function openVideo(){
+  if (USE_HTML_EXPLAINER) {
+    mount.innerHTML = '<iframe src="explainer.html" allow="autoplay" style="width:100%;height:100%;border:0;display:block;background:#0B1F3A"></iframe>';
+  } else {
+    mount.innerHTML = '<iframe src="https://www.youtube.com/embed/'+YT_ID+'?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+  }
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeVideo(){
+  modal.classList.remove('open');
+  mount.innerHTML='';
+  document.body.style.overflow='';
+}
+poster.addEventListener('click', openVideo);
+poster.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();openVideo();} });
+modalClose.addEventListener('click', closeVideo);
+modal.addEventListener('click', e => { if(e.target===modal) closeVideo(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape' && modal.classList.contains('open')) closeVideo(); });
+
 // ── nav scroll state
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
