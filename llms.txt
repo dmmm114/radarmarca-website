@@ -1,0 +1,45 @@
+# Radar Marca
+
+> Serviço de vigilância de marca em Portugal. Monitoriza o Boletim da Propriedade Industrial (BPI) do INPI semanalmente e alerta o titular em até 48 horas quando é publicado um pedido de registo de marca semelhante — dentro do prazo legal de oposição de 2 meses.
+
+## O que é
+
+Radar Marca é um serviço de monitorização contínua de marcas registadas em Portugal, dirigido a titulares de marcas que precisam de ser alertados atempadamente sobre potenciais conflitos no INPI. O serviço analisa cada edição semanal do BPI e deteta semelhanças fonéticas, gráficas e conceptuais entre novos pedidos e a marca protegida.
+
+## Para quem
+
+- Empresários e startups com marca registada em Portugal
+- Profissionais liberais com marca própria
+- Empresas com portefólio de marcas
+
+## Proposta de valor
+
+- Pagamento único de €240 + IVA (€295,20 total)
+- 10 anos de cobertura — 520 edições do BPI analisadas
+- Alertas em até 48 horas após publicação
+- Alertas ilimitados, sem renovações nem custos escondidos
+- Relatório detalhado por conflito: nome, titular, classes, número de processo, link ao BPI
+
+## Como se diferencia
+
+| | Radar Marca | Advogado especializado |
+|---|---|---|
+| Custo | €240 único | €500–€2.000/ano |
+| Monitorização | Semanal, automática | Sob pedido |
+| Alerta | 48 horas | Variável |
+| Cobertura | 10 anos | Contratual |
+
+O INPI não notifica automaticamente os titulares de marcas anteriores. O Radar Marca faz essa vigilância em substituição de um advogado especializado em propriedade industrial.
+
+## Contacto
+
+- Website: https://www.radarmarca.pt
+- Email: geral@radarmarca.pt
+- Telefone: +351 910 422 309
+
+## Páginas
+
+- [Início](https://www.radarmarca.pt/)
+- [Termos e Condições](https://www.radarmarca.pt/termos.html)
+- [Política de Privacidade](https://www.radarmarca.pt/privacidade.html)
+- [Reclamações](https://www.radarmarca.pt/reclamacoes.html)
