@@ -386,6 +386,7 @@ section{
   max-width:48ch;
   padding-bottom:0.4rem;
 }
+.feed-head .lede em, .video-head .lede em, .how-head .lede em{font-style:italic;color:var(--gold);font-weight:400}
 
 .feed-panel{
   border:1px solid var(--line);
@@ -696,6 +697,175 @@ section{
   transition:background 0.2s, border-color 0.2s, color 0.2s;
 }
 .video-close:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-soft)}
+
+/* ─── FORM MODAL ─── */
+.form-modal{
+  position:fixed;inset:0;
+  z-index:600;
+  background:rgba(11,31,58,0.85);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  display:none;
+  align-items:center;justify-content:center;
+  padding:2rem;
+  opacity:0;
+  transition:opacity 0.3s;
+  overflow-y:auto;
+}
+.form-modal.open{display:flex;opacity:1}
+.form-card{
+  width:100%;
+  max-width:680px;
+  background:var(--ink-2);
+  border:1px solid var(--line-strong);
+  border-radius:18px;
+  padding:3rem;
+  position:relative;
+  box-shadow:0 40px 120px rgba(0,0,0,0.6);
+  margin:auto;
+  transform:translateY(20px);
+  transition:transform 0.4s ease;
+}
+.form-modal.open .form-card{transform:translateY(0)}
+
+.form-head{
+  margin-bottom:2rem;
+  padding-bottom:1.5rem;
+  border-bottom:1px solid var(--line);
+}
+.form-head .eyebrow{margin-bottom:1rem}
+.form-head h3{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(1.7rem, 3vw, 2.4rem);
+  line-height:1.05;
+  letter-spacing:-0.02em;
+  color:var(--cream);
+  margin-bottom:0.5rem;
+}
+.form-head h3 em{font-style:italic;color:var(--gold)}
+.form-head p{color:var(--cream-dim);font-size:0.95rem;max-width:48ch}
+
+.form-close{
+  position:absolute;
+  top:1.25rem;right:1.25rem;
+  background:transparent;
+  border:1px solid var(--line-strong);
+  color:var(--cream-dim);
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  font-family:var(--sans);
+  font-size:16px;
+  transition:background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.form-close:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-soft);transform:rotate(90deg)}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem 1rem;
+}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1 / -1}
+.field label{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--cream-faint);
+  display:flex;justify-content:space-between;align-items:baseline;
+}
+.field label .opt{color:var(--cream-faint);opacity:0.6;font-size:9px}
+.field input,
+.field textarea{
+  background:rgba(250,249,246,0.03);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:0.85rem 1rem;
+  color:var(--cream);
+  font-family:var(--sans);
+  font-size:0.97rem;
+  letter-spacing:-0.005em;
+  width:100%;
+  transition:border-color 0.2s, background 0.2s;
+  font-weight:400;
+}
+.field input::placeholder,
+.field textarea::placeholder{color:var(--cream-faint);opacity:0.5}
+.field input:focus,
+.field textarea:focus{
+  outline:none;
+  border-color:var(--gold);
+  background:rgba(212,160,56,0.04);
+}
+.field textarea{resize:vertical;min-height:90px;font-family:var(--sans);line-height:1.5}
+.field input:invalid:not(:placeholder-shown){border-color:rgba(229,96,74,0.5)}
+
+.form-foot{
+  margin-top:1.75rem;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.5rem;
+  flex-wrap:wrap;
+}
+.form-note{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--cream-faint);
+  max-width:30ch;
+  line-height:1.6;
+}
+.form-submit{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:1rem 1.75rem;
+  background:var(--gold);
+  color:var(--ink);
+  border:none;
+  border-radius:999px;
+  font-family:var(--sans);
+  font-weight:600;
+  font-size:0.95rem;
+  cursor:pointer;
+  transition:transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+.form-submit::after{content:'→';transition:transform 0.2s}
+.form-submit:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 14px 38px rgba(212,160,56,0.35)}
+.form-submit:hover::after{transform:translateX(4px)}
+.form-submit:disabled{opacity:0.5;cursor:wait}
+
+.form-success{
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:2rem 0;
+  gap:1rem;
+}
+.form-success.show{display:flex}
+.form-success .check{
+  width:64px;height:64px;border-radius:50%;
+  background:rgba(111,191,140,0.15);
+  border:1px solid rgba(111,191,140,0.4);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--green);font-size:1.8rem;
+}
+.form-success h4{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:2rem;
+  color:var(--cream);
+  letter-spacing:-0.018em;
+}
+.form-success h4 em{font-style:italic;color:var(--gold)}
+.form-success p{color:var(--cream-dim);max-width:42ch;font-size:0.95rem}
+
+@media (max-width:600px){
+  .form-card{padding:2rem 1.5rem;border-radius:14px}
+  .form-grid{grid-template-columns:1fr}
+  .form-close{top:1rem;right:1rem}
+}
 
 /* ─── HOW IT WORKS ─── */
 .how-section{
@@ -1212,7 +1382,7 @@ footer{
     <a href="#metodo">Método</a>
     <a href="#preco">Preço</a>
     <a href="#faq">FAQ</a>
-    <a href="mailto:geral@radarmarca.pt" class="nav-cta">Contactar</a>
+    <a href="#contacto" class="nav-cta">Contactar</a>
   </div>
 </nav>
 
@@ -1331,7 +1501,7 @@ footer{
       Monitorizamos o Boletim da Propriedade Industrial e alertamo-lo em <strong>48 horas</strong> sempre que alguém tenta registar uma marca semelhante à sua — dentro do prazo legal de oposição.
     </p>
     <div class="hero-actions">
-      <a href="mailto:geral@radarmarca.pt?subject=Pedido%20de%20informa%C3%A7%C3%B5es%20Radar%20Marca" class="btn btn-gold">Proteger a minha marca</a>
+      <a href="#" class="btn btn-gold" data-open-form="protect">Proteger a minha marca</a>
       <a href="#metodo" class="btn btn-ghost">Como funciona</a>
     </div>
     <div class="hero-stats">
@@ -1391,7 +1561,7 @@ footer{
         <h2 class="h-display reveal">Um radar a varrer<br>o <em>BPI</em>, semana<br>após semana.</h2>
       </div>
       <p class="lede reveal">
-        Cada edição do Boletim da Propriedade Industrial passa pelo nosso sistema. Mostramos aqui uma simulação do que acontece nos bastidores quando o INPI publica novos pedidos.
+        Cada edição do <em>Boletim da Propriedade Industrial</em> passa pelo nosso sistema. Mostramos aqui uma simulação do que acontece nos bastidores quando o INPI publica novos pedidos.
       </p>
     </div>
 
@@ -1549,6 +1719,69 @@ footer{
     </div>
   </div>
 </section>
+
+<!-- ─── FORM MODAL ─── -->
+<div class="form-modal" id="form-modal" role="dialog" aria-modal="true" aria-label="Pedido de proteção de marca">
+  <div class="form-card">
+    <button class="form-close" id="form-close" aria-label="Fechar formulário">✕</button>
+
+    <div class="form-body" id="form-body">
+      <div class="form-head">
+        <div class="eyebrow">Pedido de proteção</div>
+        <h3 id="form-title">Proteja a sua <em>marca</em>.</h3>
+        <p id="form-desc">Preencha os dados abaixo e respondemos em menos de 24 horas com uma proposta personalizada.</p>
+      </div>
+
+      <form id="protect-form" novalidate>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="f-name">Nome completo</label>
+            <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="O seu nome">
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="voce@empresa.pt">
+          </div>
+          <div class="field">
+            <label for="f-phone">Telefone <span class="opt">opcional</span></label>
+            <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="+351 ...">
+          </div>
+          <div class="field">
+            <label for="f-company">Empresa</label>
+            <input type="text" id="f-company" name="company" autocomplete="organization" placeholder="Nome da empresa">
+          </div>
+          <div class="field">
+            <label for="f-nif">NIF</label>
+            <input type="text" id="f-nif" name="nif" inputmode="numeric" pattern="[0-9]{9}" placeholder="9 dígitos">
+          </div>
+          <div class="field">
+            <label for="f-brand">Nome da marca</label>
+            <input type="text" id="f-brand" name="brand" required placeholder="A marca a proteger">
+          </div>
+          <div class="field">
+            <label for="f-reg">Nº registo INPI <span class="opt">opcional</span></label>
+            <input type="text" id="f-reg" name="reg" placeholder="Se já estiver registada">
+          </div>
+          <div class="field full">
+            <label for="f-msg">Mensagem <span class="opt">opcional</span></label>
+            <textarea id="f-msg" name="msg" placeholder="Conte-nos um pouco mais sobre o seu caso ou dúvidas..."></textarea>
+          </div>
+        </div>
+
+        <div class="form-foot">
+          <div class="form-note">Os dados servem apenas para responder ao seu pedido. Não partilhamos com terceiros.</div>
+          <button type="submit" class="form-submit" id="form-submit">Enviar pedido</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-success" id="form-success">
+      <div class="check">✓</div>
+      <h4>Pedido <em>enviado.</em></h4>
+      <p>Recebemos os seus dados. Vamos analisar o seu caso e respondemos em menos de 24 horas com uma proposta personalizada.</p>
+    </div>
+  </div>
+</div>
 
 <!-- Video Modal -->
 <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Vídeo explicativo Radar Marca">
@@ -1713,7 +1946,7 @@ footer{
           <li>Suporte direto em caso de dúvida</li>
         </ul>
         <div class="price-cta reveal">
-          <a href="mailto:geral@radarmarca.pt?subject=Pedido%20de%20informa%C3%A7%C3%B5es%20Radar%20Marca" class="btn btn-gold">Solicitar informações</a>
+          <a href="#" class="btn btn-gold" data-open-form="info">Solicitar informações</a>
           <a href="tel:+351910422309" class="btn btn-ghost">910 422 309</a>
         </div>
       </div>
@@ -1798,7 +2031,7 @@ footer{
 </section>
 
 <!-- ─── CONTACT ─── -->
-<section class="contact">
+<section class="contact" id="contacto">
   <div class="wide">
     <div class="contact-head">
       <div>
@@ -1885,6 +2118,120 @@ poster.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.pre
 modalClose.addEventListener('click', closeVideo);
 modal.addEventListener('click', e => { if(e.target===modal) closeVideo(); });
 document.addEventListener('keydown', e => { if(e.key==='Escape' && modal.classList.contains('open')) closeVideo(); });
+
+// ── form modal
+const formModal = document.getElementById('form-modal');
+const formClose = document.getElementById('form-close');
+const formBody = document.getElementById('form-body');
+const formSuccess = document.getElementById('form-success');
+const protectForm = document.getElementById('protect-form');
+const formTitle = document.getElementById('form-title');
+const formDesc = document.getElementById('form-desc');
+
+const formVariants = {
+  protect: {
+    title: 'Proteja a sua <em>marca</em>.',
+    desc: 'Preencha os dados abaixo e respondemos em menos de 24 horas com uma proposta de proteção personalizada.',
+  },
+  info: {
+    title: 'Solicitar <em>informações</em>.',
+    desc: 'Deixe-nos os seus dados e o seu pedido. Respondemos em menos de 24 horas.',
+  },
+};
+
+function openFormModal(variant){
+  const v = formVariants[variant] || formVariants.info;
+  formTitle.innerHTML = v.title;
+  formDesc.textContent = v.desc;
+  formBody.style.display = '';
+  formSuccess.classList.remove('show');
+  protectForm.reset();
+  formModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // focus first field shortly after open
+  setTimeout(() => document.getElementById('f-name').focus(), 300);
+}
+function closeFormModal(){
+  formModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('[data-open-form]').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    openFormModal(el.getAttribute('data-open-form'));
+  });
+});
+formClose.addEventListener('click', closeFormModal);
+formModal.addEventListener('click', e => { if(e.target===formModal) closeFormModal(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape' && formModal.classList.contains('open')) closeFormModal(); });
+
+protectForm.addEventListener('submit', async e => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(protectForm).entries());
+  if (!data.name || !data.email || !data.brand) {
+    protectForm.reportValidity();
+    return;
+  }
+
+  const submitBtn = document.getElementById('form-submit');
+  const originalText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'A enviar…';
+
+  // Build a readable message body for the email Formspree forwards
+  const lines = [
+    '─ Contacto',
+    'Nome: ' + data.name,
+    'Email: ' + data.email,
+    data.phone ? 'Telefone: ' + data.phone : null,
+    '',
+    '─ Empresa',
+    data.company ? 'Empresa: ' + data.company : '(não indicado)',
+    data.nif ? 'NIF: ' + data.nif : '(não indicado)',
+    '',
+    '─ Marca',
+    'Nome da marca: ' + data.brand,
+    data.reg ? 'Nº registo INPI: ' + data.reg : '(não indicado)',
+    data.msg ? '\n─ Mensagem\n' + data.msg : null,
+  ].filter(Boolean).join('\n');
+
+  try {
+    const res = await fetch('https://formspree.io/f/xbdwbqov', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(protectForm).constructor === FormData
+        ? (() => {
+            const fd = new FormData();
+            fd.append('name', data.name);
+            fd.append('email', data.email);
+            fd.append('_replyto', data.email);
+            fd.append('_subject', 'Pedido Radar Marca — ' + data.brand);
+            fd.append('phone', data.phone || '');
+            fd.append('empresa', data.company || '');
+            fd.append('nif', data.nif || '');
+            fd.append('marca', data.brand);
+            fd.append('nr_registo', data.reg || '');
+            fd.append('mensagem', data.msg || '');
+            fd.append('message', lines);
+            return fd;
+          })()
+        : null,
+    });
+
+    if (res.ok) {
+      formBody.style.display = 'none';
+      formSuccess.classList.add('show');
+    } else {
+      const json = await res.json().catch(() => ({}));
+      throw new Error(json.error || 'Erro ao enviar');
+    }
+  } catch (err) {
+    alert('Não foi possível enviar o pedido neste momento. Por favor tente novamente ou contacte-nos diretamente em geral@radarmarca.pt');
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+});
 
 // ── nav scroll state
 const nav = document.getElementById('nav');
