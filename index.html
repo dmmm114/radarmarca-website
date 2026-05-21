@@ -1437,6 +1437,63 @@ footer{
   .form-card{padding:2rem 1.5rem}
 }
 
+/* ─── PHONE (≤600px) ─── */
+@media (max-width:600px){
+  /* HERO */
+  .hero{padding:5.25rem 1rem 2.5rem}
+  .hero-eyebrow{font-size:10px;letter-spacing:0.18em;gap:10px;margin-bottom:1.25rem}
+  .hero-eyebrow .bar{width:20px}
+  .hero-title{font-size:clamp(1.85rem, 8.5vw, 2.5rem);margin-bottom:1.1rem;letter-spacing:-0.015em}
+  .hero-lede{font-size:1rem;line-height:1.5;margin-bottom:1.5rem}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:0.65rem;width:100%}
+  .hero-actions .btn{justify-content:center;padding:0.95rem 1.25rem;width:100%}
+  .hero-trust{gap:0.7rem 1.25rem;font-size:11px;margin-top:0.5rem}
+
+  /* PRICE CARD */
+  .price-card{padding:1.5rem 1.25rem 1.25rem;border-radius:18px}
+  .price-card::before{inset:6px;border-radius:14px}
+  .price-stamp{font-size:9px;padding:5px 11px;top:-11px;right:14px;letter-spacing:0.14em}
+  .price-card .label{font-size:10px;letter-spacing:0.12em;margin-bottom:0.4rem}
+  .price-number{margin-bottom:0.25rem}
+  .price-number .euro{font-size:2.2rem;margin-top:0.22em}
+  .price-number .amount{font-size:5.4rem;line-height:0.9}
+  .price-number .unit{font-size:1.35rem;margin-top:0.5em}
+  .price-card .breakdown{gap:0.7rem;margin-top:1.25rem;padding-top:1.25rem}
+  .price-card .breakdown small{font-size:9px;letter-spacing:0.12em}
+  .price-card .breakdown strong{font-size:1.05rem}
+  .price-card .foot{font-size:9px;gap:0.5rem;margin-top:1.25rem;padding-top:1rem}
+
+  /* SECTIONS */
+  section, .math, .final-cta{padding:3.75rem 1rem}
+  .video-section{padding:3rem 1rem}
+
+  /* TRUST STRIP */
+  .trust-strip{padding:1.25rem 0}
+  .trust-track{gap:1.75rem;animation-duration:42s}
+  .trust-item{font-size:11px;gap:10px;letter-spacing:0.12em}
+
+  /* STICKY CTA — compact */
+  .sticky-cta{bottom:0.65rem;left:0.65rem;right:0.65rem}
+  .sticky-cta-inner{padding:0.4rem 0.4rem 0.4rem 1rem;gap:0.55rem;border-radius:999px}
+  .sticky-cta-eyebrow{font-size:8px;letter-spacing:0.14em}
+  .sticky-cta-title{font-size:0.82rem}
+  .sticky-cta .btn{padding:0.55rem 0.95rem;font-size:0.8rem}
+
+  /* NAV */
+  .nav{padding:0.85rem 1rem}
+  .nav-cta{padding:0.55rem 0.95rem;font-size:0.82rem}
+
+  /* PRICE STRIP (final CTA) */
+  .price-strip{flex-direction:column;gap:0.5rem;padding:1rem 1.25rem;font-size:0.95rem}
+}
+
+/* ─── SMALL PHONE (≤380px) ─── */
+@media (max-width:380px){
+  .price-card .breakdown{grid-template-columns:1fr;gap:0.55rem}
+  .price-number .amount{font-size:4.6rem}
+  .hero-title{font-size:1.75rem}
+}
+
 @media (prefers-reduced-motion: reduce){
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
