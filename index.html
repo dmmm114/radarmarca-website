@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radar Marca — Vigilância de Marca em Portugal</title>
-<meta name="description" content="Monitorize novos pedidos de registo de marca em Portugal e proteja a sua marca contra imitações. Serviço de vigilância do Boletim da Propriedade Industrial — alertas em 48h.">
-<meta name="theme-color" content="#0B1F3A">
+<title>Radar Marca — Proteja a sua marca por €2/mês</title>
+<meta name="description" content="Monitorizamos o Boletim da Propriedade Industrial e alertamo-lo em 48h se alguém tentar registar uma marca semelhante à sua. €240 = €2/mês por 10 anos.">
+<meta name="theme-color" content="#F4EEDE">
 <meta name="google-site-verification" content="nCf9NAR__q5Dfg9529QOGOnUADooN_iL7gRzm4E-S0s">
 <link rel="canonical" href="https://www.radarmarca.pt/">
 <link rel="icon" type="image/svg+xml" href="brand/favicon-32.svg">
@@ -15,14 +15,14 @@
 <meta property="og:url" content="https://www.radarmarca.pt/">
 <meta property="og:site_name" content="Radar Marca">
 <meta property="og:locale" content="pt_PT">
-<meta property="og:title" content="Radar Marca — Vigilância de Marca em Portugal">
-<meta property="og:description" content="Monitorize o Boletim da Propriedade Industrial e receba alerta em 48h quando alguém tenta registar uma marca semelhante à sua. €240 para 10 anos. Sem renovações.">
+<meta property="og:title" content="Radar Marca — Proteja a sua marca por €2/mês">
+<meta property="og:description" content="Monitorizamos o Boletim da Propriedade Industrial e alertamo-lo em 48h se alguém tentar registar uma marca semelhante à sua. €240 = €2/mês por 10 anos.">
 <meta property="og:image" content="https://www.radarmarca.pt/brand/og-image.png">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Radar Marca — Vigilância de Marca em Portugal">
-<meta name="twitter:description" content="Monitorize o BPI do INPI e receba alerta em 48h quando alguém tenta registar uma marca semelhante à sua. €240 para 10 anos.">
+<meta name="twitter:title" content="Radar Marca — Proteja a sua marca por €2/mês">
+<meta name="twitter:description" content="Monitorizamos o BPI do INPI e alertamo-lo em 48h se alguém tentar registar uma marca semelhante à sua. €240 = €2/mês por 10 anos.">
 
 <!-- JSON-LD: Organização + Serviço + FAQ -->
 <script type="application/ld+json">
@@ -137,19 +137,23 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
+  --cream:#F4EEDE;
+  --cream-2:#EBE3CE;
+  --cream-3:#E2D8BF;
   --ink:#0B1F3A;
-  --ink-2:#0F2745;
-  --ink-3:#142F52;
-  --line:rgba(250,249,246,0.12);
-  --line-strong:rgba(250,249,246,0.22);
-  --cream:#FAF9F6;
-  --cream-dim:rgba(250,249,246,0.62);
-  --cream-faint:rgba(250,249,246,0.38);
-  --gold:#D4A038;
-  --gold-bright:#E8B856;
-  --gold-soft:rgba(212,160,56,0.14);
-  --red:#E5604A;
-  --green:#6FBF8C;
+  --ink-2:#16294B;
+  --ink-soft:rgba(11,31,58,0.72);
+  --ink-mid:rgba(11,31,58,0.55);
+  --ink-faint:rgba(11,31,58,0.38);
+  --line:rgba(11,31,58,0.12);
+  --line-strong:rgba(11,31,58,0.22);
+  --gold:#C8973A;
+  --gold-bright:#D4A038;
+  --gold-dark:#A67A22;
+  --gold-soft:rgba(200,151,58,0.12);
+  --gold-bg:rgba(200,151,58,0.06);
+  --red:#C04A35;
+  --green:#4A8E5E;
 
   --serif:'Instrument Serif', ui-serif, Georgia, serif;
   --sans:'Inter Tight', system-ui, -apple-system, sans-serif;
@@ -158,8 +162,8 @@
 
 html{scroll-behavior:smooth}
 body{
-  background:var(--ink);
-  color:var(--cream);
+  background:var(--cream);
+  color:var(--ink);
   font-family:var(--sans);
   font-weight:400;
   line-height:1.55;
@@ -167,19 +171,19 @@ body{
   overflow-x:hidden;
 }
 
-::selection{background:var(--gold);color:var(--ink)}
+::selection{background:var(--gold);color:var(--cream)}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 
-/* ─── grain + vignette ─── */
+/* Subtle paper grain */
 body::before{
   content:'';
   position:fixed;inset:0;
   pointer-events:none;
   z-index:300;
-  background-image:url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.93  0 0 0 0 0.91  0 0 0 0 0.86  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.18'/></svg>");
-  mix-blend-mode:overlay;
-  opacity:0.32;
+  background-image:url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.15  0 0 0 0 0.12  0 0 0 0 0.07  0 0 0 0.35 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.12'/></svg>");
+  mix-blend-mode:multiply;
+  opacity:0.5;
 }
 
 /* ─── NAV ─── */
@@ -187,348 +191,679 @@ body::before{
   position:fixed;top:0;left:0;right:0;
   z-index:100;
   display:flex;align-items:center;justify-content:space-between;
-  padding:1.1rem 2rem;
+  padding:1rem 1.75rem;
+  transition:background 0.3s, border-color 0.3s, padding 0.3s;
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{
+  background:rgba(244,238,222,0.85);
+  backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  border-bottom-color:var(--line);
+  padding:0.5rem 1.75rem;
+}
+.nav.scrolled .nav-brand .symbol{height:48px}
+.nav.scrolled .nav-brand .wordmark{font-size:23px}
+
+.nav-brand{display:flex;align-items:center;gap:0.85rem;transition:gap 0.3s}
+.nav-brand .symbol{height:60px;width:auto;display:block;transition:height 0.3s}
+.nav-brand .wordmark{
+  font-family:var(--sans);
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:-0.02em;
+  color:var(--ink);
+  line-height:1;
+  transition:font-size 0.3s;
+}
+.nav-brand .wordmark span{font-weight:400}
+
+.nav-links{
+  display:flex;align-items:center;gap:1.5rem;
   font-family:var(--mono);
   font-size:11px;
   letter-spacing:0.12em;
   text-transform:uppercase;
-  transition:background 0.4s, backdrop-filter 0.4s, border-color 0.4s;
-  border-bottom:1px solid transparent;
 }
-.nav.scrolled{
-  background:rgba(11,31,58,0.72);
-  backdrop-filter:blur(18px) saturate(140%);
-  -webkit-backdrop-filter:blur(18px) saturate(140%);
-  border-bottom-color:var(--line);
-}
-
-.nav-brand{display:flex;align-items:center;gap:0.75rem}
-.nav-brand .symbol{height:42px;width:auto;display:block}
-.nav-brand .wordmark{
-  font-family:var(--sans);
-  font-size:22px;
-  font-weight:700;
-  letter-spacing:-0.02em;
-  color:var(--cream);
-  text-transform:none;
-  line-height:1;
-}
-.nav-brand .wordmark span{font-weight:400}
-
-.nav-links{display:flex;gap:1.75rem;align-items:center}
-.nav-links a{color:var(--cream-dim);transition:color 0.2s}
-.nav-links a:hover{color:var(--gold)}
+.nav-links a{color:var(--ink-soft);transition:color 0.2s}
+.nav-links a:hover{color:var(--gold-dark)}
 
 .nav-cta{
   display:inline-flex;align-items:center;gap:8px;
-  padding:0.55rem 1rem;
-  border:1px solid var(--line-strong);
-  border-radius:999px;
+  padding:0.65rem 1.1rem;
+  background:var(--ink);
   color:var(--cream)!important;
-  transition:border-color 0.2s, background 0.2s, color 0.2s;
+  border-radius:999px;
+  font-weight:500;
+  transition:background 0.2s, transform 0.15s;
 }
-.nav-cta::after{
-  content:'→';font-family:var(--sans);
-  transition:transform 0.2s;
-}
-.nav-cta:hover{border-color:var(--gold);background:var(--gold-soft);color:var(--gold)!important}
-.nav-cta:hover::after{transform:translateX(3px)}
+.nav-cta::after{content:'→';transition:transform 0.2s}
+.nav-cta:hover{background:var(--gold-dark);transform:translateY(-1px)}
+.nav-cta:hover::after{transform:translateX(2px)}
 
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+@keyframes pulseSoft{0%,100%{opacity:0.6}50%{opacity:1}}
 
 /* ─── HERO ─── */
 .hero{
   min-height:100vh;
   position:relative;
-  display:grid;
-  grid-template-rows:1fr auto;
-  padding:7rem 2rem 2rem;
+  padding:7rem 2rem 4rem;
+  display:flex;align-items:center;
   overflow:hidden;
 }
-
-/* Background radar */
-.hero-radar{
+.hero-bg-radar{
   position:absolute;
-  top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  width:min(120vh,120vw);
-  height:min(120vh,120vw);
+  right:-200px;top:50%;
+  transform:translateY(-50%);
+  width:900px;height:900px;
+  opacity:0.18;
   pointer-events:none;
-  opacity:0.9;
+  z-index:0;
 }
-.hero-radar svg{width:100%;height:100%;display:block}
-
-.hero-grid-bg{
-  position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(250,249,246,0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(250,249,246,0.025) 1px, transparent 1px);
-  background-size:64px 64px;
-  pointer-events:none;
-  mask-image:radial-gradient(ellipse 80% 70% at center, black 30%, transparent 80%);
-  -webkit-mask-image:radial-gradient(ellipse 80% 70% at center, black 30%, transparent 80%);
+@media (min-width:1200px){
+  .hero-bg-radar{opacity:0.1}
 }
 
-.hero-content{
-  position:relative;z-index:2;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-content:center;
-  max-width:1480px;
-  width:100%;
-  margin:0 auto;
-  padding:2rem 0;
-  gap:2.5rem;
-}
-
-.hero-mark{
-  display:flex;
-  flex-direction:column;
-  gap:1.5rem;
-  padding-bottom:1.75rem;
-  border-bottom:1px solid var(--line);
-}
-.hero-mark .lockup{
-  width:min(100%, 1100px);
-  height:auto;
-  display:block;
-}
-.hero-mark .eyebrow-row{
-  display:flex;
+.hero-grid{
+  max-width:1380px;width:100%;margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0, 1.1fr) minmax(0, 0.95fr);
+  gap:3rem;
   align-items:center;
-  justify-content:space-between;
-  gap:2rem;
-  flex-wrap:wrap;
+  position:relative;
+  z-index:1;
+}
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:1fr;gap:3rem}
 }
 
 .hero-eyebrow{
   font-family:var(--mono);
   font-size:11px;
-  letter-spacing:0.18em;
+  letter-spacing:0.2em;
   text-transform:uppercase;
-  color:var(--cream-faint);
+  color:var(--ink-mid);
   display:flex;align-items:center;gap:14px;
-  margin-bottom:2rem;
+  margin-bottom:1.75rem;
 }
-.hero-eyebrow .bar{flex:0 0 36px;height:1px;background:var(--gold)}
-.hero-eyebrow .live{color:var(--gold);display:inline-flex;align-items:center;gap:7px}
+.hero-eyebrow .bar{width:32px;height:1px;background:var(--gold)}
+.hero-eyebrow .live{color:var(--gold-dark);display:inline-flex;align-items:center;gap:7px}
 .hero-eyebrow .live::before{
-  content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);
-  box-shadow:0 0 10px var(--gold);
-  animation:pulse 1.4s ease-in-out infinite;
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--gold);
+  animation:pulseSoft 1.6s ease-in-out infinite;
 }
 
 .hero-title{
   font-family:var(--serif);
   font-weight:400;
-  font-size:clamp(3rem, 10.5vw, 10.5rem);
-  line-height:0.95;
-  letter-spacing:-0.025em;
-  margin-bottom:0;
+  font-size:clamp(2.2rem, 4.6vw, 4.2rem);
+  line-height:1.04;
+  letter-spacing:-0.02em;
+  margin-bottom:1.5rem;
+  color:var(--ink);
 }
-.hero-title .line{display:block;overflow:hidden}
-.hero-title em{
-  font-style:italic;
-  color:var(--gold);
-  position:relative;
-}
-.hero-title em::after{
-  content:'';
-  position:absolute;
-  left:0.05em;right:0.05em;bottom:0.08em;
-  height:1px;
-  background:var(--gold);
-  opacity:0.4;
-}
-
-.hero-title .indent{display:inline-block;margin-left:0.35em}
-
-.hero-bottom{
-  position:relative;z-index:2;
-  display:grid;
-  grid-template-columns:1.2fr auto 1fr;
-  gap:3rem;
-  align-items:end;
-  max-width:1480px;
-  width:100%;
-  margin:0 auto;
-  padding-top:3rem;
-  border-top:1px solid var(--line);
-}
+.hero-title em{font-style:italic;color:var(--gold-dark)}
 
 .hero-lede{
-  font-family:var(--sans);
-  font-size:clamp(0.98rem, 1.15vw, 1.1rem);
-  line-height:1.5;
-  color:var(--cream-dim);
-  max-width:34ch;
+  font-size:clamp(1.05rem, 1.3vw, 1.18rem);
+  line-height:1.55;
+  color:var(--ink-soft);
+  max-width:46ch;
+  margin-bottom:2rem;
 }
-.hero-lede strong{color:var(--cream);font-weight:600}
+.hero-lede strong{color:var(--ink);font-weight:600}
 
-.hero-actions{display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap}
-.hero-reassure{
-  font-family:var(--mono);
-  font-size:10.5px;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  color:var(--cream-faint);
-  margin-top:1rem;
-  display:flex;align-items:center;gap:8px;
-}
-.hero-reassure::before{
-  content:'';display:inline-block;
-  width:6px;height:6px;border-radius:50%;
-  background:var(--green);
-  box-shadow:0 0 8px rgba(111,191,140,0.5);
+.hero-actions{
+  display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;
+  margin-bottom:1.75rem;
 }
 
 .btn{
   display:inline-flex;align-items:center;gap:10px;
-  padding:0.95rem 1.5rem;
+  padding:1rem 1.6rem;
   border-radius:999px;
   font-weight:600;
-  font-size:0.92rem;
+  font-size:0.95rem;
   letter-spacing:-0.005em;
   cursor:pointer;
   border:1px solid transparent;
   transition:transform 0.2s, background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.25s;
   white-space:nowrap;
+  font-family:inherit;
 }
-.btn-gold{
-  background:var(--gold);color:var(--ink);
+.btn-primary{
+  background:var(--ink);color:var(--cream);
 }
-.btn-gold:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 14px 38px rgba(212,160,56,0.35)}
-.btn-gold::after{content:'→';transition:transform 0.2s}
-.btn-gold:hover::after{transform:translateX(4px)}
+.btn-primary::after{content:'→';transition:transform 0.2s}
+.btn-primary:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:0 14px 32px rgba(11,31,58,0.18)}
+.btn-primary:hover::after{transform:translateX(4px)}
 
 .btn-ghost{
   border-color:var(--line-strong);
-  color:var(--cream);
+  color:var(--ink);
   background:transparent;
 }
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-soft)}
+.btn-ghost::before{
+  content:'';
+  display:inline-block;
+  width:0;height:0;
+  border-style:solid;
+  border-width:5px 0 5px 8px;
+  border-color:transparent transparent transparent var(--ink);
+}
+.btn-ghost:hover{border-color:var(--gold-dark);color:var(--gold-dark);background:var(--gold-bg)}
+.btn-ghost:hover::before{border-left-color:var(--gold-dark)}
 
-.hero-stats{
-  display:flex;flex-direction:column;gap:0.5rem;
+.hero-trust{
+  display:flex;align-items:center;gap:1.5rem;
+  flex-wrap:wrap;
   font-family:var(--mono);
   font-size:11px;
   letter-spacing:0.1em;
-  color:var(--cream-faint);
   text-transform:uppercase;
-  text-align:right;
+  color:var(--ink-faint);
 }
-.hero-stats .row{display:flex;justify-content:space-between;gap:1.5rem;align-items:baseline}
-.hero-stats .row strong{
-  font-family:var(--serif);
-  font-weight:400;
-  font-style:italic;
-  font-size:1.6rem;
-  color:var(--cream);
-  letter-spacing:0;
-  text-transform:none;
+.hero-trust .item{display:inline-flex;align-items:center;gap:7px}
+.hero-trust .item::before{
+  content:'';width:5px;height:5px;border-radius:50%;
+  background:var(--green);
 }
 
-/* ─── MARQUEE TICKER ─── */
-.ticker{
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:1.1rem 0;
-  overflow:hidden;
+/* ─── PRICE CARD ─── */
+.price-card{
   position:relative;
-  background:var(--ink-2);
+  background:var(--cream-2);
+  border:1px solid var(--line-strong);
+  border-radius:24px;
+  padding:2.25rem 2.25rem 1.75rem;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.6) inset,
+    0 30px 60px -20px rgba(11,31,58,0.15),
+    0 10px 20px -8px rgba(11,31,58,0.08);
+  transition:transform 0.4s ease;
+  overflow:hidden;
 }
-.ticker-track{
-  display:flex;
-  gap:3rem;
-  white-space:nowrap;
-  animation:marquee 60s linear infinite;
-  width:max-content;
-}
-.ticker-item{
-  font-family:var(--mono);
-  font-size:12px;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  color:var(--cream-dim);
-  display:inline-flex;align-items:center;gap:14px;
-}
-.ticker-item .dot{
-  width:6px;height:6px;border-radius:50%;background:var(--gold);
-  flex-shrink:0;
-}
-.ticker-item .alert .dot{background:var(--red);box-shadow:0 0 8px var(--red)}
-.ticker-item .ok .dot{background:var(--green)}
-.ticker-item .num{color:var(--gold)}
-.ticker-item .alert{color:var(--cream)}
-.ticker-divider{color:var(--cream-faint);opacity:0.4}
+.price-card:hover{transform:translateY(-4px)}
 
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.price-card::before{
+  content:'';
+  position:absolute;
+  inset:8px;
+  border:1px dashed rgba(11,31,58,0.1);
+  border-radius:18px;
+  pointer-events:none;
+}
+
+.price-stamp{
+  position:absolute;
+  top:-14px;right:24px;
+  background:var(--gold);
+  color:var(--cream);
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  padding:6px 14px;
+  border-radius:999px;
+  font-weight:600;
+  box-shadow:0 6px 16px rgba(200,151,58,0.4);
+}
+
+.price-card .label{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--ink-mid);
+  margin-bottom:0.5rem;
+}
+
+.price-number{
+  font-family:var(--serif);
+  display:flex;
+  align-items:flex-start;
+  line-height:0.85;
+  letter-spacing:-0.04em;
+  color:var(--ink);
+  margin-bottom:0.5rem;
+}
+.price-number .euro{
+  font-size:clamp(3rem, 5vw, 4.2rem);
+  font-style:italic;
+  color:var(--gold-dark);
+  margin-top:0.18em;
+  margin-right:0.05em;
+}
+.price-number .amount{
+  font-size:clamp(7rem, 11vw, 10.5rem);
+  font-weight:400;
+  position:relative;
+  line-height:0.88;
+}
+.price-number .unit{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(2rem, 3vw, 2.6rem);
+  color:var(--ink-soft);
+  margin-top:0.55em;
+  letter-spacing:0;
+}
+
+.price-card .breakdown{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0.85rem;
+  margin-top:1.5rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+}
+.breakdown-item small{
+  display:block;
+  font-family:var(--mono);
+  font-size:9.5px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  margin-bottom:3px;
+}
+.breakdown-item strong{
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:400;
+  font-size:1.4rem;
+  color:var(--ink);
+  letter-spacing:-0.01em;
+}
+.breakdown-item strong .small{font-size:0.7em}
+
+.price-card .foot{
+  margin-top:1.5rem;
+  padding-top:1.2rem;
+  border-top:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap;
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--ink-mid);
+}
+.price-card .foot strong{color:var(--ink);font-weight:600}
 
 /* ─── SECTIONS ─── */
-section{
-  position:relative;
-  padding:8rem 2rem;
-}
+section{padding:7rem 2rem;position:relative}
 .container{max-width:1280px;margin:0 auto}
-.wide{max-width:1480px;margin:0 auto}
+.wide{max-width:1380px;margin:0 auto}
+.alt{background:var(--cream-2)}
+.alt-dark{background:var(--cream-3)}
 
 .eyebrow{
   font-family:var(--mono);
   font-size:11px;
-  letter-spacing:0.18em;
+  letter-spacing:0.2em;
   text-transform:uppercase;
-  color:var(--gold);
-  display:inline-flex;align-items:center;gap:14px;
-  margin-bottom:2rem;
+  color:var(--gold-dark);
+  display:inline-flex;align-items:center;gap:12px;
+  margin-bottom:1.5rem;
 }
-.eyebrow::before{
-  content:'';width:24px;height:1px;background:var(--gold);
-}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--gold)}
 
 .h-display{
   font-family:var(--serif);
   font-weight:400;
-  font-size:clamp(2.4rem, 6vw, 5.2rem);
+  font-size:clamp(2.4rem, 5vw, 4.2rem);
   line-height:1;
-  letter-spacing:-0.02em;
+  letter-spacing:-0.022em;
+  color:var(--ink);
 }
-.h-display em{font-style:italic;color:var(--gold)}
+.h-display em{font-style:italic;color:var(--gold-dark)}
 
 .h-section{
   font-family:var(--serif);
   font-weight:400;
-  font-size:clamp(2rem, 4.5vw, 3.6rem);
-  line-height:1.02;
+  font-size:clamp(2rem, 4vw, 3.2rem);
+  line-height:1.05;
   letter-spacing:-0.018em;
+  color:var(--ink);
 }
-.h-section em{font-style:italic;color:var(--gold)}
+.h-section em{font-style:italic;color:var(--gold-dark)}
 
-/* ─── LIVE FEED ─── */
-.feed-section{
-  padding-top:7rem;
-  padding-bottom:7rem;
+.section-lede{
+  color:var(--ink-soft);
+  font-size:1.08rem;
+  max-width:54ch;
+  margin-top:1.25rem;
 }
-.feed-head{
+
+/* ─── TRUST STRIP ─── */
+.trust-strip{
+  background:var(--ink);
+  color:var(--cream);
+  padding:1.75rem 2rem;
+  overflow:hidden;
+  position:relative;
+}
+.trust-track{
+  display:flex;
+  gap:3rem;
+  align-items:center;
+  white-space:nowrap;
+  animation:marquee 50s linear infinite;
+  width:max-content;
+}
+.trust-item{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  font-family:var(--mono);
+  font-size:13px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:rgba(244,238,222,0.7);
+}
+.trust-item strong{color:var(--gold);font-weight:600}
+.trust-item .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.trust-divider{color:rgba(244,238,222,0.3);font-size:14px}
+
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─── HOW IT WORKS ─── */
+.how-head{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;
+  margin-bottom:4rem;
+  align-items:end;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.25rem;
+}
+.step{
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:2rem 1.75rem 2.2rem;
+  position:relative;
+  transition:border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.step:hover{
+  border-color:var(--gold);
+  transform:translateY(-4px);
+  box-shadow:0 20px 40px -20px rgba(11,31,58,0.15);
+}
+.step-tag{
+  position:absolute;
+  top:1.25rem;right:1.5rem;
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:0.14em;
+  color:var(--gold-dark);
+  text-transform:uppercase;
+  font-weight:600;
+}
+.step-num{
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:400;
+  font-size:3.5rem;
+  line-height:1;
+  color:var(--gold-dark);
+  margin-bottom:1rem;
+}
+.step h3{
+  font-family:var(--sans);
+  font-size:1.15rem;
+  font-weight:600;
+  margin-bottom:0.6rem;
+  letter-spacing:-0.005em;
+  color:var(--ink);
+}
+.step p{color:var(--ink-soft);font-size:0.96rem;line-height:1.6}
+
+/* ─── WITHOUT vs WITH ─── */
+.versus{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:3rem;
-  align-items:end;
-  margin-bottom:3rem;
+  gap:1.5rem;
+  margin-top:3.5rem;
+  position:relative;
 }
-.feed-head .lede{
-  color:var(--cream-dim);
-  font-size:1.05rem;
-  max-width:48ch;
-  padding-bottom:0.4rem;
-}
-.feed-head .lede em, .video-head .lede em, .how-head .lede em{font-style:italic;color:var(--gold);font-weight:400}
-
-.feed-panel{
+.versus::before{
+  content:'VS';
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:3rem;
+  color:var(--gold);
+  background:var(--cream-2);
+  width:90px;height:90px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
   border:1px solid var(--line);
-  border-radius:14px;
-  background:linear-gradient(180deg, rgba(250,249,246,0.02), rgba(250,249,246,0));
+  box-shadow:0 8px 24px rgba(11,31,58,0.08);
+  z-index:2;
+}
+.versus-col{
+  border-radius:20px;
+  padding:2.5rem 2rem;
+  position:relative;
+}
+.versus-col.bad{
+  background:rgba(192,74,53,0.07);
+  border:1px solid rgba(192,74,53,0.2);
+}
+.versus-col.good{
+  background:var(--ink);
+  color:var(--cream);
+  border:1px solid var(--ink);
+}
+.versus-col .tag{
+  display:inline-block;
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  padding:5px 12px;
+  border-radius:999px;
+  margin-bottom:1.5rem;
+  font-weight:600;
+}
+.versus-col.bad .tag{
+  background:rgba(192,74,53,0.15);
+  color:var(--red);
+}
+.versus-col.good .tag{
+  background:var(--gold);
+  color:var(--ink);
+}
+.versus-col h3{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(1.5rem, 2.5vw, 2rem);
+  line-height:1.05;
+  letter-spacing:-0.015em;
+  margin-bottom:1.5rem;
+}
+.versus-col h3 em{font-style:italic;color:var(--gold-dark)}
+.versus-col.good h3 em{color:var(--gold)}
+.versus-list{list-style:none;display:flex;flex-direction:column;gap:0.9rem}
+.versus-list li{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  font-size:0.97rem;
+  line-height:1.55;
+}
+.versus-list li::before{
+  content:'';
+  display:inline-block;
+  flex-shrink:0;
+  margin-top:7px;
+  width:14px;height:14px;
+  border-radius:50%;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.versus-col.bad .versus-list li{color:var(--ink-soft)}
+.versus-col.bad .versus-list li::before{
+  background:rgba(192,74,53,0.15);
+  position:relative;
+}
+.versus-col.bad .versus-list li::before{
+  background:rgba(192,74,53,0.15) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path d='M1 1 L7 7 M7 1 L1 7' stroke='%23C04A35' stroke-width='1.5' stroke-linecap='round'/></svg>") center/8px no-repeat;
+}
+.versus-col.good .versus-list li{color:rgba(244,238,222,0.85)}
+.versus-col.good .versus-list li strong{color:var(--cream);font-weight:600}
+.versus-col.good .versus-list li::before{
+  background:rgba(200,151,58,0.25) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='9' height='8' viewBox='0 0 9 8'><path d='M1 4 L3.5 6.5 L8 1.5' stroke='%23D4A038' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/9px no-repeat;
+}
+
+/* ─── MATH SECTION ─── */
+.math{
+  background:var(--ink);
+  color:var(--cream);
+  padding:7rem 2rem;
+  position:relative;
   overflow:hidden;
+}
+.math::before{
+  content:'';
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(244,238,222,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244,238,222,0.025) 1px, transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 80% 70% at center, black 30%, transparent 80%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at center, black 30%, transparent 80%);
+  pointer-events:none;
+}
+.math .container{position:relative;z-index:1}
+.math .eyebrow{color:var(--gold-bright)}
+.math .eyebrow::before{background:var(--gold-bright)}
+.math .h-display{color:var(--cream)}
+.math .h-display em{color:var(--gold-bright)}
+.math-equation{
+  margin-top:3rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:2.5rem;
+  flex-wrap:wrap;
+  font-family:var(--serif);
+}
+.math-equation .eq-piece{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+}
+.math-equation .num{
+  font-size:clamp(3rem, 8vw, 6rem);
+  font-style:normal;
+  font-weight:400;
+  line-height:0.9;
+  letter-spacing:-0.03em;
+  color:var(--cream);
+}
+.math-equation .num em{font-style:italic;color:var(--gold-bright)}
+.math-equation .num-label{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:rgba(244,238,222,0.5);
+  margin-top:6px;
+}
+.math-equation .op{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(2rem, 5vw, 4rem);
+  color:rgba(244,238,222,0.4);
+  line-height:0.9;
+}
+.math-equation .num.highlight{color:var(--gold-bright)}
+
+.math-dots{
+  margin-top:4rem;
+  display:grid;
+  grid-template-columns:repeat(20, 1fr);
+  gap:6px;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.math-dots .dot{
+  aspect-ratio:1;
+  border-radius:50%;
+  background:rgba(244,238,222,0.18);
+  transition:background 0.2s;
+}
+.math-dots .dot:hover{background:var(--gold-bright)}
+.math-dots-note{
+  text-align:center;
+  margin-top:1.75rem;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:rgba(244,238,222,0.5);
+}
+.math-dots-note strong{color:var(--gold-bright);font-weight:600}
+
+/* ─── INCLUDED FEATURES ─── */
+.included{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:1rem;
+  margin-top:3.5rem;
+}
+.feature{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:1.75rem;
+  background:var(--cream);
+  transition:border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  position:relative;
+}
+.feature:hover{
+  border-color:var(--gold);
+  transform:translateY(-3px);
+  box-shadow:0 16px 32px -16px rgba(11,31,58,0.15);
+}
+.feature-icon{
+  width:42px;height:42px;
+  border-radius:12px;
+  background:var(--gold-bg);
+  color:var(--gold-dark);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.25rem;
+}
+.feature-icon svg{width:22px;height:22px}
+.feature h3{
+  font-family:var(--sans);
+  font-size:1.02rem;
+  font-weight:600;
+  margin-bottom:0.45rem;
+  color:var(--ink);
+  letter-spacing:-0.005em;
+}
+.feature p{color:var(--ink-soft);font-size:0.91rem;line-height:1.55}
+
+/* ─── RADAR LIVE FEED ─── */
+.feed-section{padding:6rem 2rem}
+.feed-panel{
+  border-radius:18px;
+  background:var(--ink);
+  color:var(--cream);
+  overflow:hidden;
+  box-shadow:0 30px 60px -20px rgba(11,31,58,0.25);
+  border:1px solid rgba(11,31,58,0.5);
 }
 .feed-bar{
   display:grid;
@@ -536,47 +871,31 @@ section{
   align-items:center;
   gap:1.5rem;
   padding:1rem 1.25rem;
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid rgba(244,238,222,0.08);
   font-family:var(--mono);
   font-size:11px;
   letter-spacing:0.12em;
   text-transform:uppercase;
-  color:var(--cream-faint);
-  background:rgba(250,249,246,0.02);
+  color:rgba(244,238,222,0.5);
+  background:rgba(244,238,222,0.02);
 }
 .feed-bar .left{display:flex;gap:1.25rem;align-items:center}
 .feed-bar .traffic{display:flex;gap:6px}
-.feed-bar .traffic span{width:9px;height:9px;border-radius:50%;background:rgba(250,249,246,0.18)}
+.feed-bar .traffic span{width:9px;height:9px;border-radius:50%;background:rgba(244,238,222,0.18)}
 .feed-bar .traffic span:first-child{background:var(--gold)}
-.feed-bar .scanning{color:var(--gold);display:inline-flex;align-items:center;gap:7px}
-.feed-bar .scanning::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);animation:pulse 1.2s infinite}
-.feed-bar .week{color:var(--cream-dim)}
-
+.feed-bar .scanning{color:var(--gold-bright);display:inline-flex;align-items:center;gap:7px}
+.feed-bar .scanning::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold-bright);box-shadow:0 0 8px var(--gold-bright);animation:pulseSoft 1.2s infinite}
+.feed-bar .week{color:rgba(244,238,222,0.55)}
 .feed-demo{
   display:inline-flex;align-items:center;gap:6px;
   padding:3px 9px;
   border:1px solid rgba(212,160,56,0.4);
   border-radius:4px;
-  background:rgba(212,160,56,0.08);
-  color:var(--gold);
-  font-size:10px;
-  letter-spacing:0.18em;
-  text-transform:uppercase;
-  font-weight:600;
+  background:rgba(212,160,56,0.1);
+  color:var(--gold-bright);
+  font-size:10px;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;
 }
 .feed-demo::before{content:'◆';font-size:8px;opacity:0.7}
-.feed-disclaimer{
-  padding:0.85rem 1.25rem;
-  border-top:1px solid var(--line);
-  background:rgba(212,160,56,0.04);
-  font-family:var(--mono);
-  font-size:10.5px;
-  letter-spacing:0.06em;
-  color:var(--cream-dim);
-  display:flex;align-items:center;gap:10px;
-  text-transform:none;
-}
-.feed-disclaimer strong{color:var(--gold);text-transform:uppercase;letter-spacing:0.14em;font-weight:600}
 
 .feed-grid{
   display:grid;
@@ -585,13 +904,12 @@ section{
 }
 .feed-scope{
   position:relative;
-  border-right:1px solid var(--line);
+  border-right:1px solid rgba(244,238,222,0.08);
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
-  background:radial-gradient(circle at center, rgba(212,160,56,0.04), transparent 60%);
+  background:radial-gradient(circle at center, rgba(212,160,56,0.06), transparent 60%);
 }
-
-.scope-svg{width:100%;height:100%;max-width:520px;max-height:520px}
+.scope-svg{width:100%;height:100%;max-width:520px;max-height:520px;padding:2rem}
 
 .feed-stats{
   position:absolute;
@@ -601,14 +919,14 @@ section{
   font-size:10px;
   letter-spacing:0.12em;
   text-transform:uppercase;
-  color:var(--cream-faint);
+  color:rgba(244,238,222,0.5);
   pointer-events:none;
 }
 .feed-stats .cell{
-  border:1px solid var(--line);
+  border:1px solid rgba(244,238,222,0.1);
   border-radius:8px;
   padding:0.6rem 0.75rem;
-  background:rgba(10,20,40,0.55);
+  background:rgba(11,31,58,0.7);
   backdrop-filter:blur(6px);
 }
 .feed-stats .cell strong{
@@ -635,770 +953,187 @@ section{
   grid-template-columns:auto 1fr auto auto;
   gap:1rem;
   padding:0.85rem 1.25rem;
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid rgba(244,238,222,0.06);
   align-items:center;
   transition:background 0.2s;
 }
-.feed-row:hover{background:rgba(250,249,246,0.03)}
-.feed-row .time{color:var(--cream-faint);font-size:11px}
+.feed-row:hover{background:rgba(244,238,222,0.03)}
+.feed-row .time{color:rgba(244,238,222,0.4);font-size:11px}
 .feed-row .name{color:var(--cream);font-weight:500;text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:14px}
-.feed-row .class{color:var(--cream-faint);text-transform:uppercase;font-size:10px;letter-spacing:0.1em}
+.feed-row .class{color:rgba(244,238,222,0.4);text-transform:uppercase;font-size:10px;letter-spacing:0.1em}
 .feed-row .status{
   display:inline-flex;align-items:center;gap:6px;
   padding:3px 9px;border-radius:999px;
   font-size:10px;letter-spacing:0.1em;text-transform:uppercase;
   border:1px solid;
 }
-.status-clear{color:var(--green);border-color:rgba(111,191,140,0.35);background:rgba(111,191,140,0.08)}
-.status-clear::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--green)}
-.status-conflict{color:var(--red);border-color:rgba(229,96,74,0.4);background:rgba(229,96,74,0.08)}
-.status-conflict::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);animation:pulse 1.2s infinite}
-.status-scanning{color:var(--gold);border-color:rgba(212,160,56,0.4);background:rgba(212,160,56,0.06)}
-.status-scanning::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);animation:pulse 1s infinite}
+.status-clear{color:#6FBF8C;border-color:rgba(111,191,140,0.35);background:rgba(111,191,140,0.08)}
+.status-clear::before{content:'';width:5px;height:5px;border-radius:50%;background:#6FBF8C}
+.status-conflict{color:#F08070;border-color:rgba(229,96,74,0.4);background:rgba(229,96,74,0.08)}
+.status-conflict::before{content:'';width:5px;height:5px;border-radius:50%;background:#E5604A;box-shadow:0 0 8px #E5604A;animation:pulseSoft 1.2s infinite}
+.status-scanning{color:var(--gold-bright);border-color:rgba(212,160,56,0.4);background:rgba(212,160,56,0.06)}
+.status-scanning::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold-bright);animation:pulseSoft 1s infinite}
 
 .feed-row.new-row{
   animation:slideIn 0.4s ease-out;
-  background:rgba(212,160,56,0.06);
+  background:rgba(212,160,56,0.08);
 }
 @keyframes slideIn{
-  from{opacity:0;transform:translateY(-6px);background:rgba(212,160,56,0.15)}
+  from{opacity:0;transform:translateY(-6px);background:rgba(212,160,56,0.18)}
   to{opacity:1;transform:translateY(0)}
 }
 
-/* ─── VIDEO ─── */
-.video-section{
-  padding:8rem 2rem;
-  position:relative;
-  overflow:hidden;
+.feed-disclaimer{
+  padding:0.85rem 1.25rem;
+  border-top:1px solid rgba(244,238,222,0.08);
+  background:rgba(212,160,56,0.04);
+  font-family:var(--mono);
+  font-size:10.5px;
+  letter-spacing:0.06em;
+  color:rgba(244,238,222,0.65);
+  display:flex;align-items:center;gap:10px;
+  flex-wrap:wrap;
+  text-transform:none;
+  line-height:1.5;
 }
-.video-head{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:3rem;
-  align-items:end;
-  margin-bottom:3rem;
-}
-.video-head .lede{color:var(--cream-dim);font-size:1.05rem;max-width:46ch;padding-bottom:0.4rem}
+.feed-disclaimer strong{color:var(--gold-bright);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;flex-shrink:0}
 
+@media (max-width:900px){
+  .feed-grid{grid-template-columns:1fr;min-height:auto}
+  .feed-scope{border-right:none;border-bottom:1px solid rgba(244,238,222,0.08);min-height:340px}
+}
+
+/* ─── EXPLAINER VIDEO ─── */
+.video-section{padding:5rem 2rem}
 .video-poster{
   position:relative;
   aspect-ratio:16/9;
-  border-radius:16px;
-  border:1px solid var(--line);
-  background:radial-gradient(ellipse at center, var(--ink-3) 0%, var(--ink) 70%);
+  border-radius:20px;
+  background:var(--ink);
   overflow:hidden;
   cursor:pointer;
   display:flex;align-items:center;justify-content:center;
   isolation:isolate;
-  transition:border-color 0.3s, transform 0.3s;
+  transition:transform 0.3s, box-shadow 0.3s;
+  max-width:1100px;
+  margin:0 auto;
+  border:1px solid var(--ink);
 }
-.video-poster:hover{border-color:var(--gold);transform:translateY(-3px)}
+.video-poster:hover{transform:translateY(-4px);box-shadow:0 30px 60px -20px rgba(11,31,58,0.3)}
 .video-poster::before{
   content:'';
   position:absolute;inset:0;
   background-image:
-    linear-gradient(rgba(250,249,246,0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(250,249,246,0.025) 1px, transparent 1px);
+    linear-gradient(rgba(244,238,222,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244,238,222,0.025) 1px, transparent 1px);
   background-size:48px 48px;
   mask-image:radial-gradient(ellipse 80% 70% at center, black 20%, transparent 80%);
   -webkit-mask-image:radial-gradient(ellipse 80% 70% at center, black 20%, transparent 80%);
-  z-index:0;
 }
 .video-poster .poster-radar{
   position:absolute;inset:0;
   display:flex;align-items:center;justify-content:center;
-  z-index:0;
-  opacity:0.55;
+  opacity:0.5;
 }
-.video-poster .poster-radar svg{width:80%;height:80%;max-width:600px;max-height:600px}
-
-.video-poster .poster-meta{
-  position:absolute;
-  top:1.25rem;left:1.5rem;right:1.5rem;
-  display:flex;justify-content:space-between;align-items:center;
+.video-poster .poster-radar svg{width:70%;height:70%;max-width:500px}
+.video-poster .meta{
+  position:absolute;top:1.25rem;left:1.5rem;right:1.5rem;
+  display:flex;justify-content:space-between;
   font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:0.14em;
+  font-size:11px;letter-spacing:0.14em;
   text-transform:uppercase;
-  color:var(--cream-faint);
+  color:rgba(244,238,222,0.5);
   z-index:2;
 }
-.video-poster .poster-meta .live{color:var(--gold);display:inline-flex;align-items:center;gap:7px}
-.video-poster .poster-meta .live::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);animation:pulse 1.4s infinite}
-
-.video-poster .poster-title{
-  position:absolute;
-  bottom:1.5rem;left:1.5rem;right:1.5rem;
-  display:flex;justify-content:space-between;align-items:end;
-  z-index:2;
-  gap:2rem;
+.video-poster .meta .live{color:var(--gold-bright);display:inline-flex;align-items:center;gap:7px}
+.video-poster .meta .live::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--gold-bright);
+  animation:pulseSoft 1.4s infinite;
 }
-.video-poster .poster-title h3{
+.video-poster .title{
+  position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;
+  display:flex;justify-content:space-between;align-items:end;gap:2rem;z-index:2;
+}
+.video-poster .title h3{
   font-family:var(--serif);
   font-weight:400;
-  font-size:clamp(1.6rem, 3.2vw, 2.8rem);
+  font-size:clamp(1.4rem, 2.5vw, 2rem);
   line-height:1;
   letter-spacing:-0.015em;
   color:var(--cream);
-  max-width:14ch;
+  max-width:16ch;
 }
-.video-poster .poster-title h3 em{font-style:italic;color:var(--gold)}
-.video-poster .poster-title .dur{
+.video-poster .title h3 em{font-style:italic;color:var(--gold-bright)}
+.video-poster .dur{
   font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  color:var(--cream-faint);
-  white-space:nowrap;
+  font-size:11px;letter-spacing:0.14em;text-transform:uppercase;
+  color:rgba(244,238,222,0.5);white-space:nowrap;
 }
-
-.play-btn{
-  position:relative;
-  z-index:2;
-  width:clamp(90px, 13vw, 140px);
-  height:clamp(90px, 13vw, 140px);
+.video-poster .play-btn{
+  position:relative;z-index:2;
+  width:clamp(80px, 11vw, 120px);
+  height:clamp(80px, 11vw, 120px);
   border-radius:50%;
   background:var(--gold);
   display:flex;align-items:center;justify-content:center;
-  transition:background 0.2s, transform 0.2s, box-shadow 0.3s;
-  box-shadow:0 0 0 0 rgba(212,160,56,0.4);
+  transition:background 0.2s, transform 0.2s;
 }
-.video-poster:hover .play-btn{
-  background:var(--gold-bright);
-  transform:scale(1.06);
-  box-shadow:0 20px 60px rgba(212,160,56,0.4);
-}
-.play-btn::before{
-  content:'';
-  width:0;height:0;
+.video-poster:hover .play-btn{background:var(--gold-bright);transform:scale(1.06)}
+.video-poster .play-btn::before{
+  content:'';width:0;height:0;
   border-style:solid;
-  border-width:18px 0 18px 28px;
+  border-width:14px 0 14px 22px;
   border-color:transparent transparent transparent var(--ink);
-  margin-left:8px;
+  margin-left:6px;
 }
-.play-btn::after{
-  content:'';
-  position:absolute;inset:-1px;
+.video-poster .play-btn::after{
+  content:'';position:absolute;inset:-1px;
   border-radius:50%;
   border:1px solid var(--gold);
   animation:playPulse 2.4s ease-out infinite;
 }
-@keyframes playPulse{
-  0%{transform:scale(1);opacity:1}
-  100%{transform:scale(1.4);opacity:0}
-}
-
-/* Modal */
-.video-modal{
-  position:fixed;inset:0;
-  z-index:500;
-  background:rgba(11,31,58,0.92);
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-  display:none;
-  align-items:center;justify-content:center;
-  padding:2rem;
-  opacity:0;
-  transition:opacity 0.3s;
-}
-.video-modal.open{display:flex;opacity:1}
-.video-modal-frame{
-  width:100%;
-  max-width:1100px;
-  aspect-ratio:16/9;
-  background:#000;
-  border-radius:14px;
-  overflow:hidden;
-  position:relative;
-  box-shadow:0 40px 100px rgba(0,0,0,0.6);
-}
-.video-modal-frame iframe{
-  width:100%;height:100%;border:0;display:block;
-}
-#video-mount{
-  width:100%;
-  height:100%;
-}
-.video-close{
-  position:absolute;
-  top:-3.5rem;right:0;
-  background:transparent;
-  border:1px solid var(--line-strong);
-  color:var(--cream);
-  width:44px;height:44px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;
-  font-family:var(--sans);
-  font-size:18px;
-  transition:background 0.2s, border-color 0.2s, color 0.2s;
-}
-.video-close:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-soft)}
-
-/* ─── FORM MODAL ─── */
-.form-modal{
-  position:fixed;inset:0;
-  z-index:600;
-  background:rgba(11,31,58,0.85);
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-  display:none;
-  align-items:center;justify-content:center;
-  padding:2rem;
-  opacity:0;
-  transition:opacity 0.3s;
-  overflow-y:auto;
-}
-.form-modal.open{display:flex;opacity:1}
-.form-card{
-  width:100%;
-  max-width:680px;
-  background:var(--ink-2);
-  border:1px solid var(--line-strong);
-  border-radius:18px;
-  padding:3rem;
-  position:relative;
-  box-shadow:0 40px 120px rgba(0,0,0,0.6);
-  margin:auto;
-  transform:translateY(20px);
-  transition:transform 0.4s ease;
-}
-.form-modal.open .form-card{transform:translateY(0)}
-
-.form-head{
-  margin-bottom:2rem;
-  padding-bottom:1.5rem;
-  border-bottom:1px solid var(--line);
-}
-.form-head .eyebrow{margin-bottom:1rem}
-.form-head h3{
-  font-family:var(--serif);
-  font-weight:400;
-  font-size:clamp(1.7rem, 3vw, 2.4rem);
-  line-height:1.05;
-  letter-spacing:-0.02em;
-  color:var(--cream);
-  margin-bottom:0.5rem;
-}
-.form-head h3 em{font-style:italic;color:var(--gold)}
-.form-head p{color:var(--cream-dim);font-size:0.95rem;max-width:48ch}
-
-.form-close{
-  position:absolute;
-  top:1.25rem;right:1.25rem;
-  background:transparent;
-  border:1px solid var(--line-strong);
-  color:var(--cream-dim);
-  width:38px;height:38px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;
-  font-family:var(--sans);
-  font-size:16px;
-  transition:background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
-}
-.form-close:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-soft);transform:rotate(90deg)}
-
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:1rem 1rem;
-}
-.field{display:flex;flex-direction:column;gap:6px}
-.field.full{grid-column:1 / -1}
-.field label{
-  font-family:var(--mono);
-  font-size:10px;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  color:var(--cream-faint);
-  display:flex;justify-content:space-between;align-items:baseline;
-}
-.field label .opt{color:var(--cream-faint);opacity:0.6;font-size:9px}
-.field input,
-.field textarea{
-  background:rgba(250,249,246,0.03);
-  border:1px solid var(--line);
-  border-radius:10px;
-  padding:0.85rem 1rem;
-  color:var(--cream);
-  font-family:var(--sans);
-  font-size:0.97rem;
-  letter-spacing:-0.005em;
-  width:100%;
-  transition:border-color 0.2s, background 0.2s;
-  font-weight:400;
-}
-.field input::placeholder,
-.field textarea::placeholder{color:var(--cream-faint);opacity:0.5}
-.field input:focus,
-.field textarea:focus{
-  outline:none;
-  border-color:var(--gold);
-  background:rgba(212,160,56,0.04);
-}
-.field textarea{resize:vertical;min-height:90px;font-family:var(--sans);line-height:1.5}
-.field input:invalid:not(:placeholder-shown){border-color:rgba(229,96,74,0.5)}
-
-.form-foot{
-  margin-top:1.75rem;
-  display:flex;align-items:center;justify-content:space-between;
-  gap:1.5rem;
-  flex-wrap:wrap;
-}
-.form-note{
-  font-family:var(--mono);
-  font-size:10px;
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  color:var(--cream-faint);
-  max-width:30ch;
-  line-height:1.6;
-}
-.form-submit{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:1rem 1.75rem;
-  background:var(--gold);
-  color:var(--ink);
-  border:none;
-  border-radius:999px;
-  font-family:var(--sans);
-  font-weight:600;
-  font-size:0.95rem;
-  cursor:pointer;
-  transition:transform 0.2s, background 0.2s, box-shadow 0.2s;
-}
-.form-submit::after{content:'→';transition:transform 0.2s}
-.form-submit:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 14px 38px rgba(212,160,56,0.35)}
-.form-submit:hover::after{transform:translateX(4px)}
-.form-submit:disabled{opacity:0.5;cursor:wait}
-
-.form-success{
-  display:none;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  padding:2rem 0;
-  gap:1rem;
-}
-.form-success.show{display:flex}
-.form-success .check{
-  width:64px;height:64px;border-radius:50%;
-  background:rgba(111,191,140,0.15);
-  border:1px solid rgba(111,191,140,0.4);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--green);font-size:1.8rem;
-}
-.form-success h4{
-  font-family:var(--serif);
-  font-weight:400;
-  font-size:2rem;
-  color:var(--cream);
-  letter-spacing:-0.018em;
-}
-.form-success h4 em{font-style:italic;color:var(--gold)}
-.form-success p{color:var(--cream-dim);max-width:42ch;font-size:0.95rem}
-
-@media (max-width:600px){
-  .form-card{padding:2rem 1.5rem;border-radius:14px}
-  .form-grid{grid-template-columns:1fr}
-  .form-close{top:1rem;right:1rem}
-}
-
-/* ─── HOW IT WORKS ─── */
-.how-section{
-  background:var(--ink-2);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.how-head{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:4rem;
-  margin-bottom:5rem;
-  align-items:end;
-}
-.how-head .lede{color:var(--cream-dim);font-size:1.05rem;padding-bottom:0.4rem;max-width:44ch}
-
-.steps{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:0;
-  border:1px solid var(--line);
-  border-radius:16px;
-  overflow:hidden;
-}
-.step{
-  padding:2.5rem 2rem 2.5rem;
-  border-right:1px solid var(--line);
-  position:relative;
-  background:rgba(250,249,246,0.01);
-  transition:background 0.3s;
-}
-.step:last-child{border-right:none}
-.step:hover{background:rgba(212,160,56,0.04)}
-
-.step-num{
-  font-family:var(--serif);
-  font-style:italic;
-  font-weight:400;
-  font-size:4.5rem;
-  line-height:1;
-  color:var(--gold);
-  margin-bottom:1.5rem;
-  display:flex;align-items:baseline;gap:8px;
-}
-.step-num::before{
-  content:'';
-  display:inline-block;
-  width:24px;height:1px;background:var(--gold);
-  margin-right:6px;
-  transform:translateY(-12px);
-}
-
-.step h3{
-  font-family:var(--sans);
-  font-size:1.15rem;
-  font-weight:600;
-  margin-bottom:0.7rem;
-  letter-spacing:-0.005em;
-}
-.step p{color:var(--cream-dim);font-size:0.95rem;line-height:1.6}
-
-.step-tag{
-  position:absolute;
-  top:1.25rem;right:1.25rem;
-  font-family:var(--mono);
-  font-size:10px;
-  letter-spacing:0.12em;
-  color:var(--cream-faint);
-  text-transform:uppercase;
-}
-
-/* ─── THREAT / URGENCY ─── */
-.threat{
-  padding:9rem 2rem;
-  position:relative;
-  overflow:hidden;
-}
-.threat-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:5rem;
-  align-items:center;
-}
-.threat-quote{
-  font-family:var(--serif);
-  font-weight:400;
-  font-size:clamp(2.8rem, 6vw, 5.6rem);
-  line-height:0.95;
-  letter-spacing:-0.022em;
-}
-.threat-quote em{font-style:italic;color:var(--gold)}
-.threat-quote .small{
-  display:block;
-  font-size:0.4em;
-  font-family:var(--mono);
-  font-style:normal;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  color:var(--cream-faint);
-  margin-top:1.5rem;
-}
-
-.timeline{
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:2rem;
-  background:rgba(250,249,246,0.02);
-  position:relative;
-}
-.timeline-head{
-  display:flex;justify-content:space-between;align-items:center;
-  font-family:var(--mono);
-  font-size:10px;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  color:var(--cream-faint);
-  margin-bottom:2rem;
-  padding-bottom:1rem;
-  border-bottom:1px solid var(--line);
-}
-.timeline-head .danger{color:var(--red);display:inline-flex;align-items:center;gap:6px}
-.timeline-head .danger::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);animation:pulse 1.4s infinite}
-
-.tl-row{
-  display:grid;
-  grid-template-columns:auto 1fr;
-  gap:1.25rem;
-  padding-bottom:1.5rem;
-  position:relative;
-}
-.tl-row:last-child{padding-bottom:0}
-.tl-row .dot{
-  width:14px;height:14px;border-radius:50%;
-  border:2px solid var(--gold);
-  background:var(--ink);
-  margin-top:4px;
-  position:relative;z-index:2;
-}
-.tl-row.danger .dot{
-  border-color:var(--red);
-  background:var(--red);
-  box-shadow:0 0 14px rgba(229,96,74,0.55);
-}
-.tl-row::before{
-  content:'';
-  position:absolute;
-  left:6px;top:18px;bottom:-4px;
-  width:1px;background:var(--line-strong);
-}
-.tl-row:last-child::before{display:none}
-
-.tl-row .body strong{
-  display:block;
-  font-family:var(--sans);
-  font-weight:600;
-  color:var(--cream);
-  margin-bottom:0.2rem;
-  font-size:0.98rem;
-}
-.tl-row .body span{
-  font-family:var(--mono);
-  font-size:10px;
-  color:var(--gold);
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  display:block;
-  margin-bottom:0.4rem;
-}
-.tl-row.danger .body span{color:var(--red)}
-.tl-row .body p{
-  color:var(--cream-dim);
-  font-size:0.92rem;
-  line-height:1.55;
-}
-
-/* ─── COMPARE ─── */
-.compare-section{
-  background:var(--ink-2);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-.compare{
-  border:1px solid var(--line);
-  border-radius:16px;
-  overflow:hidden;
-}
-.compare-row{
-  display:grid;
-  grid-template-columns:1.3fr 1fr 1fr;
-  border-bottom:1px solid var(--line);
-}
-.compare-row:last-child{border-bottom:none}
-.compare-cell{
-  padding:1.1rem 1.5rem;
-  font-size:0.95rem;
-  border-right:1px solid var(--line);
-}
-.compare-cell:last-child{border-right:none}
-.compare-cell.label{
-  color:var(--cream);
-  font-weight:500;
-  font-family:var(--sans);
-  background:rgba(250,249,246,0.015);
-}
-.compare-cell.alt{
-  color:var(--cream-dim);
-}
-.compare-cell.us{
-  background:rgba(212,160,56,0.05);
-  color:var(--cream);
-  font-weight:500;
-  position:relative;
-}
-.compare-row.header .compare-cell{
-  font-family:var(--mono);
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:0.12em;
-  color:var(--cream-faint);
-  font-weight:500;
-  padding:1rem 1.5rem;
-  background:rgba(250,249,246,0.02);
-}
-.compare-row.header .compare-cell.us{
-  color:var(--gold);
-  background:rgba(212,160,56,0.08);
-}
-.tick{color:var(--green);display:inline-block;margin-right:6px;font-family:var(--mono)}
-.cross{color:var(--red);display:inline-block;margin-right:6px;font-family:var(--mono)}
-
-/* ─── PRICING ─── */
-.pricing{
-  padding:9rem 2rem;
-}
-.pricing-grid{
-  display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:5rem;
-  align-items:center;
-}
-.price-display{
-  font-family:var(--serif);
-  font-weight:400;
-  font-size:clamp(7rem, 22vw, 18rem);
-  line-height:0.85;
-  letter-spacing:-0.04em;
-  color:var(--cream);
-  display:flex;align-items:flex-start;
-}
-.price-display .currency{
-  font-size:0.35em;
-  color:var(--gold);
-  font-style:italic;
-  margin-top:0.2em;
-  margin-right:0.05em;
-}
-.price-display .amount{position:relative}
-.price-display .amount::after{
-  content:'';
-  position:absolute;
-  right:-0.14em;bottom:0.18em;
-  width:0.08em;height:0.08em;border-radius:50%;
-  background:var(--gold);
-  box-shadow:0 0 30px var(--gold);
-}
-
-.price-meta{
-  font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  color:var(--cream-faint);
-  margin-top:1.5rem;
-  display:flex;flex-direction:column;gap:0.4rem;
-}
-.price-meta strong{color:var(--gold);font-weight:500}
-
-.price-equiv{
-  display:flex;
-  align-items:baseline;
-  gap:14px;
-  margin-top:1.25rem;
-  padding:0.85rem 1.1rem;
-  background:rgba(212,160,56,0.08);
-  border:1px solid rgba(212,160,56,0.25);
-  border-radius:12px;
-  width:fit-content;
-  flex-wrap:wrap;
-}
-.price-equiv .per-month{
-  font-family:var(--serif);
-  font-size:1.6rem;
-  font-style:italic;
-  color:var(--cream);
-  letter-spacing:-0.01em;
-  line-height:1;
-}
-.price-equiv .per-month strong{
-  font-style:normal;
-  font-weight:400;
-  color:var(--gold);
-  font-size:2rem;
-  font-family:var(--serif);
-}
-.price-equiv .per-month-note{
-  font-family:var(--mono);
-  font-size:10px;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  color:var(--cream-faint);
-}
-.price-list li strong{
-  color:var(--gold);
-  font-weight:500;
-  font-family:inherit;
-}
-.price-list li.highlight{
-  background:rgba(212,160,56,0.04);
-  margin:0 -0.5rem;
-  padding-left:0.5rem;
-  padding-right:0.5rem;
-  border-radius:6px;
-}
-
-.price-side h3{
-  font-family:var(--serif);
-  font-weight:400;
-  font-size:2.4rem;
-  line-height:1.05;
-  margin-bottom:1.25rem;
-  letter-spacing:-0.018em;
-}
-.price-side h3 em{font-style:italic;color:var(--gold)}
-.price-side > p{color:var(--cream-dim);margin-bottom:2rem;font-size:1rem}
-
-.price-list{
-  list-style:none;
-  margin-bottom:2.5rem;
-  border-top:1px solid var(--line);
-}
-.price-list li{
-  display:flex;align-items:flex-start;gap:14px;
-  padding:0.85rem 0;
-  border-bottom:1px solid var(--line);
-  font-size:0.95rem;
-  color:var(--cream);
-}
-.price-list li::before{
-  content:'';
-  flex-shrink:0;margin-top:8px;
-  width:6px;height:6px;border-radius:50%;
-  background:var(--gold);
-}
-
-.price-cta{display:flex;gap:0.75rem;flex-wrap:wrap}
+@keyframes playPulse{0%{transform:scale(1);opacity:1}100%{transform:scale(1.4);opacity:0}}
 
 /* ─── FAQ ─── */
-.faq-section{
-  background:var(--ink-2);
-  border-top:1px solid var(--line);
-}
-.faq-grid{
-  display:grid;
-  grid-template-columns:1fr 1.4fr;
-  gap:5rem;
-  align-items:start;
-}
+.faq-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:4.5rem;align-items:start}
 .faq-side .eyebrow{margin-bottom:1.25rem}
 .faq-side h2{margin-bottom:1.25rem}
-.faq-side p{color:var(--cream-dim);font-size:0.98rem;max-width:36ch}
+.faq-side p{color:var(--ink-soft);font-size:0.98rem;max-width:36ch}
+.faq-side .cta-mini{
+  margin-top:2rem;
+  display:inline-flex;align-items:center;gap:8px;
+  color:var(--ink);
+  font-weight:600;
+  font-size:0.95rem;
+  padding-bottom:4px;
+  border-bottom:1px solid var(--line-strong);
+  transition:color 0.2s, border-color 0.2s, gap 0.2s;
+}
+.faq-side .cta-mini:hover{color:var(--gold-dark);border-color:var(--gold);gap:12px}
 
 .faq-list{display:flex;flex-direction:column}
-.faq-item{
-  border-bottom:1px solid var(--line);
-  padding:0;
-}
+.faq-item{border-bottom:1px solid var(--line)}
 .faq-item summary{
-  list-style:none;
-  cursor:pointer;
-  padding:1.6rem 0;
+  list-style:none;cursor:pointer;
+  padding:1.4rem 0;
   display:grid;
   grid-template-columns:auto 1fr auto;
-  gap:1.5rem;
+  gap:1.25rem;
   align-items:center;
   font-family:var(--sans);
-  font-size:1.1rem;
+  font-size:1.05rem;
   font-weight:500;
-  color:var(--cream);
+  color:var(--ink);
   letter-spacing:-0.005em;
   transition:color 0.2s;
 }
-.faq-item summary:hover{color:var(--gold)}
+.faq-item summary:hover{color:var(--gold-dark)}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-num{
   font-family:var(--mono);
   font-size:11px;
-  color:var(--gold);
+  color:var(--gold-dark);
   letter-spacing:0.1em;
 }
 .faq-toggle{
@@ -1407,24 +1142,110 @@ section{
   border-radius:50%;
   display:flex;align-items:center;justify-content:center;
   font-family:var(--serif);
-  font-size:1.4rem;
-  color:var(--cream-dim);
+  font-size:1.3rem;
+  color:var(--ink-mid);
   transition:transform 0.3s, color 0.2s, border-color 0.2s, background 0.2s;
 }
 .faq-item[open] .faq-toggle{
   transform:rotate(45deg);
-  background:var(--gold);
-  color:var(--ink);
-  border-color:var(--gold);
+  background:var(--ink);
+  color:var(--cream);
+  border-color:var(--ink);
 }
 .faq-body{
-  padding:0 0 1.8rem 4.5rem;
-  color:var(--cream-dim);
+  padding:0 0 1.6rem 4.5rem;
+  color:var(--ink-soft);
   font-size:0.96rem;
   line-height:1.65;
   max-width:60ch;
 }
-.faq-body strong{color:var(--cream);font-weight:500}
+.faq-body strong{color:var(--ink);font-weight:600}
+
+/* ─── CTA SECTION ─── */
+.final-cta{
+  padding:7rem 2rem;
+  text-align:center;
+}
+.final-cta .h-display{margin-bottom:1.5rem}
+.final-cta .section-lede{
+  max-width:48ch;
+  margin:0 auto 2.5rem;
+  font-size:1.15rem;
+}
+.final-cta .price-strip{
+  display:inline-flex;
+  align-items:baseline;gap:14px;
+  background:var(--cream-2);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:0.65rem 1.5rem;
+  margin-bottom:2rem;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--ink-mid);
+}
+.final-cta .price-strip strong{
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:400;
+  font-size:1.4rem;
+  color:var(--gold-dark);
+  letter-spacing:0;
+  text-transform:none;
+}
+.final-cta .actions{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+
+/* ─── CONTACT ─── */
+.contact{padding:6rem 2rem 4rem}
+.contact-head{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:3rem;margin-bottom:3rem;align-items:end;
+}
+.contact-cards{display:grid;grid-template-columns:repeat(3, 1fr);gap:1rem}
+.contact-card{
+  display:flex;flex-direction:column;gap:0.4rem;
+  padding:1.5rem;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--cream);
+  transition:border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  cursor:pointer;
+}
+.contact-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 16px 32px -16px rgba(11,31,58,0.12)}
+.contact-card small{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--ink-faint);
+}
+.contact-card strong{
+  font-family:var(--sans);font-weight:500;color:var(--ink);font-size:1.02rem;
+}
+
+/* ─── FOOTER MARK ─── */
+.bigmark{
+  padding:4rem 2rem 3rem;
+  display:flex;align-items:center;justify-content:center;
+  border-top:1px solid var(--line);
+}
+.bigmark img{width:min(92%, 900px);height:auto;display:block}
+
+footer{
+  padding:2rem 2rem 2.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--mono);
+  font-size:11px;letter-spacing:0.08em;
+  color:var(--ink-faint);
+  text-transform:uppercase;
+}
+.foot-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;align-items:center;
+}
+.foot-grid .center{text-align:center}
+.foot-grid .right{text-align:right}
+.foot-grid a{color:var(--ink-mid);transition:color 0.2s}
+.foot-grid a:hover{color:var(--gold-dark)}
+.foot-grid .divider{margin:0 8px;opacity:0.4}
 
 /* ─── STICKY CTA ─── */
 .sticky-cta{
@@ -1437,171 +1258,184 @@ section{
   transition:opacity 0.4s ease, transform 0.5s cubic-bezier(0.16,1,0.3,1);
   display:flex;justify-content:center;
 }
-.sticky-cta.visible{
-  opacity:1;
-  transform:translateY(0);
-  pointer-events:auto;
-}
+.sticky-cta.visible{opacity:1;transform:translateY(0);pointer-events:auto}
 .sticky-cta-inner{
-  display:flex;
-  align-items:center;
-  gap:1.25rem;
-  background:rgba(15,39,69,0.92);
+  display:flex;align-items:center;gap:1rem;
+  background:rgba(11,31,58,0.95);
   backdrop-filter:blur(20px) saturate(140%);
   -webkit-backdrop-filter:blur(20px) saturate(140%);
-  border:1px solid var(--line-strong);
+  color:var(--cream);
   border-radius:999px;
-  padding:0.5rem 0.5rem 0.5rem 1.4rem;
-  box-shadow:0 24px 60px rgba(0,0,0,0.45);
-  max-width:560px;
-  width:100%;
+  padding:0.45rem 0.45rem 0.45rem 1.4rem;
+  box-shadow:0 24px 60px rgba(11,31,58,0.4);
+  max-width:540px;width:100%;
+  border:1px solid rgba(244,238,222,0.15);
 }
 .sticky-cta-info{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}
 .sticky-cta-eyebrow{
-  font-family:var(--mono);
-  font-size:9px;
-  letter-spacing:0.16em;
-  text-transform:uppercase;
-  color:var(--cream-faint);
+  font-family:var(--mono);font-size:9px;letter-spacing:0.16em;
+  text-transform:uppercase;color:rgba(244,238,222,0.55);
 }
 .sticky-cta-title{
-  font-family:var(--sans);
-  font-size:0.92rem;
-  color:var(--cream);
-  font-weight:400;
-  letter-spacing:-0.005em;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+  font-family:var(--sans);font-size:0.93rem;font-weight:400;
+  letter-spacing:-0.005em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
-.sticky-cta-title strong{color:var(--gold);font-weight:600}
-.sticky-cta .btn{padding:0.7rem 1.2rem;font-size:0.88rem;flex-shrink:0}
-.sticky-cta .btn::after{content:'→'}
-@media (max-width:520px){
-  .sticky-cta{bottom:0.5rem;left:0.5rem;right:0.5rem}
-  .sticky-cta-inner{padding:0.4rem 0.4rem 0.4rem 1rem;gap:0.6rem}
-  .sticky-cta-title{font-size:0.82rem}
-  .sticky-cta-eyebrow{font-size:8.5px}
-  .sticky-cta .btn{padding:0.6rem 1rem;font-size:0.82rem}
+.sticky-cta-title strong{color:var(--gold-bright);font-weight:600}
+.sticky-cta .btn{
+  padding:0.65rem 1.15rem;font-size:0.88rem;flex-shrink:0;
+  background:var(--gold);color:var(--ink);
 }
-
-/* ─── CONTACT / FOOTER ─── */
-.contact{
-  padding:7rem 2rem 4rem;
-  position:relative;
-}
-.contact-head{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:4rem;
-  margin-bottom:5rem;
-}
-.contact-head h2{font-size:clamp(2rem, 4.2vw, 3.4rem)}
-.contact-list{display:flex;flex-direction:column;gap:0.5rem}
-.contact-card{
-  display:grid;
-  grid-template-columns:auto 1fr auto;
-  align-items:center;
-  gap:1.25rem;
-  padding:1.4rem 1.6rem;
-  border:1px solid var(--line);
-  border-radius:14px;
-  transition:border-color 0.2s, background 0.2s, transform 0.2s;
-  cursor:pointer;
-}
-.contact-card:hover{border-color:var(--gold);background:rgba(212,160,56,0.04);transform:translateX(4px)}
-.contact-card .ico{
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--gold);
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  border:1px solid var(--line-strong);
-  border-radius:6px;
-  padding:6px 8px;
-}
-.contact-card .text small{
-  font-family:var(--mono);
-  font-size:10px;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  color:var(--cream-faint);
-  display:block;
-  margin-bottom:2px;
-}
-.contact-card .text strong{
-  font-family:var(--sans);
-  font-weight:500;
-  font-size:1.05rem;
-  color:var(--cream);
-}
-.contact-card .arrow{
-  color:var(--cream-faint);
-  font-size:1.2rem;
-  transition:color 0.2s, transform 0.2s;
-}
-.contact-card:hover .arrow{color:var(--gold);transform:translateX(4px)}
-
-/* Big mark footer */
-.bigmark{
-  padding:5rem 2rem 4rem;
-  position:relative;
-  display:flex;align-items:center;justify-content:center;
-  border-top:1px solid var(--line);
-  overflow:hidden;
-}
-.bigmark img{
-  width:min(92%, 1400px);
-  height:auto;
-  display:block;
-}
-
-footer{
-  padding:2rem 2rem 2.5rem;
-  border-top:1px solid var(--line);
-  font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:0.06em;
-  color:var(--cream-faint);
-  text-transform:uppercase;
-}
-.foot-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:2rem;
-  align-items:center;
-}
-.foot-grid .center{text-align:center}
-.foot-grid .right{text-align:right}
-.foot-grid a{color:var(--cream-dim);transition:color 0.2s}
-.foot-grid a:hover{color:var(--gold)}
-.foot-grid .divider{margin:0 8px;opacity:0.4}
+.sticky-cta .btn:hover{background:var(--gold-bright)}
 
 /* ─── REVEAL ─── */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease, transform 0.7s ease}
 .reveal.visible{opacity:1;transform:none}
 
+/* ─── FORM MODAL ─── */
+.form-modal{
+  position:fixed;inset:0;z-index:600;
+  background:rgba(11,31,58,0.65);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  display:none;align-items:center;justify-content:center;
+  padding:2rem;opacity:0;transition:opacity 0.3s;overflow-y:auto;
+}
+.form-modal.open{display:flex;opacity:1}
+.form-card{
+  width:100%;max-width:680px;
+  background:var(--cream);
+  border:1px solid var(--line-strong);
+  border-radius:20px;
+  padding:2.5rem;position:relative;
+  box-shadow:0 40px 120px rgba(11,31,58,0.3);
+  margin:auto;
+  transform:translateY(20px);transition:transform 0.4s ease;
+}
+.form-modal.open .form-card{transform:translateY(0)}
+.form-head{margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:1px solid var(--line)}
+.form-head .eyebrow{margin-bottom:0.85rem}
+.form-head h3{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(1.6rem, 3vw, 2.2rem);
+  line-height:1.05;letter-spacing:-0.02em;color:var(--ink);
+  margin-bottom:0.5rem;
+}
+.form-head h3 em{font-style:italic;color:var(--gold-dark)}
+.form-head p{color:var(--ink-soft);font-size:0.95rem;max-width:48ch}
+.form-close{
+  position:absolute;top:1.25rem;right:1.25rem;
+  background:transparent;border:1px solid var(--line-strong);
+  color:var(--ink-mid);
+  width:36px;height:36px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  font-family:var(--sans);font-size:16px;
+  transition:background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.form-close:hover{border-color:var(--gold);color:var(--gold-dark);background:var(--gold-bg);transform:rotate(90deg)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1 / -1}
+.field label{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--ink-faint);
+  display:flex;justify-content:space-between;align-items:baseline;
+}
+.field label .opt{opacity:0.6;font-size:9px}
+.field input,.field textarea{
+  background:var(--cream-2);
+  border:1px solid var(--line);border-radius:10px;
+  padding:0.8rem 1rem;color:var(--ink);
+  font-family:var(--sans);font-size:0.97rem;
+  letter-spacing:-0.005em;width:100%;
+  transition:border-color 0.2s, background 0.2s;
+}
+.field input::placeholder,.field textarea::placeholder{color:var(--ink-faint);opacity:0.7}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--gold);background:var(--cream)}
+.field textarea{resize:vertical;min-height:90px;line-height:1.5}
+.form-foot{margin-top:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.form-note{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--ink-faint);
+  max-width:30ch;line-height:1.6;
+}
+.form-submit{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:0.95rem 1.6rem;background:var(--ink);color:var(--cream);
+  border:none;border-radius:999px;
+  font-family:var(--sans);font-weight:600;font-size:0.93rem;cursor:pointer;
+  transition:transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+.form-submit::after{content:'→';transition:transform 0.2s}
+.form-submit:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:0 14px 38px rgba(11,31,58,0.18)}
+.form-submit:hover::after{transform:translateX(4px)}
+.form-submit:disabled{opacity:0.5;cursor:wait}
+.form-success{display:none;flex-direction:column;align-items:center;text-align:center;padding:2rem 0;gap:1rem}
+.form-success.show{display:flex}
+.form-success .check{
+  width:60px;height:60px;border-radius:50%;
+  background:rgba(74,142,94,0.15);
+  border:1px solid rgba(74,142,94,0.35);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--green);font-size:1.7rem;
+}
+.form-success h4{
+  font-family:var(--serif);font-weight:400;
+  font-size:1.8rem;color:var(--ink);letter-spacing:-0.018em;
+}
+.form-success h4 em{font-style:italic;color:var(--gold-dark)}
+.form-success p{color:var(--ink-soft);max-width:42ch;font-size:0.95rem}
+
+/* ─── VIDEO MODAL ─── */
+.video-modal{
+  position:fixed;inset:0;z-index:500;
+  background:rgba(11,31,58,0.88);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  display:none;align-items:center;justify-content:center;padding:2rem;
+  opacity:0;transition:opacity 0.3s;
+}
+.video-modal.open{display:flex;opacity:1}
+.video-modal-frame{
+  width:100%;max-width:1100px;aspect-ratio:16/9;
+  background:var(--ink);
+  border-radius:14px;overflow:hidden;position:relative;
+  box-shadow:0 40px 100px rgba(11,31,58,0.4);
+}
+.video-modal-frame iframe{width:100%;height:100%;border:0;display:block}
+#video-mount{width:100%;height:100%}
+.video-close{
+  position:absolute;top:-3.5rem;right:0;
+  background:transparent;border:1px solid rgba(244,238,222,0.3);
+  color:var(--cream);
+  width:42px;height:42px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  font-family:var(--sans);font-size:18px;
+  transition:background 0.2s, border-color 0.2s, color 0.2s;
+}
+.video-close:hover{border-color:var(--gold);color:var(--gold-bright);background:rgba(212,160,56,0.1)}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width:900px){
   .nav-links a:not(.nav-cta){display:none}
-  .hero-bottom{grid-template-columns:1fr;gap:2rem;align-items:start}
-  .hero-stats{text-align:left}
-  .feed-head, .how-head, .video-head, .threat-grid, .pricing-grid, .faq-grid, .contact-head{
-    grid-template-columns:1fr;
-    gap:2.5rem;
+  .hero{padding:6rem 1.25rem 3rem;min-height:auto}
+  .hero-grid, .how-head, .versus, .faq-grid, .contact-head, .contact-cards{
+    grid-template-columns:1fr;gap:2.5rem;
   }
-  .feed-grid{grid-template-columns:1fr;min-height:auto}
-  .feed-scope{border-right:none;border-bottom:1px solid var(--line);min-height:340px}
-  .steps{grid-template-columns:1fr}
-  .step{border-right:none;border-bottom:1px solid var(--line)}
-  .step:last-child{border-bottom:none}
-  .compare-row{grid-template-columns:1.4fr 1fr}
-  .compare-cell:nth-child(2){display:none}
+  .steps, .included{grid-template-columns:1fr}
+  .price-card{transform:none;padding:2rem 1.5rem 1.5rem}
+  .price-card:hover{transform:translateY(-3px)}
+  .contact-cards{grid-template-columns:1fr;gap:0.85rem}
+  .versus::before{
+    position:relative;left:auto;top:auto;transform:none;
+    margin:0 auto;width:64px;height:64px;font-size:2rem;
+  }
+  .versus{flex-direction:column;display:flex}
+  section{padding:5rem 1.25rem}
+  .math, .final-cta{padding:5rem 1.25rem}
+  .math-dots{grid-template-columns:repeat(15, 1fr)}
   .foot-grid{grid-template-columns:1fr;text-align:center;gap:0.8rem}
   .foot-grid .right{text-align:center}
   .faq-body{padding-left:0}
-  section{padding:5rem 1.5rem}
-  .threat, .pricing, .contact{padding:6rem 1.5rem}
-  .nav{padding:1rem}
+  .form-grid{grid-template-columns:1fr}
+  .form-card{padding:2rem 1.5rem}
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -1615,195 +1449,177 @@ footer{
 <!-- ─── NAV ─── -->
 <nav class="nav" id="nav">
   <a href="#" class="nav-brand">
-    <img src="brand/symbol-on-navy.svg" alt="" class="symbol">
+    <img src="brand/symbol-color.svg" alt="" class="symbol" onerror="this.src='brand/symbol-on-navy.svg'">
     <span class="wordmark">radar<span>marca</span></span>
   </a>
   <div class="nav-links">
-    <a href="#feed">Feed</a>
-    <a href="#video">Vídeo</a>
-    <a href="#metodo">Método</a>
+    <a href="#como">Como funciona</a>
     <a href="#preco">Preço</a>
     <a href="#faq">FAQ</a>
-    <a href="#contacto" class="nav-cta">Contactar</a>
+    <a href="#" class="nav-cta" data-open-form="protect">Proteger marca</a>
   </div>
 </nav>
 
 <!-- ─── HERO ─── -->
 <header class="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-radar">
-    <svg viewBox="-300 -300 600 600" preserveAspectRatio="xMidYMid meet">
+  <div class="hero-bg-radar" aria-hidden="true">
+    <svg viewBox="-300 -300 600 600">
       <defs>
-        <radialGradient id="sweepGrad" cx="0" cy="0" r="280" gradientUnits="userSpaceOnUse">
+        <radialGradient id="bgGrad" cx="0" cy="0" r="280" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stop-color="#C8973A" stop-opacity="0"/>
-          <stop offset="70%" stop-color="#C8973A" stop-opacity="0.05"/>
-          <stop offset="100%" stop-color="#C8973A" stop-opacity="0.22"/>
+          <stop offset="100%" stop-color="#C8973A" stop-opacity="0.4"/>
         </radialGradient>
-        <linearGradient id="sweepLine" x1="0" y1="0" x2="280" y2="0" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#C8973A" stop-opacity="0"/>
-          <stop offset="100%" stop-color="#E4B14B" stop-opacity="1"/>
-        </linearGradient>
       </defs>
-
-      <!-- rings -->
-      <g fill="none" stroke="rgba(250,249,246,0.08)" stroke-width="1">
-        <circle r="60"/>
-        <circle r="120"/>
-        <circle r="180"/>
-        <circle r="240"/>
-        <circle r="300"/>
+      <g fill="none" stroke="rgba(11,31,58,0.18)" stroke-width="1">
+        <circle r="80"/><circle r="160"/><circle r="240"/><circle r="300"/>
       </g>
-      <!-- crosshairs -->
-      <g stroke="rgba(250,249,246,0.06)" stroke-width="1">
+      <g stroke="rgba(11,31,58,0.1)" stroke-width="1">
         <line x1="-300" y1="0" x2="300" y2="0"/>
         <line x1="0" y1="-300" x2="0" y2="300"/>
-        <line x1="-212" y1="-212" x2="212" y2="212" stroke-dasharray="2 4"/>
-        <line x1="-212" y1="212" x2="212" y2="-212" stroke-dasharray="2 4"/>
       </g>
-      <!-- ticks -->
-      <g fill="rgba(250,249,246,0.25)" font-family="JetBrains Mono" font-size="9">
-        <text x="0" y="-308" text-anchor="middle">N</text>
-        <text x="312" y="3" dominant-baseline="middle">E</text>
-        <text x="0" y="320" text-anchor="middle">S</text>
-        <text x="-312" y="3" text-anchor="end" dominant-baseline="middle">W</text>
-      </g>
-
-      <!-- expanding pulses -->
-      <g fill="none" stroke="#C8973A" stroke-width="1">
-        <circle r="0" opacity="0.7">
-          <animate attributeName="r" from="20" to="300" dur="4s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" from="0.6" to="0" dur="4s" repeatCount="indefinite"/>
-        </circle>
-        <circle r="0" opacity="0.7">
-          <animate attributeName="r" from="20" to="300" dur="4s" begin="1.3s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" from="0.6" to="0" dur="4s" begin="1.3s" repeatCount="indefinite"/>
-        </circle>
-        <circle r="0" opacity="0.7">
-          <animate attributeName="r" from="20" to="300" dur="4s" begin="2.6s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" from="0.6" to="0" dur="4s" begin="2.6s" repeatCount="indefinite"/>
-        </circle>
-      </g>
-
-      <!-- sweep wedge -->
       <g>
-        <path d="M0,0 L280,0 A280,280 0 0,1 215,180 Z" fill="url(#sweepGrad)">
-          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite"/>
+        <path d="M0,0 L280,0 A280,280 0 0,1 198,198 Z" fill="url(#bgGrad)">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite"/>
         </path>
-        <line x1="0" y1="0" x2="280" y2="0" stroke="url(#sweepLine)" stroke-width="1.5">
-          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite"/>
-        </line>
       </g>
-
-      <!-- detected blips -->
-      <g>
-        <circle cx="-160" cy="-90" r="3" fill="#C8973A">
-          <animate attributeName="opacity" values="0;1;0.2" dur="3s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="-160" cy="-90" r="3" fill="none" stroke="#C8973A">
-          <animate attributeName="r" values="3;14" dur="3s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.8;0" dur="3s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="105" cy="-150" r="2.5" fill="#C8973A">
-          <animate attributeName="opacity" values="0;1;0.2" dur="3.4s" begin="1s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="-80" cy="180" r="2.5" fill="#E5604A">
-          <animate attributeName="opacity" values="0;1;0.2" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="-80" cy="180" r="2.5" fill="none" stroke="#E5604A">
-          <animate attributeName="r" values="2.5;16" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.9;0" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="200" cy="100" r="2" fill="#C8973A">
-          <animate attributeName="opacity" values="0;1;0.2" dur="3.8s" begin="1.7s" repeatCount="indefinite"/>
-        </circle>
-      </g>
-
-      <!-- centre -->
-      <circle r="4" fill="#E4B14B"/>
-      <circle r="10" fill="none" stroke="#C8973A" stroke-opacity="0.5"/>
+      <circle r="4" fill="#C8973A"/>
     </svg>
   </div>
 
-  <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="bar"></span>
-      <span>Vigilância de Marca · Portugal</span>
-      <span class="live">A monitorizar agora</span>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-eyebrow">
+        <span class="bar"></span>
+        <span>Vigilância de Marca · Portugal</span>
+        <span class="live">100% INPI</span>
+      </div>
+      <h1 class="hero-title">
+        Defenda a sua marca por <em>€2/mês.</em>
+      </h1>
+      <p class="hero-lede">
+        Monitorizamos o <strong>Boletim da Propriedade Industrial</strong> e alertamo-lo em <strong>48 horas</strong> sempre que alguém tenta registar uma marca semelhante à sua. Sem mensalidades — um único pagamento de €240 cobre 10 anos completos.
+      </p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary" data-open-form="protect">Proteger a minha marca</a>
+        <a href="#video" class="btn btn-ghost">Ver o vídeo · 90s</a>
+      </div>
+      <div class="hero-trust">
+        <span class="item">Sem compromisso</span>
+        <span class="item">Resposta em 24h</span>
+        <span class="item">Empresa portuguesa</span>
+      </div>
     </div>
-    <h1 class="hero-title">
-      <span class="line">Vigiamos</span>
-      <span class="line"><em>cada</em> pedido</span>
-      <span class="line indent">— para que não</span>
-      <span class="line">tenha que olhar.</span>
-    </h1>
-  </div>
 
-  <div class="hero-bottom">
-    <p class="hero-lede">
-      Monitorizamos o Boletim da Propriedade Industrial e alertamo-lo em <strong>48 horas</strong> sempre que alguém tenta registar uma marca semelhante à sua — dentro do prazo legal de oposição.
-    </p>
-    <div class="hero-actions">
-      <a href="#" class="btn btn-gold" data-open-form="protect">Proteger a minha marca</a>
-      <a href="#metodo" class="btn btn-ghost">Como funciona</a>
-    </div>
-    <p class="hero-reassure">Sem compromisso · Resposta em 24h · €240 = €2/mês por 10 anos</p>
-    <div class="hero-stats">
-      <div class="row"><span>Cobertura</span><strong>10 anos</strong></div>
-      <div class="row"><span>Alerta máx.</span><strong>48 h</strong></div>
-      <div class="row"><span>Fonte oficial</span><strong>INPI · BPI</strong></div>
+    <div class="hero-price">
+      <div class="price-card">
+        <div class="price-stamp">Preço único</div>
+        <div class="label">O custo de proteger a sua marca</div>
+        <div class="price-number">
+          <span class="euro">€</span>
+          <span class="amount">2</span>
+          <span class="unit">/mês</span>
+        </div>
+        <div class="breakdown">
+          <div class="breakdown-item">
+            <small>Pagamento único</small>
+            <strong>€240</strong>
+          </div>
+          <div class="breakdown-item">
+            <small>Cobertura</small>
+            <strong>10 anos</strong>
+          </div>
+          <div class="breakdown-item">
+            <small>Alertas</small>
+            <strong>Ilimitados</strong>
+          </div>
+          <div class="breakdown-item">
+            <small>Renovações</small>
+            <strong>Zero</strong>
+          </div>
+        </div>
+        <div class="foot">
+          <span>120 meses · 520 edições BPI</span>
+          <span>c/ IVA · <strong>€295,20</strong></span>
+        </div>
+      </div>
     </div>
   </div>
 </header>
 
-<!-- ─── TICKER ─── -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <!-- duplicate for seamless loop -->
-    <span class="ticker-item"><span class="dot"></span><span class="num">BPI 21/2026</span> · monitorização semanal</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item ok"><span class="dot"></span>NORTE FILMES · cl. 41 · sem conflito</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item"><span class="dot"></span><span class="num">+842</span> pedidos analisados esta semana</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item alert"><span class="dot"></span>ALERTA · semelhança fonética detetada · cl. 25</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item ok"><span class="dot"></span>CASA DA AVENIDA · cl. 43 · sem conflito</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item"><span class="dot"></span>Próxima edição BPI · seg 18 · 09:00</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item ok"><span class="dot"></span>OLIVEIRA &amp; CO · cl. 33 · sem conflito</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item"><span class="dot"></span><span class="num">100%</span> cobertura BPI</span>
-    <span class="ticker-divider">◆</span>
-    <!-- repeat -->
-    <span class="ticker-item"><span class="dot"></span><span class="num">BPI 21/2026</span> · monitorização semanal</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item ok"><span class="dot"></span>NORTE FILMES · cl. 41 · sem conflito</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item"><span class="dot"></span><span class="num">+842</span> pedidos analisados esta semana</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item alert"><span class="dot"></span>ALERTA · semelhança fonética detetada · cl. 25</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item ok"><span class="dot"></span>CASA DA AVENIDA · cl. 43 · sem conflito</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item"><span class="dot"></span>Próxima edição BPI · seg 18 · 09:00</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item ok"><span class="dot"></span>OLIVEIRA &amp; CO · cl. 33 · sem conflito</span>
-    <span class="ticker-divider">◆</span>
-    <span class="ticker-item"><span class="dot"></span><span class="num">100%</span> cobertura BPI</span>
-    <span class="ticker-divider">◆</span>
+<!-- ─── TRUST STRIP ─── -->
+<div class="trust-strip" aria-hidden="true">
+  <div class="trust-track">
+    <span class="trust-item"><span class="dot"></span><strong>100%</strong> dados oficiais INPI</span>
+    <span class="trust-divider">◆</span>
+    <span class="trust-item"><span class="dot"></span>Monitorização semanal do <strong>BPI</strong></span>
+    <span class="trust-divider">◆</span>
+    <span class="trust-item"><span class="dot"></span>Alertas em <strong>48 horas</strong></span>
+    <span class="trust-divider">◆</span>
+    <span class="trust-item"><span class="dot"></span>Cobertura <strong>10 anos</strong></span>
+    <span class="trust-divider">◆</span>
+    <span class="trust-item"><span class="dot"></span>Pagamento <strong>único</strong></span>
+    <span class="trust-divider">◆</span>
+    <span class="trust-item"><span class="dot"></span>Alerta de <strong>renovação</strong></span>
+    <span class="trust-divider">◆</span>
+    <!-- duplicate for seamless marquee -->
+    <span class="trust-item"><span class="dot"></span><strong>100%</strong> dados oficiais INPI</span>
+    <span class="trust-divider">◆</span>
+    <span class="trust-item"><span class="dot"></span>Monitorização semanal do <strong>BPI</strong></span>
+    <span class="trust-divider">◆</span>
+    <span class="trust-item"><span class="dot"></span>Alertas em <strong>48 horas</strong></span>
+    <span class="trust-divider">◆</span>
+    <span class="trust-item"><span class="dot"></span>Cobertura <strong>10 anos</strong></span>
+    <span class="trust-divider">◆</span>
+    <span class="trust-item"><span class="dot"></span>Pagamento <strong>único</strong></span>
+    <span class="trust-divider">◆</span>
+    <span class="trust-item"><span class="dot"></span>Alerta de <strong>renovação</strong></span>
+    <span class="trust-divider">◆</span>
   </div>
 </div>
 
-<!-- ─── LIVE FEED ─── -->
-<section class="feed-section" id="feed">
-  <div class="wide">
-    <div class="feed-head">
+<!-- ─── COMO FUNCIONA ─── -->
+<section id="como">
+  <div class="container">
+    <div class="how-head">
       <div>
-        <div class="eyebrow reveal">01 · Operação em tempo real</div>
+        <div class="eyebrow reveal">Como funciona</div>
+        <h2 class="h-display reveal">Simples,<br>do nosso lado.<br><em>Automático</em>, do seu.</h2>
+      </div>
+      <p class="section-lede reveal">Não precisa de fazer nada. Indica-nos o nome e o número de registo da sua marca, e o resto é connosco — durante 10 anos.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step-tag">Semanal</span>
+        <div class="step-num">01</div>
+        <h3>Captura do BPI</h3>
+        <p>Todas as semanas o sistema descarrega o novo Boletim da Propriedade Industrial publicado pelo INPI — automaticamente, sem falhas.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-tag">Algoritmo</span>
+        <div class="step-num">02</div>
+        <h3>Análise de conflito</h3>
+        <p>Comparamos cada novo pedido com a sua marca em três dimensões: fonética, gráfica e conceptual. Detetamos semelhanças que olho humano deixaria passar.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-tag">≤ 48h</span>
+        <div class="step-num">03</div>
+        <h3>Alerta direto</h3>
+        <p>Quando algo merece atenção, recebe um relatório com titular, classes, número de processo e link direto ao BPI. Tempo para agir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── RADAR LIVE FEED ─── -->
+<section class="feed-section alt" id="feed">
+  <div class="wide">
+    <div class="how-head" style="margin-bottom:2.5rem">
+      <div>
+        <div class="eyebrow reveal">Operação em tempo real</div>
         <h2 class="h-display reveal">Um radar a varrer<br>o <em>BPI</em>, semana<br>após semana.</h2>
       </div>
-      <p class="lede reveal">
+      <p class="section-lede reveal">
         Cada edição do <em>Boletim da Propriedade Industrial</em> passa pelo nosso sistema. Mostramos aqui uma simulação do que acontece nos bastidores quando o INPI publica novos pedidos.
       </p>
     </div>
@@ -1824,37 +1640,34 @@ footer{
           <svg class="scope-svg" viewBox="-260 -260 520 520">
             <defs>
               <radialGradient id="sweepGrad2" cx="0" cy="0" r="240" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#C8973A" stop-opacity="0"/>
-                <stop offset="100%" stop-color="#C8973A" stop-opacity="0.28"/>
+                <stop offset="0%" stop-color="#D4A038" stop-opacity="0"/>
+                <stop offset="100%" stop-color="#D4A038" stop-opacity="0.32"/>
               </radialGradient>
             </defs>
-            <g fill="none" stroke="rgba(250,249,246,0.1)" stroke-width="1">
+            <g fill="none" stroke="rgba(244,238,222,0.1)" stroke-width="1">
               <circle r="60"/><circle r="120"/><circle r="180"/><circle r="240"/>
             </g>
-            <g stroke="rgba(250,249,246,0.07)" stroke-width="1">
+            <g stroke="rgba(244,238,222,0.07)" stroke-width="1">
               <line x1="-240" y1="0" x2="240" y2="0"/>
               <line x1="0" y1="-240" x2="0" y2="240"/>
             </g>
             <path d="M0,0 L240,0 A240,240 0 0,1 170,170 Z" fill="url(#sweepGrad2)">
               <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
             </path>
-            <line x1="0" y1="0" x2="240" y2="0" stroke="#E4B14B" stroke-width="1.5">
+            <line x1="0" y1="0" x2="240" y2="0" stroke="#D4A038" stroke-width="1.5">
               <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
             </line>
-
-            <!-- blips -->
-            <g id="scope-blips">
-              <circle cx="-130" cy="-70" r="3" fill="#C8973A"><animate attributeName="opacity" values="0;1;0.3" dur="2.6s" repeatCount="indefinite"/></circle>
+            <g>
+              <circle cx="-130" cy="-70" r="3" fill="#D4A038"><animate attributeName="opacity" values="0;1;0.3" dur="2.6s" repeatCount="indefinite"/></circle>
               <circle cx="80" cy="-110" r="2.5" fill="#6FBF8C"><animate attributeName="opacity" values="0;1;0.3" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
               <circle cx="-60" cy="140" r="3" fill="#E5604A"><animate attributeName="opacity" values="0;1;0.3" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></circle>
               <circle cx="-60" cy="140" r="3" fill="none" stroke="#E5604A"><animate attributeName="r" values="3;18" dur="2.4s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></circle>
-              <circle cx="160" cy="60" r="2.5" fill="#C8973A"><animate attributeName="opacity" values="0;1;0.3" dur="3.2s" begin="0.3s" repeatCount="indefinite"/></circle>
+              <circle cx="160" cy="60" r="2.5" fill="#D4A038"><animate attributeName="opacity" values="0;1;0.3" dur="3.2s" begin="0.3s" repeatCount="indefinite"/></circle>
               <circle cx="-180" cy="40" r="2" fill="#6FBF8C"><animate attributeName="opacity" values="0;1;0.3" dur="2.8s" begin="1.8s" repeatCount="indefinite"/></circle>
-              <circle cx="40" cy="200" r="2.5" fill="#C8973A"><animate attributeName="opacity" values="0;1;0.3" dur="3.6s" begin="0.9s" repeatCount="indefinite"/></circle>
+              <circle cx="40" cy="200" r="2.5" fill="#D4A038"><animate attributeName="opacity" values="0;1;0.3" dur="3.6s" begin="0.9s" repeatCount="indefinite"/></circle>
             </g>
-
-            <circle r="4" fill="#E4B14B"/>
-            <circle r="9" fill="none" stroke="#C8973A" stroke-opacity="0.5"/>
+            <circle r="4" fill="#D4A038"/>
+            <circle r="9" fill="none" stroke="#D4A038" stroke-opacity="0.5"/>
           </svg>
 
           <div class="feed-stats">
@@ -1865,7 +1678,6 @@ footer{
         </div>
 
         <div class="feed-list" id="feed-list">
-          <!-- populated by JS, but seeded for SSR -->
           <div class="feed-row">
             <span class="time">09:14</span>
             <span class="name">NORTE FILMES, Lda</span>
@@ -1918,63 +1730,299 @@ footer{
   </div>
 </section>
 
-<!-- ─── VIDEO ─── -->
-<section class="video-section" id="video">
-  <div class="wide">
-    <div class="video-head">
+<!-- ─── SEM VS COM ─── -->
+<section>
+  <div class="container">
+    <div class="how-head">
       <div>
-        <div class="eyebrow reveal">02 · Em 90 segundos</div>
-        <h2 class="h-display reveal">Veja o radar<br>em <em>movimento.</em></h2>
+        <div class="eyebrow reveal">A diferença</div>
+        <h2 class="h-display reveal">O que muda<br>com o <em>Radar Marca.</em></h2>
       </div>
-      <p class="lede reveal">
-        Do registo no INPI ao alerta na sua caixa de entrada — explicado em menos de dois minutos, sem jargão jurídico.
-      </p>
+      <p class="section-lede reveal">Sem vigilância, o titular da marca raramente sabe que está a ser copiado — até ser tarde demais.</p>
     </div>
 
-    <div class="video-poster reveal" id="video-poster" role="button" tabindex="0" aria-label="Reproduzir vídeo explicativo">
-      <div class="poster-radar" aria-hidden="true">
-        <svg viewBox="-200 -200 400 400">
-          <g fill="none" stroke="rgba(212,160,56,0.18)" stroke-width="1">
-            <circle r="60"/><circle r="120"/><circle r="180"/>
-          </g>
-          <g stroke="rgba(212,160,56,0.1)" stroke-width="1">
-            <line x1="-200" y1="0" x2="200" y2="0"/>
-            <line x1="0" y1="-200" x2="0" y2="200"/>
-          </g>
-          <path d="M0,0 L180,0 A180,180 0 0,1 127,127 Z" fill="rgba(212,160,56,0.18)">
-            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
-          </path>
-          <circle r="4" fill="#D4A038"/>
-        </svg>
+    <div class="versus">
+      <div class="versus-col bad reveal">
+        <span class="tag">Sem Radar Marca</span>
+        <h3>Tem a marca registada — mas <em>ninguém</em> a vigia.</h3>
+        <ul class="versus-list">
+          <li>O INPI publica pedidos semelhantes sem o notificar.</li>
+          <li>O prazo de oposição de 2 meses corre em silêncio.</li>
+          <li>Quando descobre, a marca concorrente já foi concedida.</li>
+          <li>A diluição da sua marca é definitiva.</li>
+          <li>Disputa judicial: milhares de euros e meses de processo.</li>
+        </ul>
       </div>
-
-      <div class="poster-meta">
-        <span>radarmarca.pt / film</span>
-        <span class="live">Play</span>
-      </div>
-
-      <div class="play-btn" aria-hidden="true"></div>
-
-      <div class="poster-title">
-        <h3>Perceba em <em>2 minutos</em> como protegemos a sua marca.</h3>
-        <span class="dur">02:14</span>
+      <div class="versus-col good reveal">
+        <span class="tag">Com Radar Marca</span>
+        <h3>Vigiamos por si. Todas as semanas. Durante <em>10 anos</em>.</h3>
+        <ul class="versus-list">
+          <li><strong>Monitorização semanal</strong> automática do BPI.</li>
+          <li><strong>Alerta em 48 horas</strong> quando há semelhança.</li>
+          <li>Relatório com tudo o que o seu advogado precisa.</li>
+          <li>Tempo para apresentar oposição no prazo legal.</li>
+          <li><strong>€2/mês.</strong> Sem mensalidades. Sem custos escondidos.</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── FORM MODAL ─── -->
-<div class="form-modal" id="form-modal" role="dialog" aria-modal="true" aria-label="Pedido de proteção de marca">
-  <div class="form-card">
-    <button class="form-close" id="form-close" aria-label="Fechar formulário">✕</button>
+<!-- ─── A MATEMÁTICA ─── -->
+<section class="math" id="preco">
+  <div class="container">
+    <div class="how-head" style="margin-bottom:2rem">
+      <div>
+        <div class="eyebrow reveal">A matemática</div>
+        <h2 class="h-display reveal">Um pagamento.<br>Dez anos. <em>€2/mês.</em></h2>
+      </div>
+      <p class="section-lede reveal" style="color:rgba(244,238,222,0.7);max-width:48ch">€240 dividido por 120 meses. Pagas uma vez, esqueces durante uma década.</p>
+    </div>
 
+    <div class="math-equation reveal">
+      <div class="eq-piece">
+        <div class="num">€<em>240</em></div>
+        <div class="num-label">Pagamento único</div>
+      </div>
+      <div class="op">÷</div>
+      <div class="eq-piece">
+        <div class="num">120</div>
+        <div class="num-label">Meses · 10 anos</div>
+      </div>
+      <div class="op">=</div>
+      <div class="eq-piece">
+        <div class="num highlight">€2</div>
+        <div class="num-label">por mês</div>
+      </div>
+    </div>
+
+    <div class="math-dots reveal" aria-hidden="true" id="math-dots">
+      <!-- 120 dots injected by JS -->
+    </div>
+    <p class="math-dots-note reveal">
+      Cada ponto = <strong>1 mês</strong> de proteção · 120 meses incluídos
+    </p>
+  </div>
+</section>
+
+<!-- ─── INCLUDED ─── -->
+<section class="alt">
+  <div class="container">
+    <div class="how-head">
+      <div>
+        <div class="eyebrow reveal">O que está incluído</div>
+        <h2 class="h-display reveal">Tudo o que precisa.<br><em>Nada</em> que não precise.</h2>
+      </div>
+      <p class="section-lede reveal">Um único preço cobre todos os componentes essenciais à proteção da sua marca — não há extras, upgrades ou planos premium.</p>
+    </div>
+
+    <div class="included">
+      <div class="feature reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 2"/>
+          </svg>
+        </div>
+        <h3>Monitorização semanal</h3>
+        <p>Cada nova edição do BPI passa pelo nosso sistema, sem falhas, durante toda a vigência.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L3 7v6c0 5 4 9 9 10 5-1 9-5 9-10V7z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3>Alertas em 48h</h3>
+        <p>Detetada uma semelhança, recebe email com o relatório detalhado dentro do prazo de 48 horas.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <path d="M14 2v6h6M8 13h8M8 17h6"/>
+          </svg>
+        </div>
+        <h3>Relatório detalhado</h3>
+        <p>Titular, classes, número do processo, data, link direto ao BPI — tudo o que o seu advogado precisa.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.8 1 6.5 2.7"/>
+            <path d="M21 4v6h-6"/>
+          </svg>
+        </div>
+        <h3>Alerta de renovação</h3>
+        <p>Avisamos 90 dias antes do fim do registo para renovar junto do INPI sem risco de caducidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-side">
+        <div class="eyebrow reveal">Perguntas frequentes</div>
+        <h2 class="h-section reveal">Tudo o que pode estar<br>a <em>pensar.</em></h2>
+        <p class="reveal">Se ficou alguma dúvida por responder, escreva-nos — respondemos em menos de 24 horas.</p>
+        <a href="#contacto" class="cta-mini reveal">Falar com a equipa →</a>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>
+            <span class="faq-num">01</span>
+            <span>Já tenho a marca registada — ainda preciso do Radar?</span>
+            <span class="faq-toggle">+</span>
+          </summary>
+          <div class="faq-body">
+            Sim. O registo da sua marca <strong>não impede que terceiros apresentem pedidos de marcas semelhantes</strong>. O INPI não faz essa verificação automaticamente — é da responsabilidade do titular monitorizar e opor-se dentro do prazo de 2 meses.
+          </div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            <span class="faq-num">02</span>
+            <span>O €240 inclui mesmo tudo?</span>
+            <span class="faq-toggle">+</span>
+          </summary>
+          <div class="faq-body">
+            Sim. <strong>€240 + IVA cobre 10 anos completos</strong> — equivalente a €2/mês. Inclui monitorização semanal, alertas de conflito ilimitados, relatórios detalhados e <strong>alerta de renovação</strong> 90 dias antes do fim do registo. Sem mensalidades, renovações ou custos escondidos.
+          </div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            <span class="faq-num">03</span>
+            <span>E se durante os 10 anos não houver conflitos?</span>
+            <span class="faq-toggle">+</span>
+          </summary>
+          <div class="faq-body">
+            É uma ótima notícia — significa que a sua marca está protegida. O serviço continua a monitorizar semanalmente. <strong>Prefere pagar €240 por 10 anos de tranquilidade do que descobrir tarde demais que havia uma ameaça.</strong>
+          </div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            <span class="faq-num">04</span>
+            <span>O que recebo quando há um conflito?</span>
+            <span class="faq-toggle">+</span>
+          </summary>
+          <div class="faq-body">
+            Um email com um <strong>relatório detalhado</strong>: nome da marca conflituante, titular, classes de produtos/serviços, data de depósito, número do processo e link direto à publicação no BPI. Tudo o que o seu advogado precisa para agir no prazo de 2 meses.
+          </div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            <span class="faq-num">05</span>
+            <span>Posso monitorizar mais que uma marca?</span>
+            <span class="faq-toggle">+</span>
+          </summary>
+          <div class="faq-body">
+            Cada contrato cobre uma marca. Para portefólios com várias marcas, fale connosco — temos condições especiais.
+          </div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>
+            <span class="faq-num">06</span>
+            <span>Como funciona depois de contratar?</span>
+            <span class="faq-toggle">+</span>
+          </summary>
+          <div class="faq-body">
+            Após confirmação dos dados e pagamento, o serviço fica ativo. Todas as semanas, quando o INPI publica o novo BPI, o sistema analisa automaticamente. <strong>Se não houver conflitos, não recebe notificação</strong> — só falamos consigo quando há algo relevante.
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FINAL CTA ─── -->
+<section class="final-cta alt-dark">
+  <div class="container">
+    <div class="price-strip reveal">
+      <span>Apenas</span>
+      <strong>€2/mês</strong>
+      <span>por 10 anos</span>
+    </div>
+    <h2 class="h-display reveal">A sua marca,<br>protegida hoje.</h2>
+    <p class="section-lede reveal">Sem mensalidades. Sem renovações. Sem letras pequenas.<br>Um pedido, e ficamos a olhar — durante uma década.</p>
+    <div class="actions reveal">
+      <a href="#" class="btn btn-primary" data-open-form="protect">Proteger a minha marca</a>
+      <a href="tel:+351910422309" class="btn btn-ghost">910 422 309</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="contact-head">
+      <div>
+        <div class="eyebrow reveal">Fale connosco</div>
+        <h2 class="h-section reveal">Dúvidas? <em>Respondemos</em><br>em menos de 24h.</h2>
+      </div>
+      <p class="section-lede reveal" style="max-width:42ch">Email, telefone ou formulário — qualquer canal. Em dia útil, normalmente respondemos no próprio dia.</p>
+    </div>
+
+    <div class="contact-cards">
+      <a href="mailto:geral@radarmarca.pt" class="contact-card reveal">
+        <small>Email</small>
+        <strong>geral@radarmarca.pt</strong>
+      </a>
+      <a href="tel:+351910422309" class="contact-card reveal">
+        <small>Telefone</small>
+        <strong>+351 910 422 309</strong>
+      </a>
+      <a href="#" class="contact-card reveal" data-open-form="info">
+        <small>Formulário</small>
+        <strong>Pedir informações →</strong>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BIGMARK + FOOTER ─── -->
+<div class="bigmark" aria-hidden="true">
+  <img src="brand/lockup-horizontal-color.svg" alt="">
+</div>
+
+<footer>
+  <div class="foot-grid">
+    <div>© 2026 · Radar Marca</div>
+    <div class="center">Cosmic Oasis, Unipessoal Lda · NIF 517071800</div>
+    <div class="right">
+      <a href="termos.html">Termos</a>
+      <span class="divider">·</span>
+      <a href="privacidade.html">Privacidade</a>
+      <span class="divider">·</span>
+      <a href="reclamacoes.html">Reclamações</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── STICKY CTA ─── -->
+<div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+  <div class="sticky-cta-inner">
+    <div class="sticky-cta-info">
+      <span class="sticky-cta-eyebrow">Radar Marca</span>
+      <span class="sticky-cta-title"><strong>€2/mês</strong> para proteger a sua marca</span>
+    </div>
+    <a href="#" class="btn" data-open-form="protect">Proteger agora →</a>
+  </div>
+</div>
+
+<!-- ─── FORM MODAL ─── -->
+<div class="form-modal" id="form-modal" role="dialog" aria-modal="true">
+  <div class="form-card">
+    <button class="form-close" id="form-close" aria-label="Fechar">✕</button>
     <div class="form-body" id="form-body">
       <div class="form-head">
         <div class="eyebrow">Pedido de proteção</div>
         <h3 id="form-title">Proteja a sua <em>marca</em>.</h3>
         <p id="form-desc">Preencha os dados abaixo e respondemos em menos de 24 horas com uma proposta personalizada.</p>
       </div>
-
       <form id="protect-form" novalidate>
         <div class="form-grid">
           <div class="field full">
@@ -2007,17 +2055,15 @@ footer{
           </div>
           <div class="field full">
             <label for="f-msg">Mensagem <span class="opt">opcional</span></label>
-            <textarea id="f-msg" name="msg" placeholder="Conte-nos um pouco mais sobre o seu caso ou dúvidas..."></textarea>
+            <textarea id="f-msg" name="msg" placeholder="Conte-nos um pouco sobre o seu caso..."></textarea>
           </div>
         </div>
-
         <div class="form-foot">
           <div class="form-note">Os dados servem apenas para responder ao seu pedido. Não partilhamos com terceiros.</div>
           <button type="submit" class="form-submit" id="form-submit">Enviar pedido</button>
         </div>
       </form>
     </div>
-
     <div class="form-success" id="form-success">
       <div class="check">✓</div>
       <h4>Pedido <em>enviado.</em></h4>
@@ -2026,487 +2072,25 @@ footer{
   </div>
 </div>
 
-<!-- Video Modal -->
-<div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Vídeo explicativo Radar Marca">
+<!-- ─── VIDEO MODAL ─── -->
+<div class="video-modal" id="video-modal" role="dialog" aria-modal="true">
   <div class="video-modal-frame">
     <button class="video-close" id="video-close" aria-label="Fechar vídeo">✕</button>
     <div id="video-mount"></div>
   </div>
 </div>
 
-<!-- ─── HOW IT WORKS ─── -->
-<section class="how-section" id="metodo">
-  <div class="container">
-    <div class="how-head">
-      <div>
-        <div class="eyebrow reveal">03 · Método</div>
-        <h2 class="h-section reveal">Três passos.<br>Zero <em>trabalho</em><br>do seu lado.</h2>
-      </div>
-      <p class="lede reveal">
-        Tudo o que precisamos é o nome e número de registo da sua marca. A partir daí, o sistema corre em pano de fundo enquanto continua o seu negócio.
-      </p>
-    </div>
-
-    <div class="steps">
-      <div class="step reveal">
-        <span class="step-tag">Semanal</span>
-        <div class="step-num">01</div>
-        <h3>Captura do BPI</h3>
-        <p>Todas as semanas o nosso sistema descarrega o novo Boletim da Propriedade Industrial publicado pelo INPI — sem falhas, sem pausas, durante 10 anos.</p>
-      </div>
-      <div class="step reveal">
-        <span class="step-tag">Algoritmo próprio</span>
-        <div class="step-num">02</div>
-        <h3>Análise de conflito</h3>
-        <p>Comparamos cada novo pedido com a sua marca em três dimensões: fonética, gráfica e conceptual. Detetamos semelhanças que olho humano deixaria passar.</p>
-      </div>
-      <div class="step reveal">
-        <span class="step-tag">≤ 48h</span>
-        <div class="step-num">03</div>
-        <h3>Alerta direto</h3>
-        <p>Quando algo merece atenção, recebe um relatório com titular, classes, número de processo e link direto ao BPI. Tempo para o seu advogado agir.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── THREAT ─── -->
-<section class="threat">
-  <div class="container">
-    <div class="threat-grid">
-      <div>
-        <div class="eyebrow reveal" style="color:var(--red)">04 · Prazo legal</div>
-        <h2 class="threat-quote reveal">
-          <em>2 meses.</em><br>
-          Depois,<br>
-          é tarde.
-          <span class="small">O prazo de oposição corre a partir da publicação no BPI</span>
-        </h2>
-      </div>
-
-      <div class="timeline reveal">
-        <div class="timeline-head">
-          <span>Sem vigilância — cenário real</span>
-          <span class="danger">Crítico</span>
-        </div>
-        <div class="tl-row">
-          <div class="dot"></div>
-          <div class="body">
-            <span>Dia 0</span>
-            <strong>Marca semelhante publicada no BPI</strong>
-            <p>O INPI publica o pedido conflituante. O prazo de oposição de 2 meses começa a correr — sem qualquer notificação ao titular da marca anterior.</p>
-          </div>
-        </div>
-        <div class="tl-row">
-          <div class="dot"></div>
-          <div class="body">
-            <span>Semanas 1 — 8</span>
-            <strong>Silêncio</strong>
-            <p>Sem monitorização ativa, o titular nunca toma conhecimento do pedido. O relógio continua a correr em pano de fundo.</p>
-          </div>
-        </div>
-        <div class="tl-row danger">
-          <div class="dot"></div>
-          <div class="body">
-            <span>Dia 60 · Game over</span>
-            <strong>Marca concorrente concedida</strong>
-            <p>Expirado o prazo, o pedido segue para concessão. A oposição já não é possível. A diluição da sua marca é definitiva.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── COMPARE ─── -->
-<section class="compare-section">
-  <div class="container">
-    <div class="eyebrow reveal" style="text-align:center;justify-content:center;display:flex">05 · Comparação</div>
-    <h2 class="h-section reveal" style="text-align:center;margin-bottom:3rem">
-      Não somos um <em>advogado</em>.<br>Somos a vigilância que ele não dá.
-    </h2>
-
-    <div class="compare reveal">
-      <div class="compare-row header">
-        <div class="compare-cell">Critério</div>
-        <div class="compare-cell">Advogado de PI</div>
-        <div class="compare-cell us">Radar Marca</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell label">Custo · 10 anos</div>
-        <div class="compare-cell alt">€500 — €2 000 / ano</div>
-        <div class="compare-cell us">€240 pagamento único</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell label">Monitorização</div>
-        <div class="compare-cell alt">Sob pedido</div>
-        <div class="compare-cell us"><span class="tick">✓</span> Automática · semanal</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell label">Velocidade de alerta</div>
-        <div class="compare-cell alt">Dias a semanas</div>
-        <div class="compare-cell us"><span class="tick">✓</span> Máx. 48 h</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell label">Cobertura de classes</div>
-        <div class="compare-cell alt"><span class="cross">✗</span> Depende do contrato</div>
-        <div class="compare-cell us"><span class="tick">✓</span> Total · sem exceções</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell label">Relatório de conflito</div>
-        <div class="compare-cell alt">Custo adicional</div>
-        <div class="compare-cell us"><span class="tick">✓</span> Incluído</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell label">Alerta de renovação</div>
-        <div class="compare-cell alt"><span class="cross">✗</span> Não aplicável</div>
-        <div class="compare-cell us"><span class="tick">✓</span> 90 dias antes do fim</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── PRICING ─── -->
-<section class="pricing" id="preco">
-  <div class="wide">
-    <div class="pricing-grid">
-      <div>
-        <div class="eyebrow reveal">06 · Preço</div>
-        <div class="price-display reveal">
-          <span class="currency">€</span>
-          <span class="amount">240</span>
-        </div>
-        <div class="price-equiv reveal">
-          <span class="per-month">≈ <strong>€2</strong> / mês</span>
-        </div>
-        <div class="price-meta reveal">
-          <span><strong>Único pagamento</strong> · sem mensalidades · sem renovações</span>
-          <span>10 anos · 520 edições do BPI · alertas ilimitados</span>
-          <span>Total c/ IVA · €295,20</span>
-        </div>
-      </div>
-
-      <div class="price-side">
-        <h3 class="reveal">Investimento <em>único</em>, proteção duradoura.</h3>
-        <p class="reveal">Sem renovações, sem custos escondidos, sem extras. Um único pagamento por uma década inteira de vigilância oficial.</p>
-        <ul class="price-list reveal">
-          <li>Monitorização semanal do BPI</li>
-          <li>Alertas de conflito em até 48 horas</li>
-          <li>Relatórios detalhados com titular, classes e processo</li>
-          <li class="highlight"><strong>Alerta de renovação</strong> · avisamos 90 dias antes do fim do registo</li>
-          <li>Cobertura total · 10 anos</li>
-          <li>Suporte direto em caso de dúvida</li>
-        </ul>
-        <div class="price-cta reveal">
-          <a href="#" class="btn btn-gold" data-open-form="info">Solicitar informações</a>
-          <a href="tel:+351910422309" class="btn btn-ghost">910 422 309</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── FAQ ─── -->
-<section class="faq-section" id="faq">
-  <div class="wide">
-    <div class="faq-grid">
-      <div class="faq-side">
-        <div class="eyebrow reveal">07 · FAQ</div>
-        <h2 class="h-section reveal">Dúvidas <em>frequentes.</em></h2>
-        <p class="reveal">Se algo aqui não responde, escreva-nos. Respondemos em menos de 24 horas.</p>
-      </div>
-
-      <div class="faq-list">
-        <details class="faq-item reveal">
-          <summary>
-            <span class="faq-num">01</span>
-            <span>Já tenho a marca registada no INPI — ainda preciso do Radar?</span>
-            <span class="faq-toggle">+</span>
-          </summary>
-          <div class="faq-body">
-            Sim. O registo da sua marca <strong>não impede que terceiros apresentem pedidos de marcas semelhantes</strong>. O INPI não faz essa verificação automaticamente — é responsabilidade do titular monitorizar e opor-se dentro do prazo de 2 meses.
-          </div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>
-            <span class="faq-num">02</span>
-            <span>E se durante os 10 anos não houver conflitos?</span>
-            <span class="faq-toggle">+</span>
-          </summary>
-          <div class="faq-body">
-            É uma ótima notícia — significa que a sua marca está protegida. O serviço continua a monitorizar semanalmente. <strong>Prefere pagar €240 por 10 anos de tranquilidade do que descobrir tarde demais que havia uma ameaça.</strong>
-          </div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>
-            <span class="faq-num">03</span>
-            <span>O €240 inclui mesmo tudo?</span>
-            <span class="faq-toggle">+</span>
-          </summary>
-          <div class="faq-body">
-            Sim. <strong>€240 + IVA cobre 10 anos completos</strong> — menos de €2 por mês. Inclui monitorização semanal, alertas de conflito ilimitados, relatórios detalhados e <strong>alerta de renovação</strong> 90 dias antes do fim do registo. Sem mensalidades, renovações ou custos escondidos. Se precisar de aconselhamento jurídico para apresentar oposição, isso fica com o seu advogado — nós garantimos que recebe o alerta a tempo.
-          </div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>
-            <span class="faq-num">04</span>
-            <span>Posso monitorizar mais que uma marca?</span>
-            <span class="faq-toggle">+</span>
-          </summary>
-          <div class="faq-body">
-            Cada contrato cobre uma marca. Para portefólios com várias marcas, fale connosco — temos condições para isso.
-          </div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>
-            <span class="faq-num">05</span>
-            <span>O que recebo quando há um conflito?</span>
-            <span class="faq-toggle">+</span>
-          </summary>
-          <div class="faq-body">
-            Um email com um <strong>relatório detalhado</strong>: nome da marca conflituante, titular, classes de produtos/serviços, data de depósito, número do processo e link direto à publicação no BPI. Tudo o que o seu advogado precisa para agir no prazo de 2 meses.
-          </div>
-        </details>
-        <details class="faq-item reveal">
-          <summary>
-            <span class="faq-num">06</span>
-            <span>Como funciona depois de contratar?</span>
-            <span class="faq-toggle">+</span>
-          </summary>
-          <div class="faq-body">
-            Após confirmação dos dados e pagamento, o serviço fica ativo. Todas as semanas, quando o INPI publica o novo BPI, o sistema analisa automaticamente. <strong>Se não houver conflitos, não recebe notificação</strong> — só falamos consigo quando há algo relevante.
-          </div>
-        </details>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── CONTACT ─── -->
-<section class="contact" id="contacto">
-  <div class="wide">
-    <div class="contact-head">
-      <div>
-        <div class="eyebrow reveal">08 · Fale connosco</div>
-        <h2 class="h-section reveal">Pronto para <em>dormir</em><br>descansado?</h2>
-      </div>
-      <div class="contact-list">
-        <a href="mailto:geral@radarmarca.pt" class="contact-card reveal">
-          <span class="ico">@</span>
-          <div class="text">
-            <small>Email</small>
-            <strong>geral@radarmarca.pt</strong>
-          </div>
-          <span class="arrow">→</span>
-        </a>
-        <a href="tel:+351910422309" class="contact-card reveal">
-          <span class="ico">Tel</span>
-          <div class="text">
-            <small>Telefone</small>
-            <strong>+351 910 422 309</strong>
-          </div>
-          <span class="arrow">→</span>
-        </a>
-        <div class="contact-card reveal" style="cursor:default">
-          <span class="ico">NIF</span>
-          <div class="text">
-            <small>Empresa</small>
-            <strong>Cosmic Oasis, Unipessoal Lda · 517071800</strong>
-          </div>
-          <span class="arrow" style="opacity:0">→</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="bigmark" aria-hidden="true">
-    <img src="brand/lockup-horizontal-on-navy.svg" alt="">
-  </div>
-</section>
-
-<!-- ─── STICKY CTA ─── -->
-<div class="sticky-cta" id="sticky-cta" aria-hidden="true">
-  <div class="sticky-cta-inner">
-    <div class="sticky-cta-info">
-      <span class="sticky-cta-eyebrow">Radar Marca · €240 / 10 anos</span>
-      <span class="sticky-cta-title">≈ <strong>€2/mês</strong> para proteger a sua marca</span>
-    </div>
-    <a href="#" class="btn btn-gold" data-open-form="protect">Proteger agora</a>
-  </div>
-</div>
-
-<!-- ─── FOOTER ─── -->
-<footer>
-  <div class="foot-grid">
-    <div>© 2026 · Radar Marca</div>
-    <div class="center">Cosmic Oasis, Unipessoal Lda · NIF 517071800</div>
-    <div class="right">
-      <a href="termos.html">Termos</a>
-      <span class="divider">·</span>
-      <a href="privacidade.html">Privacidade</a>
-      <span class="divider">·</span>
-      <a href="reclamacoes.html">Reclamações</a>
-    </div>
-  </div>
-</footer>
-
 <script>
-// also renumber sections so video is 02 and rest shift if needed
-// (left as 02 on video, 03 on método etc.)
-
-// ── video modal
-const poster = document.getElementById('video-poster');
-const modal = document.getElementById('video-modal');
-const modalClose = document.getElementById('video-close');
-const mount = document.getElementById('video-mount');
-const YT_ID = 'FU3jllXgXwA';
-const USE_HTML_EXPLAINER = true;
-
-function openVideo(){
-  if (USE_HTML_EXPLAINER) {
-    mount.innerHTML = '<iframe src="explainer.html" allow="autoplay" style="width:100%;height:100%;border:0;display:block;background:#0B1F3A"></iframe>';
-  } else {
-    mount.innerHTML = '<iframe src="https://www.youtube.com/embed/'+YT_ID+'?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
-  }
-  modal.classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeVideo(){
-  modal.classList.remove('open');
-  mount.innerHTML='';
-  document.body.style.overflow='';
-}
-poster.addEventListener('click', openVideo);
-poster.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();openVideo();} });
-modalClose.addEventListener('click', closeVideo);
-modal.addEventListener('click', e => { if(e.target===modal) closeVideo(); });
-document.addEventListener('keydown', e => { if(e.key==='Escape' && modal.classList.contains('open')) closeVideo(); });
-
-// ── form modal
-const formModal = document.getElementById('form-modal');
-const formClose = document.getElementById('form-close');
-const formBody = document.getElementById('form-body');
-const formSuccess = document.getElementById('form-success');
-const protectForm = document.getElementById('protect-form');
-const formTitle = document.getElementById('form-title');
-const formDesc = document.getElementById('form-desc');
-
-const formVariants = {
-  protect: {
-    title: 'Proteja a sua <em>marca</em>.',
-    desc: 'Preencha os dados abaixo e respondemos em menos de 24 horas com uma proposta de proteção personalizada.',
-  },
-  info: {
-    title: 'Solicitar <em>informações</em>.',
-    desc: 'Deixe-nos os seus dados e o seu pedido. Respondemos em menos de 24 horas.',
-  },
-};
-
-function openFormModal(variant){
-  const v = formVariants[variant] || formVariants.info;
-  formTitle.innerHTML = v.title;
-  formDesc.textContent = v.desc;
-  formBody.style.display = '';
-  formSuccess.classList.remove('show');
-  protectForm.reset();
-  formModal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  // focus first field shortly after open
-  setTimeout(() => document.getElementById('f-name').focus(), 300);
-}
-function closeFormModal(){
-  formModal.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-document.querySelectorAll('[data-open-form]').forEach(el => {
-  el.addEventListener('click', e => {
-    e.preventDefault();
-    openFormModal(el.getAttribute('data-open-form'));
-  });
-});
-formClose.addEventListener('click', closeFormModal);
-formModal.addEventListener('click', e => { if(e.target===formModal) closeFormModal(); });
-document.addEventListener('keydown', e => { if(e.key==='Escape' && formModal.classList.contains('open')) closeFormModal(); });
-
-protectForm.addEventListener('submit', async e => {
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(protectForm).entries());
-  if (!data.name || !data.email || !data.brand) {
-    protectForm.reportValidity();
-    return;
-  }
-
-  const submitBtn = document.getElementById('form-submit');
-  const originalText = submitBtn.textContent;
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'A enviar…';
-
-  // Build a readable message body for the email Formspree forwards
-  const lines = [
-    '─ Contacto',
-    'Nome: ' + data.name,
-    'Email: ' + data.email,
-    data.phone ? 'Telefone: ' + data.phone : null,
-    '',
-    '─ Empresa',
-    data.company ? 'Empresa: ' + data.company : '(não indicado)',
-    data.nif ? 'NIF: ' + data.nif : '(não indicado)',
-    '',
-    '─ Marca',
-    'Nome da marca: ' + data.brand,
-    data.reg ? 'Nº registo INPI: ' + data.reg : '(não indicado)',
-    data.msg ? '\n─ Mensagem\n' + data.msg : null,
-  ].filter(Boolean).join('\n');
-
-  try {
-    const res = await fetch('https://formspree.io/f/xbdwbqov', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(protectForm).constructor === FormData
-        ? (() => {
-            const fd = new FormData();
-            fd.append('name', data.name);
-            fd.append('email', data.email);
-            fd.append('_replyto', data.email);
-            fd.append('_subject', 'Pedido Radar Marca — ' + data.brand);
-            fd.append('phone', data.phone || '');
-            fd.append('empresa', data.company || '');
-            fd.append('nif', data.nif || '');
-            fd.append('marca', data.brand);
-            fd.append('nr_registo', data.reg || '');
-            fd.append('mensagem', data.msg || '');
-            fd.append('message', lines);
-            return fd;
-          })()
-        : null,
-    });
-
-    if (res.ok) {
-      formBody.style.display = 'none';
-      formSuccess.classList.add('show');
-    } else {
-      const json = await res.json().catch(() => ({}));
-      throw new Error(json.error || 'Erro ao enviar');
-    }
-  } catch (err) {
-    alert('Não foi possível enviar o pedido neste momento. Por favor tente novamente ou contacte-nos diretamente em geral@radarmarca.pt');
-    submitBtn.disabled = false;
-    submitBtn.textContent = originalText;
-  }
-});
-
-// ── nav scroll state
+// ── nav scroll
 const nav = document.getElementById('nav');
 const stickyCta = document.getElementById('sticky-cta');
 const priceSection = document.getElementById('preco');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
-  if (stickyCta) {
+  if (stickyCta && priceSection) {
     const showAt = window.innerHeight * 0.9;
-    const hideAt = priceSection ? priceSection.offsetTop - 200 : Infinity;
-    const shouldShow = window.scrollY > showAt && window.scrollY < hideAt;
-    stickyCta.classList.toggle('visible', shouldShow);
+    const hideAt = priceSection.offsetTop - 200;
+    stickyCta.classList.toggle('visible', window.scrollY > showAt && window.scrollY < hideAt);
   }
 }, {passive:true});
 
@@ -2515,6 +2099,17 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target);} });
 }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ── 120-month dot grid
+const dots = document.getElementById('math-dots');
+if (dots) {
+  for (let i=0; i<120; i++) {
+    const d = document.createElement('div');
+    d.className = 'dot';
+    d.style.animationDelay = (i*0.015) + 's';
+    dots.appendChild(d);
+  }
+}
 
 // ── live feed simulation
 const sampleBrands = [
@@ -2539,7 +2134,7 @@ const sampleBrands = [
 ];
 const statusText = {
   clear:'Sem conflito',
-  conflict:() => 'Conflito · ' + (78 + Math.floor(Math.random()*18)) + '%',
+  conflict: () => 'Conflito · ' + (78 + Math.floor(Math.random()*18)) + '%',
   scanning:'A analisar…'
 };
 const feedList = document.getElementById('feed-list');
@@ -2550,41 +2145,172 @@ const paceCell = document.getElementById('stat-pace');
 function pad2(n){ return String(n).padStart(2,'0'); }
 function nowHHMM(){ const d = new Date(); return pad2(d.getHours())+':'+pad2(d.getMinutes()); }
 
-function addRow(){
+function addFeedRow(){
+  if (!feedList) return;
   const item = sampleBrands[Math.floor(Math.random()*sampleBrands.length)];
   const row = document.createElement('div');
   row.className = 'feed-row new-row';
   const label = typeof statusText[item.status] === 'function' ? statusText[item.status]() : statusText[item.status];
-  row.innerHTML = `
-    <span class="time">${nowHHMM()}</span>
-    <span class="name">${item.name}</span>
-    <span class="class">${item.cl}</span>
-    <span class="status status-${item.status}">${label}</span>
-  `;
+  row.innerHTML =
+    '<span class="time">' + nowHHMM() + '</span>' +
+    '<span class="name">' + item.name + '</span>' +
+    '<span class="class">' + item.cl + '</span>' +
+    '<span class="status status-' + item.status + '">' + label + '</span>';
   feedList.insertBefore(row, feedList.firstChild);
-  // limit rows
-  while (feedList.children.length > 8){
-    feedList.removeChild(feedList.lastChild);
-  }
-  if (item.status === 'conflict'){
+  while (feedList.children.length > 8){ feedList.removeChild(feedList.lastChild); }
+  if (item.status === 'conflict' && alertsCell){
     alertCount++;
     alertsCell.textContent = pad2(alertCount);
   }
-  // bump pace
-  paceCell.textContent = (820 + Math.floor(Math.random()*60)) + '/s';
+  if (paceCell) paceCell.textContent = (820 + Math.floor(Math.random()*60)) + '/s';
 }
 
-// only animate if user is on/near the feed
 let feedRunning = false;
-const feedIo = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting && !feedRunning){
-      feedRunning = true;
-      setInterval(addRow, 2600);
-    }
+const feedPanel = document.querySelector('.feed-panel');
+if (feedPanel) {
+  const feedIo = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !feedRunning){
+        feedRunning = true;
+        setInterval(addFeedRow, 2600);
+      }
+    });
+  }, {threshold:0.15});
+  feedIo.observe(feedPanel);
+}
+
+// ── video modal
+const poster = document.getElementById('video-poster');
+const vmodal = document.getElementById('video-modal');
+const vclose = document.getElementById('video-close');
+const vmount = document.getElementById('video-mount');
+
+function openVideo(){
+  if (!vmount) return;
+  vmount.innerHTML = '<iframe src="explainer.html" allow="autoplay" style="width:100%;height:100%;border:0;display:block;background:#0B1F3A"></iframe>';
+  vmodal.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeVideo(){
+  if (!vmodal) return;
+  vmodal.classList.remove('open');
+  if (vmount) vmount.innerHTML='';
+  document.body.style.overflow='';
+}
+if (poster) {
+  poster.addEventListener('click', openVideo);
+  poster.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();openVideo();} });
+}
+if (vclose) vclose.addEventListener('click', closeVideo);
+if (vmodal) vmodal.addEventListener('click', e => { if(e.target===vmodal) closeVideo(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape' && vmodal && vmodal.classList.contains('open')) closeVideo(); });
+
+// ── form modal
+const fmodal = document.getElementById('form-modal');
+const fclose = document.getElementById('form-close');
+const fbody = document.getElementById('form-body');
+const fsuccess = document.getElementById('form-success');
+const fform = document.getElementById('protect-form');
+const ftitle = document.getElementById('form-title');
+const fdesc = document.getElementById('form-desc');
+
+const formVariants = {
+  protect: {
+    title: 'Proteja a sua <em>marca</em>.',
+    desc: 'Preencha os dados abaixo e respondemos em menos de 24 horas com uma proposta personalizada.',
+  },
+  info: {
+    title: 'Solicitar <em>informações</em>.',
+    desc: 'Deixe-nos os seus dados e o seu pedido. Respondemos em menos de 24 horas.',
+  },
+};
+
+function openForm(variant){
+  const v = formVariants[variant] || formVariants.info;
+  ftitle.innerHTML = v.title;
+  fdesc.textContent = v.desc;
+  fbody.style.display = '';
+  fsuccess.classList.remove('show');
+  fform.reset();
+  fmodal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('f-name').focus(), 300);
+}
+function closeForm(){
+  fmodal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('[data-open-form]').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    openForm(el.getAttribute('data-open-form'));
   });
-}, {threshold:0.15});
-feedIo.observe(document.querySelector('.feed-panel'));
+});
+fclose.addEventListener('click', closeForm);
+fmodal.addEventListener('click', e => { if(e.target===fmodal) closeForm(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape' && fmodal.classList.contains('open')) closeForm(); });
+
+fform.addEventListener('submit', async e => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(fform).entries());
+  if (!data.name || !data.email || !data.brand) {
+    fform.reportValidity();
+    return;
+  }
+  const submitBtn = document.getElementById('form-submit');
+  const originalText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'A enviar…';
+
+  const lines = [
+    '─ Contacto',
+    'Nome: ' + data.name,
+    'Email: ' + data.email,
+    data.phone ? 'Telefone: ' + data.phone : null,
+    '',
+    '─ Empresa',
+    data.company ? 'Empresa: ' + data.company : '(não indicado)',
+    data.nif ? 'NIF: ' + data.nif : '(não indicado)',
+    '',
+    '─ Marca',
+    'Nome da marca: ' + data.brand,
+    data.reg ? 'Nº registo INPI: ' + data.reg : '(não indicado)',
+    data.msg ? '\n─ Mensagem\n' + data.msg : null,
+  ].filter(Boolean).join('\n');
+
+  try {
+    const fd = new FormData();
+    fd.append('name', data.name);
+    fd.append('email', data.email);
+    fd.append('_replyto', data.email);
+    fd.append('_subject', 'Pedido Radar Marca — ' + data.brand);
+    fd.append('phone', data.phone || '');
+    fd.append('empresa', data.company || '');
+    fd.append('nif', data.nif || '');
+    fd.append('marca', data.brand);
+    fd.append('nr_registo', data.reg || '');
+    fd.append('mensagem', data.msg || '');
+    fd.append('message', lines);
+
+    const res = await fetch('https://formspree.io/f/xbdwbqov', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: fd,
+    });
+    if (res.ok) {
+      fbody.style.display = 'none';
+      fsuccess.classList.add('show');
+    } else {
+      const json = await res.json().catch(() => ({}));
+      throw new Error(json.error || 'Erro ao enviar');
+    }
+  } catch (err) {
+    alert('Não foi possível enviar o pedido neste momento. Por favor tente novamente ou contacte-nos diretamente em geral@radarmarca.pt');
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+});
 </script>
 
 </body>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" fill="none" font-family="Inter Tight, system-ui, sans-serif">
+  
+  <g transform="translate(0, 18)">
+    <path d="M32 4 L56 11 V32 C56 46 45 56 32 60 C19 56 8 46 8 32 V11 Z" fill="#0B1F3A"></path>
+    <path d="M32 20 A 14 14 0 0 1 46 34" stroke="#D4A038" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.25"></path>
+    <path d="M32 24 A 10 10 0 0 1 42 34" stroke="#D4A038" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.5"></path>
+    <circle cx="32" cy="34" r="3.5" fill="#D4A038"></circle>
+    <path d="M32 34 L47 23" stroke="#D4A038" stroke-width="1.9" stroke-linecap="round"></path>
+  </g>
+  
+  <text x="80" y="62" font-size="40" font-weight="700" letter-spacing="-0.8" fill="#0B1F3A">radar<tspan font-weight="400">marca</tspan></text>
+</svg>
