@@ -1479,9 +1479,16 @@ footer{
   .sticky-cta-title{font-size:0.82rem}
   .sticky-cta .btn{padding:0.55rem 0.95rem;font-size:0.8rem}
 
-  /* NAV */
-  .nav{padding:0.85rem 1rem}
-  .nav-cta{padding:0.55rem 0.95rem;font-size:0.82rem}
+  /* NAV — encolher brand para nao colidir com CTA */
+  .nav{padding:0.75rem 0.9rem;gap:0.75rem}
+  .nav-brand{gap:0.5rem;min-width:0;flex-shrink:1}
+  .nav-brand .symbol{height:38px}
+  .nav-brand .wordmark{font-size:19px}
+  .nav.scrolled{padding:0.45rem 0.9rem}
+  .nav.scrolled .nav-brand .symbol{height:32px}
+  .nav.scrolled .nav-brand .wordmark{font-size:17px}
+  .nav-links{flex-shrink:0}
+  .nav-cta{padding:0.5rem 0.9rem;font-size:0.78rem;gap:6px}
 
   /* PRICE STRIP (final CTA) */
   .price-strip{flex-direction:column;gap:0.5rem;padding:1rem 1.25rem;font-size:0.95rem}
@@ -1492,6 +1499,13 @@ footer{
   .price-card .breakdown{grid-template-columns:1fr;gap:0.55rem}
   .price-number .amount{font-size:4.6rem}
   .hero-title{font-size:1.75rem}
+  .nav{padding:0.65rem 0.75rem;gap:0.5rem}
+  .nav-brand{gap:0.4rem}
+  .nav-brand .symbol{height:32px}
+  .nav-brand .wordmark{font-size:16px}
+  .nav.scrolled .nav-brand .symbol{height:28px}
+  .nav.scrolled .nav-brand .wordmark{font-size:15px}
+  .nav-cta{padding:0.45rem 0.75rem;font-size:0.72rem;gap:5px}
 }
 
 @media (prefers-reduced-motion: reduce){
