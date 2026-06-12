@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radar Marca — Registe a sua marca e nós vigiamo-la</title>
-<meta name="description" content="Registamos a sua marca no INPI e depois o radar vigia o Boletim da Propriedade Industrial, alertando-o em 48h se alguém tentar copiá-la. Registo desde €394,71. Vigilância €295,20 por 10 anos.">
+<title>Radar Marca — Nós vigiamos a sua marca</title>
+<meta name="description" content="O radar vigia o Boletim da Propriedade Industrial e alerta-o em 48h se alguém tentar copiar a sua marca. Vigilância €295,20 por 10 anos. Ainda não registou? Tratamos do registo no INPI desde €394,71.">
 <meta name="theme-color" content="#070f22">
 <meta name="google-site-verification" content="nCf9NAR__q5Dfg9529QOGOnUADooN_iL7gRzm4E-S0s">
 <link rel="canonical" href="https://www.radarmarca.pt/">
@@ -14,12 +14,12 @@
 <meta property="og:url" content="https://www.radarmarca.pt/">
 <meta property="og:site_name" content="Radar Marca">
 <meta property="og:locale" content="pt_PT">
-<meta property="og:title" content="Radar Marca — Registe a sua marca e nós vigiamo-la">
-<meta property="og:description" content="Registo de marca no INPI + vigilância permanente do BPI. Alertamo-lo em 48h se alguém tentar copiar a sua marca.">
+<meta property="og:title" content="Radar Marca — Nós vigiamos a sua marca">
+<meta property="og:description" content="Vigilância permanente do BPI com alerta em 48h se alguém tentar copiar a sua marca. E se ainda não registou, tratamos do registo no INPI.">
 <meta property="og:image" content="https://www.radarmarca.pt/brand/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Radar Marca — Registe a sua marca e nós vigiamo-la">
-<meta name="twitter:description" content="Registo de marca no INPI + vigilância permanente do BPI. Alertamo-lo em 48h se alguém tentar copiar a sua marca.">
+<meta name="twitter:title" content="Radar Marca — Nós vigiamos a sua marca">
+<meta name="twitter:description" content="Vigilância permanente do BPI com alerta em 48h se alguém tentar copiar a sua marca. E se ainda não registou, tratamos do registo no INPI.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,19 +54,19 @@
     },
     {
       "@type": "Service",
-      "name": "Registo de Marca — Radar Marca",
-      "provider": { "@id": "https://www.radarmarca.pt/#organization" },
-      "serviceType": "Registo de marca no INPI",
-      "areaServed": "PT",
-      "description": "Pesquisa de anterioridades e registo de marca no INPI por procuração, com garantia de reembolso da taxa de serviço em caso de recusa. Desde €394,71."
-    },
-    {
-      "@type": "Service",
       "name": "Vigilância de Marca — Radar Marca",
       "provider": { "@id": "https://www.radarmarca.pt/#organization" },
       "serviceType": "Monitorização de Marca Registada",
       "areaServed": "PT",
       "description": "Monitorização semanal do Boletim da Propriedade Industrial (INPI) com alerta em 48h quando é publicado um pedido de marca semelhante. €295,20 por 10 anos."
+    },
+    {
+      "@type": "Service",
+      "name": "Registo de Marca — Radar Marca",
+      "provider": { "@id": "https://www.radarmarca.pt/#organization" },
+      "serviceType": "Registo de marca no INPI",
+      "areaServed": "PT",
+      "description": "Pesquisa de anterioridades e registo de marca no INPI por procuração, com garantia de reembolso da taxa de serviço em caso de recusa. Desde €394,71."
     }
   ]
 }
@@ -222,33 +222,63 @@
   .pricebox .break{margin-top:18px; border-top:1px solid rgba(244,238,222,.1); padding-top:16px; display:grid; gap:9px; font-family:var(--mono); font-size:12px; color:rgba(244,238,222,.6)}
   .pricebox .break .row{display:flex; justify-content:space-between}
   .pricebox .break .row b{color:var(--cream); font-weight:500; font-variant-numeric:tabular-nums}
+  .permonth-note{margin-top:10px; display:inline-block; font-size:14px; color:rgba(244,238,222,.75);
+    background:rgba(200,151,58,.12); border:1px solid rgba(200,151,58,.3); border-radius:24px; padding:7px 14px}
+  .permonth-note b{color:var(--gold-2); font-weight:700}
   .guarantee{margin-top:18px; background:rgba(93,214,160,.07); border:1px solid rgba(93,214,160,.25); border-radius:12px; padding:16px; font-size:13px; color:rgba(244,238,222,.82)}
   .guarantee b{color:var(--signal)}
   .btn-gold{display:inline-block; margin-top:22px; background:var(--gold); color:#1a1206; font-weight:700; font-size:15px; padding:14px 26px; border-radius:11px; transition:transform .2s, box-shadow .2s; will-change:transform}
   .btn-gold:hover{box-shadow:0 10px 28px rgba(200,151,58,.35)}
-  .permonth{font-weight:800;font-size:46px;letter-spacing:-.03em}
-  .permonth em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--gold)}
-  @media(max-width:760px){ .service .grid, .service.alt .grid{grid-template-columns:1fr} }
+  @media(max-width:760px){ .service .grid{grid-template-columns:1fr} }
 
-  /* consola live-ops (S4) */
-  .service.alt .grid{grid-template-columns:.95fr 1.05fr}
-  .scope-panel{position:relative; background:rgba(10,20,40,.66); border:1px solid rgba(200,151,58,.25);
-    border-radius:16px; overflow:hidden; font-family:var(--mono); backdrop-filter:blur(3px);
-    box-shadow:0 30px 90px rgba(0,0,0,.4)}
-  .scope-panel::after{content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+  /* vigilância (S3) — o palco onde os nomes vivem dentro do radar */
+  .vigia .vigia-head{max-width:780px}
+  .radar-stage{position:relative; margin-top:44px; height:clamp(400px,62vh,580px);
+    border:1px solid rgba(200,151,58,.3); border-radius:18px; overflow:hidden;
+    background:rgba(7,15,34,.26); box-shadow:0 30px 90px rgba(0,0,0,.35)}
+  .radar-stage::after{content:""; position:absolute; inset:0; pointer-events:none; opacity:.45;
     background:repeating-linear-gradient(0deg, rgba(244,238,222,.025) 0 1px, transparent 1px 3px)}
-  .scope-bar{display:flex; align-items:center; gap:10px; padding:12px 16px; border-bottom:1px solid rgba(244,238,222,.08); font-size:11px; color:rgba(244,238,222,.5); flex-wrap:wrap}
-  .scope-bar .traffic{display:flex; gap:5px}
-  .scope-bar .traffic span{width:9px;height:9px;border-radius:50%;background:rgba(244,238,222,.18)}
-  .scope-bar .demo{background:rgba(200,151,58,.18); color:var(--gold); padding:2px 8px; border-radius:20px; font-size:9px; letter-spacing:1px}
-  .scope-bar .scanning{margin-left:auto; color:var(--signal)}
-  .scope-window{position:relative; height:clamp(220px,30vw,300px); border-bottom:1px solid rgba(244,238,222,.06)}
-  .scope-window .hint{position:absolute; left:14px; top:12px; font-size:9px; letter-spacing:2px; color:rgba(244,238,222,.35); text-transform:uppercase}
+  .radar-stage .stage-bar{display:flex; align-items:center; gap:10px; padding:12px 16px;
+    border-bottom:1px solid rgba(244,238,222,.08); font-family:var(--mono); font-size:11px;
+    color:rgba(244,238,222,.5); flex-wrap:wrap; background:rgba(7,15,34,.55); backdrop-filter:blur(4px)}
+  .radar-stage .traffic{display:flex; gap:5px}
+  .radar-stage .traffic span{width:9px;height:9px;border-radius:50%;background:rgba(244,238,222,.18)}
+  .radar-stage .demo{background:rgba(200,151,58,.18); color:var(--gold); padding:2px 8px; border-radius:20px; font-size:9px; letter-spacing:1px}
+  .radar-stage .scanning{margin-left:auto; color:var(--signal)}
+  .radar-stage .hint{position:absolute; left:16px; bottom:12px; font-family:var(--mono); font-size:9px; letter-spacing:2px; color:rgba(244,238,222,.35); text-transform:uppercase}
+  /* modo alerta — quando o feixe trava no conflito */
+  .radar-stage::before{content:""; position:absolute; inset:0; pointer-events:none; z-index:1; border-radius:18px;
+    box-shadow:inset 0 0 0 rgba(229,96,74,0); transition:box-shadow .6s ease}
+  .radar-stage.alert{border-color:rgba(229,96,74,.6)}
+  .radar-stage.alert::before{animation:alertbreath 1.1s ease-in-out infinite alternate}
+  @keyframes alertbreath{from{box-shadow:inset 0 0 130px rgba(229,96,74,.18)}to{box-shadow:inset 0 0 90px rgba(229,96,74,.32)}}
+  .radar-stage .scanning.alert{color:var(--alert-2)}
+  .radar-stage .stage-alert{position:absolute; right:14px; top:56px; z-index:2; max-width:250px;
+    background:rgba(7,15,34,.9); border:1px solid rgba(229,96,74,.5); border-radius:12px;
+    padding:12px 14px; font-family:var(--mono); display:grid; gap:6px; pointer-events:none;
+    opacity:0; transform:translateX(14px); transition:opacity .45s ease, transform .45s ease}
+  .radar-stage .stage-alert.on{opacity:1; transform:none}
+  .stage-alert b{color:var(--alert-2); font-size:11px; letter-spacing:1px; font-weight:500}
+  .stage-alert span{color:rgba(244,238,222,.85); font-size:11px; line-height:1.4}
+  .stage-alert em{color:var(--signal); font-style:normal; font-size:10px; letter-spacing:.5px}
+  @media(max-width:560px){ .radar-stage .stage-alert{max-width:200px; right:10px; top:auto; bottom:32px; padding:10px 12px} }
+  .scope-row.alarm{background:rgba(229,96,74,.13)}
+  .scope-row.alarm .nm{color:#ffd9d0}
+  .no-motion .radar-stage.alert::before{animation:none}
+  .vigia-grid{margin-top:26px; display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(22px,4vw,44px); align-items:start}
+  .detections{background:rgba(10,20,40,.66); border:1px solid rgba(200,151,58,.25);
+    border-radius:16px; overflow:hidden; font-family:var(--mono); backdrop-filter:blur(3px)}
+  .scope-row.lit{background:rgba(200,151,58,.09)}
+  .scope-row.lit .nm{color:var(--cream)}
+  @media(max-width:760px){
+    .vigia-grid{grid-template-columns:1fr}
+    .radar-stage{height:clamp(340px,58vh,460px)}
+  }
   .scope-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; padding:16px; text-align:center; border-bottom:1px solid rgba(244,238,222,.06)}
   .scope-stats .cell{font-size:10px; color:rgba(244,238,222,.5); letter-spacing:1px; text-transform:uppercase}
   .scope-stats .cell strong{display:block; margin-top:4px; font-size:18px; color:var(--cream); font-family:var(--sans); font-weight:700; letter-spacing:-.02em; font-variant-numeric:tabular-nums}
   .scope-list{padding:6px 16px 14px}
-  .scope-row{display:grid; grid-template-columns:1fr auto auto; gap:12px; align-items:center; padding:9px 0; border-bottom:1px solid rgba(244,238,222,.05); font-size:12px}
+  .scope-row{display:grid; grid-template-columns:1fr auto auto; gap:12px; align-items:center; padding:9px 8px; margin:0 -8px; border-radius:8px; border-bottom:1px solid rgba(244,238,222,.05); font-size:12px; transition:background .35s ease}
   .scope-row .nm{color:rgba(244,238,222,.82); font-family:var(--sans)}
   .scope-row .cl{color:rgba(244,238,222,.4); font-size:11px}
   .scope-row .st{font-size:10px; padding:3px 8px; border-radius:20px; letter-spacing:.5px; white-space:nowrap}
@@ -259,10 +289,6 @@
   .scope-foot{padding:12px 16px; background:rgba(7,15,34,.5); font-size:10px; color:rgba(244,238,222,.4); display:flex; gap:8px; align-items:center}
   .scope-foot b{background:rgba(200,151,58,.18); color:var(--gold); padding:2px 7px; border-radius:5px; flex:0 0 auto}
   .no-motion .st.conflict{animation:none}
-  @media(max-width:760px){
-    .service.alt .grid{grid-template-columns:1fr}
-    .service.alt .scope-panel{order:2}
-  }
 
   /* ===== S5 · FUNIL ===== */
   .funnel{text-align:center; min-height:80svh; display:flex; align-items:center}
@@ -375,8 +401,8 @@
 <nav id="miniNav" aria-label="Navegação">
   <a href="#topo"><img src="Radarmarca_logo_light.png" alt="Radar Marca"></a>
   <div class="links">
-    <a href="#registo">REGISTO</a>
     <a href="#vigilancia">VIGILÂNCIA</a>
+    <a href="#registo">REGISTO</a>
     <a href="#faq">FAQ</a>
     <a class="cta" href="#contacto">Proteger a minha marca</a>
   </div>
@@ -395,20 +421,20 @@
     <div class="live"><span class="dot"></span> <span class="live-txt">BPI · A VIGIAR EM TEMPO REAL</span></div>
   </div>
   <div class="hero-inner" id="heroInner">
-    <div class="eyebrow">Registo de marca <b>+</b> vigilância permanente</div>
-    <h1 id="heroTitle"><span class="w">Registe-a.</span><br><span class="w">E</span> <span class="w">nós</span> <span class="w">nunca</span><br><em id="heroEm">tiramos o olho.</em></h1>
-    <p class="lede" id="heroLede">Em Portugal, a marca é de quem a regista primeiro. Tratamos do registo no INPI — e depois o radar vigia-a, semana após semana, durante 10 anos.</p>
+    <div class="eyebrow">Vigilância permanente <b>+</b> registo no INPI</div>
+    <h1 id="heroTitle"><span class="w">Nós</span> <span class="w">nunca</span> <span class="w">tiramos</span><br><em id="heroEm">o olho da sua marca.</em></h1>
+    <p class="lede" id="heroLede">O radar varre o Boletim da Propriedade Industrial, semana após semana, e alerta-o em menos de 48h se alguém tentar copiá-la. Ainda não a registou? Também tratamos disso.</p>
     <div class="fork" id="heroFork">
-      <a class="path primary" href="#registo">
+      <a class="path primary" href="#vigilancia">
+        <div class="k">JÁ TENHO MARCA</div>
+        <div class="t">Quero vigiá-la contra&nbsp;cópias</div>
+        <div class="s">O radar que varre o BPI por si</div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="path" href="#registo">
         <div class="k">COMEÇAR DO ZERO</div>
         <div class="t">Ainda não registei a&nbsp;minha marca</div>
         <div class="s">Pesquisa grátis + registo no INPI</div>
-        <span class="arrow">→</span>
-      </a>
-      <a class="path" href="#vigilancia">
-        <div class="k">JÁ TENHO MARCA</div>
-        <div class="t">Quero vigiá-la contra cópias</div>
-        <div class="s">O radar que varre o BPI por si</div>
         <span class="arrow">→</span>
       </a>
     </div>
@@ -430,17 +456,73 @@
   <div class="wrap">
     <div class="eyebrow reveal" style="display:inline-block;margin-bottom:18px">O porquê de tudo</div>
     <h2 class="section-title reveal">Vale quem regista primeiro.<br>E ninguém o avisa quando <em>o copiam.</em></h2>
-    <p class="lede reveal">Em Portugal, a marca pertence a quem a registar primeiro — não a quem a usou primeiro. Registar dá-lhe o direito. Mas o INPI não o avisa quando alguém tenta registar algo parecido. Por isso fazemos as duas coisas: <strong>damos-lhe o direito</strong> e <strong>vigiamo-lo por si</strong>.</p>
+    <p class="lede reveal">Em Portugal, a marca pertence a quem a registar primeiro — não a quem a usou primeiro. Registar dá-lhe o direito. Mas o INPI não o avisa quando alguém tenta registar algo parecido. É aí que entramos: <strong>vigiamos o Boletim por si</strong> — e, se ainda não registou, <strong>tratamos do registo</strong> também.</p>
     <div class="alertline reveal"><span class="adot"></span> PEDIDO COLIDENTE PUBLICADO · O TITULAR NÃO FOI NOTIFICADO</div>
   </div>
 </section>
 
-<!-- ===== S3 · REGISTO (Venda 1) — target lock ===== -->
-<section class="service" id="registo" data-scene="registo" data-hud="03 · TARGET LOCK">
+<!-- ===== S3 · VIGILÂNCIA (Venda 1) — os nomes vivem dentro do radar ===== -->
+<section class="service vigia" id="vigilancia" data-scene="vigilancia" data-hud="03 · LIVE OPS">
+  <div class="wrap">
+    <div class="vigia-head">
+      <div class="eyebrow reveal">A nossa especialidade <b>·</b> Vigilância</div>
+      <h2 class="section-title reveal" style="margin-top:16px">Registada não é protegida.<br><em>É só o princípio.</em></h2>
+      <p class="lede reveal" style="margin-top:20px">O radar varre o Boletim da Propriedade Industrial todas as semanas. Quando aparece um pedido parecido com o seu, <strong>alertamo-lo em menos de 48h</strong> — com tempo para reagir e deduzir oposição.</p>
+    </div>
+    <div class="radar-stage reveal" id="radarStage" aria-hidden="true">
+      <div class="stage-bar">
+        <span class="traffic"><span></span><span></span><span></span></span>
+        <span>radarmarca.pt / scope</span>
+        <span class="demo">DEMO</span>
+        <span class="scanning" id="stageScanning">● BPI · varrimento semanal</span>
+      </div>
+      <div class="stage-alert" id="stageAlert">
+        <b>⚠ CONFLITO DETETADO</b>
+        <span>VINHO &amp; PEDRA · semelhança 87% · classe 33</span>
+        <em>alerta enviado ao titular · &lt;48h</em>
+      </div>
+      <span class="hint">janela do radar · em direto</span>
+    </div>
+    <div class="vigia-grid">
+      <div class="detections reveal" id="detections">
+        <div class="scope-stats">
+          <div class="cell">Cobertura<strong>100%</strong></div>
+          <div class="cell">Análise<strong id="statScan">842/s</strong></div>
+          <div class="cell">Alertas<strong id="statAlerts">01</strong></div>
+        </div>
+        <div class="scope-list" id="scopeList">
+          <div class="scope-row"><span class="nm">NORTE FILMES, Lda</span><span class="cl">cl. 41</span><span class="st clear">Sem conflito</span></div>
+          <div class="scope-row"><span class="nm">VINHO &amp; PEDRA</span><span class="cl">cl. 33</span><span class="st conflict">Conflito · 87%</span></div>
+          <div class="scope-row"><span class="nm">Oliveira &amp; Co</span><span class="cl">cl. 35</span><span class="st clear">Sem conflito</span></div>
+          <div class="scope-row"><span class="nm">Estúdio Rebento</span><span class="cl">cl. 42</span><span class="st scan">A analisar…</span></div>
+        </div>
+        <div class="scope-foot"><b>DEMO</b><span>Painel ilustrativo. O Radar Marca é alimentado pelo BPI oficial publicado semanalmente pelo INPI.</span></div>
+      </div>
+      <div class="pricebox reveal" id="priceboxVigia">
+        <div class="lock-tag">VIGILÂNCIA ATIVA</div>
+        <div class="total"><span class="counter" data-to="295.20" data-prefix="€">€295,20</span> <small>/ pagamento único · 10 anos</small></div>
+        <div class="permonth-note">equivale a <b>~€2/mês</b> a vigiar por si</div>
+        <div class="break">
+          <div class="row"><span>Cobertura</span><b>10 anos de vigilância</b></div>
+          <div class="row"><span>Varrimento do BPI</span><b>semanal</b></div>
+          <div class="row"><span>Mensalidades / renovações</span><b>€0</b></div>
+        </div>
+        <div class="guarantee">
+          <b>Alerta em menos de 48h.</b> Quando o BPI publica um pedido parecido com a sua marca, recebe o alerta com a análise de semelhança — a tempo de deduzir oposição dentro do prazo legal.
+        </div>
+        <a class="btn-gold" href="#contacto">Quero vigiar a minha marca</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S4 · REGISTO (Venda 2) — o ponto de partida ===== -->
+<section class="service" id="registo" data-scene="registo" data-hud="04 · REGISTO">
   <div class="wrap grid">
     <div>
-      <div class="eyebrow reveal">Primeiro <b>·</b> O direito</div>
-      <h2 class="section-title reveal" style="margin-top:16px">A sua marca,<br>registada <em>como deve ser.</em></h2>
+      <div class="eyebrow reveal">O ponto de partida <b>·</b> Registo</div>
+      <h2 class="section-title reveal" style="margin-top:16px">Ainda não registou?<br><em>Tratamos disso também.</em></h2>
+      <p class="lede reveal" style="margin-top:20px">A vigilância protege marcas registadas. Se a sua ainda não o está, tratamos do registo no INPI — e o radar liga-se a seguir.</p>
       <ul class="feat">
         <li class="reveal"><span class="ic">✓</span><div><b>Pesquisa de anterioridades grátis</b> (INPI + EUIPO) antes de submeter. Só avançamos se as hipóteses forem boas.</div></li>
         <li class="reveal"><span class="ic">✓</span><div><b>Submissão por procuração</b> — tratamos de tudo com um modelo simples, sem burocracia para si.</div></li>
@@ -448,7 +530,7 @@
       </ul>
     </div>
     <div class="pricebox reveal" id="priceboxRegisto">
-      <div class="lock-tag">ALVO ADQUIRIDO</div>
+      <div class="lock-tag">O PONTO DE PARTIDA</div>
       <div class="total"><span class="counter" data-to="394.71" data-prefix="€">€394,71</span> <small>/ tudo incluído</small></div>
       <div class="break">
         <div class="row"><span>Serviço (€200 + IVA)</span><b><span class="counter" data-to="246.00" data-prefix="€">€246,00</span></b></div>
@@ -459,45 +541,6 @@
         <b>E se o INPI não aceitar?</b> Pesquisamos primeiro, grátis. Se mesmo assim recusar, <b>devolvemos a taxa de serviço</b>. A taxa do INPI (€148,71) é paga ao Estado e não é reembolsável — por isso é que pesquisamos antes.
       </div>
       <a class="btn-gold" href="#contacto">Quero registar a minha marca</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== S4 · VIGILÂNCIA (Venda 2) — o radar vira consola ===== -->
-<section class="service alt" id="vigilancia" data-scene="vigilancia" data-hud="04 · LIVE OPS">
-  <div class="wrap grid">
-    <div class="scope-panel reveal" id="scopePanel" aria-hidden="true">
-      <div class="scope-bar">
-        <span class="traffic"><span></span><span></span><span></span></span>
-        <span>radarmarca.pt / scope</span>
-        <span class="demo">DEMO</span>
-        <span class="scanning">● BPI · varrimento semanal</span>
-      </div>
-      <div class="scope-window" id="scopeWindow">
-        <span class="hint">janela do radar · em direto</span>
-      </div>
-      <div class="scope-stats">
-        <div class="cell">Cobertura<strong>100%</strong></div>
-        <div class="cell">Análise<strong id="statScan">842/s</strong></div>
-        <div class="cell">Alertas<strong id="statAlerts">02</strong></div>
-      </div>
-      <div class="scope-list" id="scopeList">
-        <div class="scope-row"><span class="nm">NORTE FILMES, Lda</span><span class="cl">cl. 41</span><span class="st clear">Sem conflito</span></div>
-        <div class="scope-row"><span class="nm">VINHO &amp; PEDRA</span><span class="cl">cl. 33</span><span class="st conflict">Conflito · 87%</span></div>
-        <div class="scope-row"><span class="nm">Oliveira &amp; Co</span><span class="cl">cl. 35</span><span class="st clear">Sem conflito</span></div>
-        <div class="scope-row"><span class="nm">Estúdio Rebento</span><span class="cl">cl. 42</span><span class="st scan">A analisar…</span></div>
-      </div>
-      <div class="scope-foot"><b>DEMO</b><span>Painel ilustrativo. O Radar Marca é alimentado pelo BPI oficial publicado semanalmente pelo INPI.</span></div>
-    </div>
-    <div>
-      <div class="eyebrow reveal">Depois <b>·</b> A defesa</div>
-      <h2 class="section-title reveal" style="margin-top:16px">Registada não é protegida.<br><em>É só o princípio.</em></h2>
-      <p class="lede reveal" style="margin-top:20px">O radar varre o Boletim da Propriedade Industrial todas as semanas. Quando aparece um pedido parecido com o seu, <strong>alertamo-lo em menos de 48h</strong> — com tempo para reagir e deduzir oposição.</p>
-      <div class="reveal" style="margin-top:26px">
-        <div class="permonth">~€2<em>/mês</em></div>
-        <p class="lede" style="margin-top:8px">€295,20 uma vez. Cobre <strong>10 anos</strong> de vigilância. Sem mensalidades, sem renovações.</p>
-        <a class="btn-gold" href="#contacto">Quero vigiar a minha marca</a>
-      </div>
     </div>
   </div>
 </section>
@@ -538,12 +581,12 @@
     <div class="eyebrow reveal">Perguntas frequentes</div>
     <h2 class="section-title reveal" style="margin-top:16px">Tudo o que pode estar <em>a pensar.</em></h2>
     <div class="list reveal">
+      <details><summary>O que acontece se alguém tentar copiar a minha marca? <span class="pm">+</span></summary><div class="body">O radar deteta o pedido no BPI e alerta-o em menos de 48h, com tempo para deduzir oposição dentro do prazo legal.</div></details>
+      <details><summary>Porque é que registar não chega? <span class="pm">+</span></summary><div class="body">Registar dá-lhe o direito, mas o INPI não o avisa quando publicam um pedido semelhante. Sem vigilância, só descobre quando já é tarde. Por isso os dois serviços encaixam.</div></details>
+      <details><summary>Fazem a defesa jurídica da marca em tribunal? <span class="pm">+</span></summary><div class="body">Não. O nosso serviço é a <strong>vigilância</strong> que o alerta a tempo e o <strong>registo</strong> da sua marca. Não fazemos representação jurídica nem contencioso — oposições, recursos ou ações em tribunal. Quando o radar deteta um conflito, avisamo-lo dentro do prazo para poder agir; se precisar de avançar juridicamente, pode fazê-lo com o seu advogado ou agente oficial da propriedade industrial.</div></details>
       <details><summary>Quanto tempo demora o registo no INPI? <span class="pm">+</span></summary><div class="body">Depois de submetido, o processo no INPI costuma demorar alguns meses até decisão. Mantemo-lo informado em cada fase.</div></details>
       <details><summary>E se já existir uma marca parecida? <span class="pm">+</span></summary><div class="body">É exatamente o que a pesquisa de anterioridades (grátis) deteta antes de submeter. Se houver risco, avisamo-lo e ajustamos a estratégia — para não gastar a taxa do Estado em vão.</div></details>
-      <details><summary>O que acontece se alguém tentar copiar a minha marca? <span class="pm">+</span></summary><div class="body">O radar deteta o pedido no BPI e alerta-o em menos de 48h, com tempo para deduzir oposição dentro do prazo legal.</div></details>
-      <details><summary>Fazem a defesa jurídica da marca em tribunal? <span class="pm">+</span></summary><div class="body">Não. O nosso serviço é o <strong>registo</strong> da sua marca e a <strong>vigilância</strong> que o alerta a tempo. Não fazemos representação jurídica nem contencioso — oposições, recursos ou ações em tribunal. Quando o radar deteta um conflito, avisamo-lo dentro do prazo para poder agir; se precisar de avançar juridicamente, pode fazê-lo com o seu advogado ou agente oficial da propriedade industrial.</div></details>
-      <details><summary>Porque é que registar não chega? <span class="pm">+</span></summary><div class="body">Registar dá-lhe o direito, mas o INPI não o avisa quando publicam um pedido semelhante. Sem vigilância, só descobre quando já é tarde. Por isso os dois serviços encaixam.</div></details>
-      <details><summary>O pagamento é mesmo único? <span class="pm">+</span></summary><div class="body">Sim. O registo é um pagamento único de €394,71. A vigilância é €295,20 uma vez, e cobre 10 anos — sem mensalidades nem renovações.</div></details>
+      <details><summary>O pagamento é mesmo único? <span class="pm">+</span></summary><div class="body">Sim. A vigilância é €295,20 uma vez, e cobre 10 anos — sem mensalidades nem renovações. O registo é um pagamento único de €394,71.</div></details>
     </div>
   </div>
 </section>
@@ -553,7 +596,7 @@
   <div class="wrap">
     <h2 class="section-title reveal">A sua marca,<br>protegida <em>desde hoje.</em></h2>
     <div class="locked reveal"><span class="dot"></span> ALVO TRAVADO · VIGILÂNCIA ATIVA</div>
-    <p class="lede reveal" style="margin:22px auto 0;text-align:center">Diga-nos a sua marca. Tratamos do registo e ficamos a olhar por si — durante uma década.</p>
+    <p class="lede reveal" style="margin:22px auto 0;text-align:center">Diga-nos a sua marca. O radar fica de olho por si durante uma década — e, se for preciso, tratamos também do registo.</p>
     <form class="cform reveal" id="cform" novalidate>
       <div class="row">
         <div class="field"><label for="f-name">Nome</label><input id="f-name" name="name" required autocomplete="name" placeholder="O seu nome"></div>
@@ -620,13 +663,13 @@
   // flags: label (a sua marca), red (alerta ignorado), green (lock final),
   // reticle (mira S3), beam (feixe horizontal S5), rings (nº de anéis)
   const SCENES = {
-    hero:      {x:.5,  y:.45, r:.62, alpha:1.00, sweep:0.008, label:1, red:0, green:0, reticle:0, beam:0},
-    tese:      {x:.5,  y:.5,  r:.85, alpha:0.34, sweep:0.004, label:0, red:1, green:0, reticle:0, beam:0},
-    registo:   {x:.72, y:.5,  r:.42, alpha:0.55, sweep:0.010, label:0, red:0, green:0, reticle:1, beam:0, anchor:'#priceboxRegisto'},
-    vigilancia:{x:.3,  y:.45, r:.30, alpha:0.95, sweep:0.022, label:0, red:1, green:0, reticle:0, beam:0, anchor:'#scopeWindow'},
-    funil:     {x:.5,  y:.30, r:.34, alpha:0.50, sweep:0.012, label:0, red:0, green:0, reticle:0, beam:1},
-    ambient:   {x:.5,  y:.55, r:1.05, alpha:0.10, sweep:0.003, label:0, red:0, green:0, reticle:0, beam:0},
-    final:     {x:.5,  y:.38, r:.5,  alpha:0.85, sweep:0.010, label:1, red:0, green:1, reticle:0, beam:0}
+    hero:      {x:.5,  y:.45, r:.62, alpha:1.00, sweep:0.008, label:1, red:0, green:0, reticle:0, beam:0, named:0},
+    tese:      {x:.5,  y:.5,  r:.85, alpha:0.34, sweep:0.004, label:0, red:1, green:0, reticle:0, beam:0, named:0},
+    vigilancia:{x:.5,  y:.5,  r:.44, alpha:1.00, sweep:0.018, label:0, red:0, green:0, reticle:0, beam:0, named:1, anchor:'#radarStage'},
+    registo:   {x:.72, y:.5,  r:.40, alpha:0.40, sweep:0.008, label:0, red:0, green:0, reticle:0, beam:0, named:0, anchor:'#priceboxRegisto'},
+    funil:     {x:.5,  y:.30, r:.34, alpha:0.50, sweep:0.012, label:0, red:0, green:0, reticle:0, beam:1, named:0},
+    ambient:   {x:.5,  y:.55, r:1.05, alpha:0.10, sweep:0.003, label:0, red:0, green:0, reticle:0, beam:0, named:0},
+    final:     {x:.5,  y:.38, r:.5,  alpha:0.85, sweep:0.010, label:1, red:0, green:1, reticle:0, beam:0, named:0}
   };
   const cur = Object.assign({}, SCENES.hero);   // estado interpolado
   let activeScene = 'hero';
@@ -667,6 +710,7 @@
           t.y = (rc.top + rc.height/2) / H;
           t.r = (Math.min(rc.width, rc.height)/2.15) / Math.min(W,H);
         }
+        if(t.anchor==='#radarStage') stageRect={x:rc.left, y:rc.top, w:rc.width, h:rc.height};
       }
     }
     return t;
@@ -677,6 +721,73 @@
   const NB = isMobile ? 6 : 9;
   for(let i=0;i<NB;i++){
     blips.push({ a:(i/NB)*Math.PI*2 + 0.35, r:0.28+(i%4)*0.18, hot:i===2, threat:i===5 });
+  }
+
+  /* marcas nomeadas — vivem dentro do radar na cena de vigilância,
+     sincronizadas com as linhas da lista de deteções (#scopeList) */
+  const MARKS=[
+    {name:'NORTE FILMES, Lda', st:'clear',    a:-2.30, r:.58},
+    {name:'VINHO & PEDRA',     st:'conflict', a:-0.62, r:.55, pct:'87%'},
+    {name:'Oliveira & Co',     st:'clear',    a: 2.52, r:.62},
+    {name:'Estúdio Rebento',   st:'scan',     a: 0.95, r:.42}
+  ];
+  const markRowEls=document.querySelectorAll('#scopeList .scope-row');
+  MARKS.forEach((m,i)=>{ m.row=markRowEls[i]||null; m._rv=0; });
+  const NAMED = isMobile ? MARKS.filter((m,i)=>i!==2) : MARKS;
+
+  /* ---------- o drama da deteção: o feixe trava no conflito ---------- */
+  const stageEl=document.getElementById('radarStage');
+  const stageAlertEl=document.getElementById('stageAlert');
+  const stageScanEl=document.getElementById('stageScanning');
+  const drama={state:'idle', t:0, prog:0, cool:200};
+  let stageRect=null;
+  function startAlert(){
+    if(stageEl) stageEl.classList.add('alert');
+    if(stageAlertEl) stageAlertEl.classList.add('on');
+    if(stageScanEl){ stageScanEl.textContent='⚠ CONFLITO DETETADO · CL. 33'; stageScanEl.classList.add('alert'); }
+    if(MARKS[1].row) MARKS[1].row.classList.add('alarm');
+  }
+  function endAlert(){
+    if(stageEl) stageEl.classList.remove('alert');
+    if(stageAlertEl) stageAlertEl.classList.remove('on');
+    if(stageScanEl){ stageScanEl.textContent='● BPI · varrimento semanal'; stageScanEl.classList.remove('alert'); }
+    if(MARKS[1].row) MARKS[1].row.classList.remove('alarm');
+  }
+  function updateDrama(){
+    const active = activeScene==='vigilancia' && cur.named>0.6;
+    if(!active){
+      if(drama.state!=='idle'){ endAlert(); drama.state='idle'; drama.prog=0; drama.cool=200; }
+      return 1;
+    }
+    if(drama.state==='idle'){
+      if(drama.cool>0){ drama.cool--; return 1; }
+      const conf=NAMED.find(m=>m.st==='conflict');
+      if(!conf) return 1;
+      const ca=((conf.a%TAU)+TAU)%TAU, sa=((sweep%TAU)+TAU)%TAU;
+      let diff=Math.abs(sa-ca); if(diff>Math.PI) diff=TAU-diff;
+      if(diff<0.06){ drama.state='lock'; drama.t=0; startAlert(); }
+      return 1;
+    }
+    if(drama.state==='lock'){
+      drama.t++;
+      drama.prog=Math.min(1, drama.t/50);
+      if(drama.t>230){ drama.state='release'; drama.t=0; endAlert(); }
+      return 0.12+(1-drama.prog)*0.88;   /* o tempo abranda */
+    }
+    /* release — o feixe retoma a velocidade */
+    drama.t++; drama.prog=Math.max(0, 1-drama.t/40);
+    if(drama.t>40){ drama.state='idle'; drama.cool=560; drama.prog=0; }
+    return 1;
+  }
+
+  /* faíscas no rasto do feixe */
+  const sparks=[];
+
+  /* crosshair interativo sobre o palco (desktop) */
+  let cx=-1, cy=-1;
+  if(stageEl && !isMobile){
+    stageEl.addEventListener('pointermove',(e)=>{cx=e.clientX; cy=e.clientY;},{passive:true});
+    stageEl.addEventListener('pointerleave',()=>{cx=-1;},{passive:true});
   }
   /* poeira de fundo — vida ambiente */
   const dust=[];
@@ -705,7 +816,7 @@
     cur.alpha=lerp(cur.alpha,t.alpha,K); cur.sweep=lerp(cur.sweep,t.sweep,K);
     cur.label=lerp(cur.label,t.label,K); cur.red=lerp(cur.red,t.red,K);
     cur.green=lerp(cur.green,t.green,K); cur.reticle=lerp(cur.reticle,t.reticle,K);
-    cur.beam=lerp(cur.beam,t.beam,K);
+    cur.beam=lerp(cur.beam,t.beam,K); cur.named=lerp(cur.named,t.named||0,K);
 
     ctx.clearRect(0,0,W,H);
 
@@ -719,16 +830,22 @@
     ctx.globalAlpha = 1;
 
     const parallaxOn = activeScene==='hero' ? 1 : 0;
-    const ox = cur.x*W + mx*parallaxOn;
-    const oy = cur.y*H + my*parallaxOn;
+    let ox = cur.x*W + mx*parallaxOn;
+    let oy = cur.y*H + my*parallaxOn;
+    /* impacto: tremor curto quando o lock dispara */
+    if(drama.state==='lock' && drama.t<22){
+      const k=(22-drama.t)/22*5;
+      ox+=(Math.random()-.5)*k; oy+=(Math.random()-.5)*k;
+    }
     const R  = cur.r*Math.min(W,H);
     const A  = cur.alpha;
     if(A < 0.01){ if(!reduce) requestAnimationFrame(draw); return; }
 
-    /* anéis concêntricos */
+    /* anéis concêntricos — respiram suavemente na cena de vigilância */
     ctx.lineWidth=1;
     for(let i=1;i<=5;i++){
-      ctx.beginPath(); ctx.arc(ox,oy,R*i/5,0,TAU);
+      const br=1+cur.named*0.012*Math.sin(frame*0.04+i*1.7);
+      ctx.beginPath(); ctx.arc(ox,oy,R*i/5*br,0,TAU);
       ctx.strokeStyle='rgba(200,151,58,'+((0.11-i*0.013)*A)+')'; ctx.stroke();
     }
     /* cruz */
@@ -736,10 +853,10 @@
     ctx.beginPath(); ctx.moveTo(ox-R,oy); ctx.lineTo(ox+R,oy);
     ctx.moveTo(ox,oy-R); ctx.lineTo(ox,oy+R); ctx.stroke();
 
-    /* marcas de graus no anel exterior (toque técnico) */
+    /* marcas de graus no anel exterior — contra-rotação lenta em vigilância */
     ctx.strokeStyle='rgba(200,151,58,'+(0.20*A)+')';
     for(let g=0; g<36; g++){
-      const ga=g/36*TAU;
+      const ga=g/36*TAU - sweep*0.07*cur.named;
       const r1=R*0.985, r2= g%9===0 ? R*0.94 : R*0.965;
       ctx.beginPath();
       ctx.moveTo(ox+Math.cos(ga)*r1, oy+Math.sin(ga)*r1);
@@ -747,18 +864,43 @@
       ctx.stroke();
     }
 
-    /* varredura */
-    if(!reduce) sweep += cur.sweep;
+    /* varredura — com rasto fosforescente e drama do lock */
+    if(!reduce) sweep += cur.sweep * updateDrama();
     ctx.save(); ctx.translate(ox,oy); ctx.rotate(sweep);
-    const g=ctx.createLinearGradient(0,0,R,0);
-    g.addColorStop(0,'rgba(200,151,58,'+(0.25*A)+')');
-    g.addColorStop(1,'rgba(200,151,58,0)');
-    ctx.beginPath(); ctx.moveTo(0,0); ctx.arc(0,0,R,-0.55,0.02); ctx.closePath();
-    ctx.fillStyle=g; ctx.fill();
+    if(ctx.createConicGradient){
+      /* rasto de fósforo: brilha atrás da agulha e decai */
+      const trail=0.22+cur.named*0.16;
+      const cg=ctx.createConicGradient(0,0,0);
+      cg.addColorStop(0,'rgba(200,151,58,'+(trail*1.4*A)+')');
+      cg.addColorStop(0.02,'rgba(200,151,58,0)');
+      cg.addColorStop(0.55,'rgba(200,151,58,0)');
+      cg.addColorStop(1,'rgba(200,151,58,'+(trail*A)+')');
+      ctx.beginPath(); ctx.arc(0,0,R,0,TAU);
+      ctx.fillStyle=cg; ctx.fill();
+    } else {
+      const g=ctx.createLinearGradient(0,0,R,0);
+      g.addColorStop(0,'rgba(200,151,58,'+(0.25*A)+')');
+      g.addColorStop(1,'rgba(200,151,58,0)');
+      ctx.beginPath(); ctx.moveTo(0,0); ctx.arc(0,0,R,-0.55,0.02); ctx.closePath();
+      ctx.fillStyle=g; ctx.fill();
+    }
     /* agulha */
     ctx.strokeStyle='rgba(224,170,74,'+(0.55*A)+')'; ctx.lineWidth=1.4;
     ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(R,0); ctx.stroke();
     ctx.restore();
+
+    /* faíscas no rasto (cena de vigilância) */
+    if(!reduce && cur.named>0.3){
+      if(sparks.length<70 && frame%2===0) sparks.push({a:sweep, r:Math.random()*0.92+0.05, life:1});
+    }
+    for(let i=sparks.length-1;i>=0;i--){
+      const s=sparks[i]; s.life-=0.012; s.r+=0.0012;
+      if(s.life<=0){ sparks.splice(i,1); continue; }
+      ctx.globalAlpha=s.life*0.45*cur.named*A;
+      ctx.fillStyle='#e0aa4a';
+      ctx.fillRect(ox+Math.cos(s.a)*R*s.r, oy+Math.sin(s.a)*R*s.r, 1.7, 1.7);
+    }
+    ctx.globalAlpha=1;
 
     /* centro */
     ctx.beginPath(); ctx.arc(ox,oy,4,0,TAU);
@@ -767,6 +909,7 @@
 
     /* blips */
     const sweepA=((sweep%TAU)+TAU)%TAU;
+    const dim=1-cur.named*0.75;   /* os blips genéricos cedem o palco aos nomes */
     for(const b of blips){
       const bx=ox+Math.cos(b.a)*R*b.r;
       const by=oy+Math.sin(b.a)*R*b.r;
@@ -793,7 +936,7 @@
 
       const hot=b.hot;
       const base=hot?0.5:0.24;
-      const alpha=(base+lit*0.6)*A;
+      const alpha=(base+lit*0.6)*A*dim;
       const size=(hot?3.4:1.9)+lit*2.0;
       let fill;
       if(hot && cur.green>0.5) fill='rgba(93,214,160,'+alpha+')';
@@ -819,6 +962,129 @@
           ctx.fillText(cur.green>0.5?'a sua marca · protegida':'a sua marca', bx+size+12, by+3);
         }
       }
+    }
+
+    /* nomes dentro do radar — cena de vigilância */
+    if(cur.named>0.04){
+      const na=cur.named*A;
+      const fName=isMobile?'10px':'12px', fSub=isMobile?'8px':'9px';
+      ctx.textBaseline='middle';
+      for(const m of NAMED){
+        const bx=ox+Math.cos(m.a)*R*m.r;
+        const by=oy+Math.sin(m.a)*R*m.r;
+        let ma=((m.a%TAU)+TAU)%TAU;
+        let diff=Math.abs(sweepA-ma); if(diff>Math.PI) diff=TAU-diff;
+        const lit=Math.max(0,1-diff*1.3);
+        const right=Math.cos(m.a)>=0;
+        ctx.textAlign=right?'left':'right';
+        let lx=bx+(right?15:-15);
+        /* manter a etiqueta dentro do palco do radar */
+        const line1=(m.st==='conflict')?(m.name+' · '+m.pct):m.name;
+        ctx.font=(m.st==='conflict'?'600 ':'')+fName+' JetBrains Mono, monospace';
+        const lw=ctx.measureText(line1).width;
+        if(right){ lx=Math.min(lx, ox+R*1.04-lw); }
+        else{ lx=Math.max(lx, ox-R*1.04+lw); }
+
+        /* o feixe "descobre" cada nome: typewriter à primeira passagem */
+        if(reduce) m._rv=1;
+        if(m.st==='conflict' && drama.prog>0) m._rv=1;
+        if(lit>0.5 && m._rv<1) m._rv=Math.min(1, m._rv+0.055);
+        const txt1=m._rv>=1 ? line1 : (m._rv>0 ? line1.slice(0,Math.ceil(line1.length*m._rv))+'▌' : '');
+
+        /* linha de dados centro → blip enquanto o feixe o lê */
+        if(lit>0.5 && m._rv>0){
+          ctx.setLineDash([3,6]);
+          ctx.strokeStyle='rgba(224,170,74,'+((lit-0.5)*0.55*na)+')'; ctx.lineWidth=1;
+          ctx.beginPath(); ctx.moveTo(ox,oy); ctx.lineTo(bx,by); ctx.stroke();
+          ctx.setLineDash([]);
+        }
+
+        if(m.st==='conflict'){
+          /* o pedido colidente — vermelho, pulso e onda de alerta */
+          const pulse=(frame%120)/120;
+          ctx.beginPath(); ctx.arc(bx,by,4.4,0,TAU);
+          ctx.fillStyle='rgba(229,96,74,'+(0.95*na)+')';
+          ctx.shadowColor='#e5604a'; ctx.shadowBlur=22*na; ctx.fill(); ctx.shadowBlur=0;
+          ctx.beginPath(); ctx.arc(bx,by,6+pulse*32,0,TAU);
+          ctx.strokeStyle='rgba(229,96,74,'+((1-pulse)*0.75*na)+')'; ctx.lineWidth=1.3; ctx.stroke();
+          ctx.font='600 '+fName+' JetBrains Mono, monospace';
+          ctx.fillStyle='rgba(255,138,114,'+((0.7+0.3*lit)*na)+')';
+          if(txt1) ctx.fillText(txt1, lx, by-6);
+          if(m._rv>=1){
+            ctx.font=fSub+' JetBrains Mono, monospace';
+            ctx.fillStyle='rgba(255,138,114,'+(0.6*na)+')';
+            ctx.fillText('CONFLITO DETETADO', lx, by+9);
+          }
+          /* lock: a mira fecha-se sobre o conflito e o palco pisca */
+          if(drama.prog>0.01){
+            const pe=1-Math.pow(1-drama.prog,3);
+            const dist=12+(1-pe)*64, Lb=9;
+            ctx.strokeStyle='rgba(229,96,74,'+(0.95*pe*na)+')'; ctx.lineWidth=1.7;
+            [[-1,-1],[1,-1],[1,1],[-1,1]].forEach(function(c){
+              ctx.beginPath();
+              ctx.moveTo(bx+c[0]*dist-c[0]*Lb, by+c[1]*dist);
+              ctx.lineTo(bx+c[0]*dist, by+c[1]*dist);
+              ctx.lineTo(bx+c[0]*dist, by+c[1]*dist-c[1]*Lb);
+              ctx.stroke();
+            });
+            ctx.beginPath(); ctx.arc(bx,by,dist*1.5,0,TAU);
+            ctx.strokeStyle='rgba(229,96,74,'+(0.3*pe*na)+')'; ctx.lineWidth=1; ctx.stroke();
+            if(drama.state==='lock' && drama.t<16 && stageRect){
+              ctx.fillStyle='rgba(229,96,74,'+((16-drama.t)/16*0.10)+')';
+              ctx.fillRect(stageRect.x, stageRect.y, stageRect.w, stageRect.h);
+            }
+          }
+        } else if(m.st==='scan'){
+          /* em análise — dourado, a piscar */
+          const tw=(frame%90)<55;
+          ctx.beginPath(); ctx.arc(bx,by,3.2,0,TAU);
+          ctx.fillStyle='rgba(224,170,74,'+((tw?0.9:0.4)*na)+')';
+          ctx.shadowColor='#e0aa4a'; ctx.shadowBlur=12*na; ctx.fill(); ctx.shadowBlur=0;
+          ctx.font=fName+' JetBrains Mono, monospace';
+          ctx.fillStyle='rgba(244,238,222,'+((0.4+0.5*lit)*na)+')';
+          if(txt1) ctx.fillText(txt1, lx, by-6);
+          if(m._rv>=1){
+            ctx.font=fSub+' JetBrains Mono, monospace';
+            ctx.fillStyle='rgba(224,170,74,'+((tw?0.7:0.35)*na)+')';
+            ctx.fillText('A ANALISAR…', lx, by+9);
+          }
+        } else {
+          /* sem conflito — verde, acende à passagem do feixe */
+          ctx.beginPath(); ctx.arc(bx,by,3.2,0,TAU);
+          ctx.fillStyle='rgba(93,214,160,'+((0.4+0.55*lit)*na)+')';
+          if(lit>0.3){ctx.shadowColor='#5dd6a0'; ctx.shadowBlur=12*lit*na;}
+          ctx.fill(); ctx.shadowBlur=0;
+          ctx.font=fName+' JetBrains Mono, monospace';
+          ctx.fillStyle='rgba(244,238,222,'+((0.35+0.55*lit)*na)+')';
+          if(txt1) ctx.fillText(txt1, lx, by-6);
+          if(m._rv>=1){
+            ctx.font=fSub+' JetBrains Mono, monospace';
+            ctx.fillStyle='rgba(93,214,160,'+((0.3+0.5*lit)*na)+')';
+            ctx.fillText('SEM CONFLITO', lx, by+9);
+          }
+        }
+        /* a linha correspondente da lista acende em sincronia com o feixe */
+        if(m.row) m.row.classList.toggle('lit', cur.named>0.5 && lit>0.55);
+      }
+
+      /* crosshair interativo — o visitante "opera" o radar */
+      if(cx>=0 && stageRect && cur.named>0.5){
+        const sr=stageRect;
+        if(cx>sr.x+8 && cx<sr.x+sr.w-8 && cy>sr.y+46 && cy<sr.y+sr.h-10){
+          ctx.strokeStyle='rgba(224,170,74,'+(0.16*na)+')'; ctx.lineWidth=1;
+          ctx.beginPath();
+          ctx.moveTo(sr.x+10,cy); ctx.lineTo(sr.x+sr.w-10,cy);
+          ctx.moveTo(cx,sr.y+48); ctx.lineTo(cx,sr.y+sr.h-10);
+          ctx.stroke();
+          const dx2=cx-ox, dy2=cy-oy;
+          const az=Math.round((Math.atan2(dy2,dx2)*180/Math.PI+360)%360);
+          const rr2=Math.sqrt(dx2*dx2+dy2*dy2)/Math.max(R,1);
+          ctx.font='9px JetBrains Mono, monospace'; ctx.textAlign='left';
+          ctx.fillStyle='rgba(224,170,74,'+(0.55*na)+')';
+          ctx.fillText('AZ '+az+'° · R '+rr2.toFixed(2), cx+10, cy-9);
+        }
+      }
+      ctx.textAlign='left'; ctx.textBaseline='alphabetic';
     }
 
     /* reticle — mira de target lock (S3) */
@@ -977,29 +1243,10 @@ window.addEventListener('DOMContentLoaded', function(){
     });
   }
 
-  /* ---------- consola live-ops: stream de estados (sempre que houver motion) ---------- */
+  /* ---------- consola live-ops: contador de análise (a lista é sincronizada
+     pelo próprio feixe do radar, no draw loop do canvas) ---------- */
   if(!reduce){
-    const rows=document.querySelectorAll('#scopeList .scope-row');
     const statScan=document.getElementById('statScan');
-    // estados finais fixos (dados do anexo); a linha "A analisar…" circula entre elas
-    const finals=[
-      {cls:'clear', txt:'Sem conflito'},
-      {cls:'conflict', txt:'Conflito · 87%'},
-      {cls:'clear', txt:'Sem conflito'},
-      {cls:'clear', txt:'Sem conflito'}
-    ];
-    let scanIdx=3;
-    setInterval(()=>{
-      // a linha que estava a analisar resolve para o seu estado final
-      const prev=rows[scanIdx].querySelector('.st');
-      const f=finals[scanIdx];
-      prev.className='st '+f.cls; prev.textContent=f.txt;
-      // a próxima entra em análise
-      scanIdx=(scanIdx+1)%rows.length;
-      const next=rows[scanIdx].querySelector('.st');
-      next.className='st scan'; next.textContent='A analisar…';
-    }, 2600);
-    // contador de análise a tiquetaquear ~842/s
     if(statScan){
       setInterval(()=>{
         const v=815+Math.floor(Math.random()*55);
