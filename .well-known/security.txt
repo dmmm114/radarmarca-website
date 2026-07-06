@@ -1,0 +1,4 @@
+Contact: mailto:geral@radarmarca.pt
+Expires: 2027-07-06T00:00:00.000Z
+Preferred-Languages: pt, en
+Canonical: https://www.radarmarca.pt/.well-known/security.txt

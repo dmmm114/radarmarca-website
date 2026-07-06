@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self' https://formspree.io; form-action https://formspree.io; base-uri 'none'; object-src 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Radar Marca — Nós vigiamos a sua marca</title>
-<meta name="description" content="O radar vigia o Boletim da Propriedade Industrial e alerta-o em menos de 48h se alguém tentar copiar a sua marca. Vigilância €295,20 por 10 anos. Ainda não registou? Tratamos do registo no INPI desde €394,71.">
+<meta name="description" content="O radar vigia o Boletim da Propriedade Industrial e alerta-o em menos de 48h se alguém tentar copiar a sua marca. Vigilância €295,20, pagamento único, 10 anos. Ainda não registou? Peça um orçamento à medida.">
 <meta name="theme-color" content="#070f22">
 <meta name="google-site-verification" content="nCf9NAR__q5Dfg9529QOGOnUADooN_iL7gRzm4E-S0s">
 <link rel="canonical" href="https://www.radarmarca.pt/">
@@ -15,15 +17,15 @@
 <meta property="og:site_name" content="Radar Marca">
 <meta property="og:locale" content="pt_PT">
 <meta property="og:title" content="Radar Marca — Nós vigiamos a sua marca">
-<meta property="og:description" content="Vigilância permanente do BPI com alerta em menos de 48h se alguém tentar copiar a sua marca. E se ainda não registou, tratamos do registo no INPI.">
+<meta property="og:description" content="Vigilância permanente do BPI com alerta em menos de 48h se alguém tentar copiar a sua marca. Pagamento único, 10 anos de cobertura.">
 <meta property="og:image" content="https://www.radarmarca.pt/brand/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Radar Marca — Nós vigiamos a sua marca">
-<meta name="twitter:description" content="Vigilância permanente do BPI com alerta em menos de 48h se alguém tentar copiar a sua marca. E se ainda não registou, tratamos do registo no INPI.">
+<meta name="twitter:description" content="Vigilância permanente do BPI com alerta em menos de 48h se alguém tentar copiar a sua marca. Pagamento único, 10 anos de cobertura.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-tight-var.latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-serif-italic.latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jetbrains-mono-var.latin.woff2" as="font" type="font/woff2" crossorigin>
 
 <script type="application/ld+json">
 {
@@ -66,13 +68,45 @@
       "provider": { "@id": "https://www.radarmarca.pt/#organization" },
       "serviceType": "Registo de marca no INPI",
       "areaServed": "PT",
-      "description": "Pesquisa de anterioridades grátis e registo de marca no INPI por procuração. Desde €394,71."
+      "description": "Pesquisa de anterioridades grátis e registo de marca no INPI por procuração. Orçamento individualizado, sem compromisso."
     }
   ]
 }
 </script>
 
 <style>
+  /* ===== fonts self-hosted (privacidade: zero pedidos a terceiros) ===== */
+  @font-face{font-family:'Inter Tight';font-style:normal;font-weight:400 900;font-display:swap;
+    src:url(fonts/inter-tight-var.latin.woff2) format('woff2');
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Inter Tight';font-style:normal;font-weight:400 900;font-display:swap;
+    src:url(fonts/inter-tight-var.latin-ext.woff2) format('woff2');
+    unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+  @font-face{font-family:'Inter Tight';font-style:italic;font-weight:400;font-display:swap;
+    src:url(fonts/inter-tight-italic.latin.woff2) format('woff2');
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Inter Tight';font-style:italic;font-weight:400;font-display:swap;
+    src:url(fonts/inter-tight-italic.latin-ext.woff2) format('woff2');
+    unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+  @font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:swap;
+    src:url(fonts/instrument-serif.latin.woff2) format('woff2');
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:swap;
+    src:url(fonts/instrument-serif.latin-ext.woff2) format('woff2');
+    unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+  @font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;
+    src:url(fonts/instrument-serif-italic.latin.woff2) format('woff2');
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;
+    src:url(fonts/instrument-serif-italic.latin-ext.woff2) format('woff2');
+    unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+  @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;
+    src:url(fonts/jetbrains-mono-var.latin.woff2) format('woff2');
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;
+    src:url(fonts/jetbrains-mono-var.latin-ext.woff2) format('woff2');
+    unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
   :root{
     --navy:#0F2044; --navy-2:#162d5a; --ink:#070f22;
     --gold:#C8973A; --gold-2:#e0aa4a; --cream:#F4EEDE;
@@ -165,7 +199,8 @@
   .hero h1 .w{display:inline-block}
   .hero h1 em{font-family:var(--serif); font-style:italic; font-weight:400; color:var(--gold); position:relative; display:inline-block}
   .hero h1 em::after{content:""; position:absolute; left:2%; bottom:.04em; width:96%; height:2px;
-    background:linear-gradient(90deg,var(--gold),transparent); transform:scaleX(0); transform-origin:0 50%}
+    background:linear-gradient(90deg,var(--gold),transparent); transform-origin:0 50%}
+  body.motion .hero h1 em::after{transform:scaleX(0)}
   .hero h1 em.drawn::after{transform:scaleX(1); transition:transform 1.1s cubic-bezier(.22,.8,.24,1) .15s}
   .hero .lede{margin-top:24px; max-width:46ch}
   .fork{margin-top:clamp(30px,5vw,50px); display:grid; grid-template-columns:1fr 1fr; gap:14px; max-width:660px}
@@ -229,6 +264,11 @@
   .permonth-note b{color:var(--gold-2); font-weight:700}
   .guarantee{margin-top:18px; background:rgba(93,214,160,.07); border:1px solid rgba(93,214,160,.25); border-radius:12px; padding:16px; font-size:13px; color:rgba(244,238,222,.82)}
   .guarantee b{color:var(--signal)}
+  /* caixa de orçamento à medida (registo) */
+  .quotebox .q-title{font-weight:800; font-size:clamp(26px,3.6vw,34px); line-height:1.05; letter-spacing:-.02em; color:var(--cream)}
+  .quotebox .q-title em{font-family:var(--serif); font-style:italic; font-weight:400; color:var(--gold)}
+  .quotebox .q-sub{margin-top:12px; font-size:14px; line-height:1.55; color:rgba(244,238,222,.7)}
+  .quotebox .break .row b{color:var(--gold-2)}
   .btn-gold{display:inline-block; margin-top:22px; background:var(--gold); color:#1a1206; font-weight:700; font-size:15px; padding:14px 26px; border-radius:11px; transition:transform .2s, box-shadow .2s; will-change:transform}
   .btn-gold:hover{box-shadow:0 10px 28px rgba(200,151,58,.35)}
   @media(max-width:760px){ .service .grid{grid-template-columns:1fr} }
@@ -361,6 +401,22 @@
   .cform .submit:hover{transform:translateY(-2px); box-shadow:0 10px 28px rgba(200,151,58,.35)}
   .cform .submit:disabled{opacity:.6; cursor:default; transform:none}
   .cform .note{font-size:12px; color:rgba(244,238,222,.45); margin-top:14px; text-align:center}
+  /* chips de intenção — vigilância (foco) vs orçamento de registo */
+  .cform .intent{border:none; padding:0; margin-bottom:16px; display:grid; grid-template-columns:1fr 1fr; gap:12px}
+  .cform .intent legend{grid-column:1/-1; font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; color:rgba(244,238,222,.6); margin-bottom:9px}
+  .cform .chip{position:relative; display:block; cursor:pointer}
+  .cform .chip input{position:absolute; opacity:0; width:1px; height:1px}
+  .cform .chip span{display:block; padding:13px 15px; border-radius:11px; border:1px solid rgba(244,238,222,.14);
+    background:rgba(255,255,255,.04); transition:border-color .2s, background .2s, box-shadow .2s}
+  .cform .chip span b{display:block; font-size:14px; font-weight:600; color:rgba(244,238,222,.9)}
+  .cform .chip span small{display:block; margin-top:3px; font-family:var(--mono); font-size:10.5px; letter-spacing:.4px; color:rgba(244,238,222,.66)}
+  .cform .chip input:checked+span{border-color:var(--gold); background:rgba(200,151,58,.1); box-shadow:0 0 0 1px var(--gold) inset}
+  .cform .chip input:checked+span b{color:var(--cream)}
+  .cform .chip input:checked+span small{color:var(--gold-2)}
+  .cform .chip input:focus-visible+span{outline:2px solid var(--gold-2); outline-offset:2px}
+  @media(max-width:560px){ .cform .intent{grid-template-columns:1fr} }
+  /* honeypot anti-spam — invisível para humanos, irresistível para bots */
+  .cform .hp{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
   .cform-alt{margin-top:18px; text-align:center; font-size:13px; color:rgba(244,238,222,.5)}
   .cform-alt a{color:var(--gold)}
   .cform-success{display:none; max-width:680px; margin:36px auto 0; text-align:center; background:rgba(93,214,160,.08); border:1px solid rgba(93,214,160,.3); border-radius:16px; padding:40px 24px}
@@ -471,7 +527,7 @@
     <div class="live"><span class="dot"></span> <span class="live-txt">BPI · VARRIMENTO SEMANAL</span></div>
   </div>
   <div class="hero-inner" id="heroInner">
-    <div class="eyebrow">Vigilância permanente <b>+</b> registo no INPI</div>
+    <div class="eyebrow">Vigilância de marca <b>·</b> BPI varrido semanalmente</div>
     <h1 id="heroTitle"><span class="w">Nós</span> <span class="w">nunca</span> <span class="w">tiramos</span><br><em id="heroEm">o olho da sua marca.</em></h1>
     <p class="lede" id="heroLede">O radar varre o Boletim da Propriedade Industrial, semana após semana, e alerta-o em menos de 48h se alguém tentar copiá-la. Ainda não a registou? Também tratamos disso.</p>
     <div class="fork" id="heroFork">
@@ -484,7 +540,7 @@
       <a class="path" href="#registo">
         <div class="k">COMEÇAR DO ZERO</div>
         <div class="t">Ainda não registei a&nbsp;minha marca</div>
-        <div class="s">Pesquisa grátis + registo no INPI</div>
+        <div class="s">Peça um orçamento à medida, sem compromisso</div>
         <span class="arrow">→</span>
       </a>
     </div>
@@ -504,7 +560,7 @@
       <span><span class="ok">●</span> 3 colisões detetadas este mês</span>
       <span>alerta médio <b>&lt;48h</b></span>
       <span>BPI varrido <b>semanalmente</b></span>
-      <span>pesquisa de anterioridades <b>grátis</b></span>
+      <span>cobertura de <b>10 anos</b> · pagamento único</span>
     </div>
   </div>
 </section>
@@ -514,7 +570,7 @@
   <div class="wrap">
     <div class="eyebrow reveal" style="display:inline-block;margin-bottom:18px">O porquê de tudo</div>
     <h2 class="section-title reveal">Vale quem regista primeiro.<br>E ninguém o avisa quando <em>o copiam.</em></h2>
-    <p class="lede reveal">Em Portugal, a marca pertence a quem a registar primeiro — não a quem a usou primeiro. Registar dá-lhe o direito. Mas o INPI não o avisa quando alguém tenta registar algo parecido. É aí que entramos: <strong>vigiamos o Boletim por si</strong> — e, se ainda não registou, <strong>tratamos do registo</strong> também.</p>
+    <p class="lede reveal">Em Portugal, a marca pertence a quem a registar primeiro — não a quem a usou primeiro. Registar dá-lhe o direito. Mas o INPI não o avisa quando alguém tenta registar algo parecido. É aí que entramos: <strong>vigiamos o Boletim por si</strong>, semana após semana — para que nenhum pedido parecido passe despercebido.</p>
     <p class="sosialine" id="sosiaLine" aria-live="polite"></p>
     <div class="stamp" id="teseStamp" aria-hidden="true"></div>
     <div class="alertline reveal"><span class="adot"></span> PEDIDO COLIDENTE PUBLICADO · O TITULAR NÃO FOI NOTIFICADO</div>
@@ -571,7 +627,7 @@
         <div class="guarantee">
           <b>Alerta em menos de 48h.</b> Quando o BPI publica um pedido parecido com a sua marca, recebe o alerta com a análise de semelhança — a tempo de deduzir oposição dentro do prazo legal.
         </div>
-        <a class="btn-gold" href="#contacto">Quero vigiar a minha marca</a>
+        <a class="btn-gold" href="#contacto" data-intent="vigilancia">Quero vigiar a minha marca</a>
       </div>
     </div>
   </div>
@@ -590,36 +646,38 @@
         <li class="reveal"><span class="ic">✓</span><div><b>Acompanhamento</b> do processo até decisão do INPI.</div></li>
       </ul>
     </div>
-    <div class="pricebox reveal" id="priceboxRegisto">
-      <div class="lock-tag">O PONTO DE PARTIDA</div>
-      <div class="total"><span class="counter" data-to="394.71" data-prefix="€">€394,71</span> <small>/ tudo incluído</small></div>
+    <div class="pricebox quotebox reveal" id="priceboxRegisto">
+      <div class="lock-tag">ORÇAMENTO À MEDIDA</div>
+      <div class="q-title">Cada marca é <em>um caso.</em></div>
+      <p class="q-sub">Número de classes, tipo de marca, estratégia de proteção — o registo certo não é um pacote. Diga-nos a sua marca e enviamos-lhe um orçamento individualizado, fechado e sem compromisso.</p>
       <div class="break">
-        <div class="row"><span>Serviço (€200 + IVA)</span><b><span class="counter" data-to="246.00" data-prefix="€">€246,00</span></b></div>
-        <div class="row"><span>Taxa INPI · 1 classe</span><b><span class="counter" data-to="148.71" data-prefix="€">€148,71</span></b></div>
-        <div class="row" style="border-top:1px solid rgba(244,238,222,.1);padding-top:9px"><span>Total</span><b>€394,71</b></div>
+        <div class="row"><span>Análise do seu caso</span><b>grátis</b></div>
+        <div class="row"><span>Pesquisa de anterioridades</span><b>grátis · INPI + EUIPO</b></div>
+        <div class="row"><span>Orçamento individualizado</span><b>em 24h úteis</b></div>
+        <div class="row"><span>Compromisso</span><b>zero — decide depois</b></div>
       </div>
       <div class="guarantee">
-        <b>E se o INPI não aceitar?</b> É para reduzir esse risco que pesquisamos primeiro, grátis — só avançamos quando as hipóteses de aprovação são sólidas. A taxa de serviço cobre o trabalho de pesquisa, preparação e submissão do pedido por procuração; a taxa do INPI (€148,71) é paga ao Estado. A decisão final é sempre do INPI, mas a pesquisa prévia é o que coloca o seu pedido em terreno firme.
+        <b>E se o INPI não aceitar?</b> É para reduzir esse risco que pesquisamos primeiro, grátis — só avançamos quando as hipóteses de aprovação são sólidas. A decisão final é sempre do INPI, mas a pesquisa prévia é o que coloca o seu pedido em terreno firme.
       </div>
-      <a class="btn-gold" href="#contacto">Quero registar a minha marca</a>
+      <a class="btn-gold" href="#contacto" data-intent="registo">Pedir orçamento de registo</a>
     </div>
   </div>
 </section>
 
 <!-- ===== S5 · COMO ENCAIXAM — o feixe desenha a timeline ===== -->
-<section class="funnel" id="funil" data-scene="funil" data-hud="05 · TRAJETÓRIA">
+<section class="funnel" id="funil" data-scene="funil" data-hud="05 · COMO FUNCIONA">
   <div class="wrap">
-    <div class="eyebrow reveal" style="display:inline-block;margin-bottom:16px">Do início ao fim</div>
-    <h2 class="section-title reveal">Um fornecedor, do nascimento<br>da marca à sua <em>defesa.</em></h2>
+    <div class="eyebrow reveal" style="display:inline-block;margin-bottom:16px">Como funciona a vigilância</div>
+    <h2 class="section-title reveal">Do primeiro varrimento<br>ao alerta <em>a tempo.</em></h2>
     <div class="timeline" id="timeline">
       <div class="line" id="timelineLine"></div>
       <div class="steps">
-        <div class="step" data-step="1"><div class="node">01</div><div class="st-t">Regista</div><div class="st-s">Pesquisamos, preparamos e submetemos a sua marca no INPI.</div></div>
-        <div class="step" data-step="2"><div class="node">02</div><div class="st-t">INPI aprova</div><div class="st-s">Acompanhamos o processo até a sua marca ficar registada.</div></div>
-        <div class="step" data-step="3"><div class="node">03</div><div class="st-t">O radar liga-se</div><div class="st-s">A vigilância arranca automaticamente — e fica de olho por 10 anos.</div></div>
+        <div class="step" data-step="1"><div class="node">01</div><div class="st-t">Ative o radar</div><div class="st-s">Diga-nos a sua marca. Ela entra no radar no varrimento seguinte — e fica lá 10 anos.</div></div>
+        <div class="step" data-step="2"><div class="node">02</div><div class="st-t">Varrimento semanal</div><div class="st-s">Todas as semanas, cada novo pedido publicado no BPI é comparado com a sua marca.</div></div>
+        <div class="step" data-step="3"><div class="node">03</div><div class="st-t">Alerta em &lt;48h</div><div class="st-s">Aparece um pedido parecido? Recebe o alerta com a análise de semelhança — a tempo de deduzir oposição.</div></div>
       </div>
     </div>
-    <p class="kicker reveal">Regista com quem a vai defender.</p>
+    <p class="kicker reveal">O INPI publica. Nós avisamos. A decisão é sua.</p>
   </div>
 </section>
 
@@ -630,7 +688,7 @@
     <h2 class="section-title reveal" style="margin-top:16px">Transparência <em>a sério.</em></h2>
     <div class="cols">
       <div class="col reveal"><h3>Pesquisamos antes de submeter</h3><p>Não cobramos por um registo condenado à partida. Primeiro vemos se vale a pena.</p></div>
-      <div class="col reveal"><h3>Preço sem letras pequenas</h3><p>Taxas do Estado à vista, sem pacotes opacos nem extras surpresa.</p></div>
+      <div class="col reveal"><h3>Preço sem letras pequenas</h3><p>Vigilância com valor único, à vista. Registo com orçamento fechado e aprovado por si antes de avançarmos.</p></div>
       <div class="col reveal"><h3>Resposta humana &lt;24h</h3><p>Email, telefone ou formulário. Em dia útil, normalmente respondemos no próprio dia.</p></div>
     </div>
   </div>
@@ -642,12 +700,13 @@
     <div class="eyebrow reveal">Perguntas frequentes</div>
     <h2 class="section-title reveal" style="margin-top:16px">Tudo o que pode estar <em>a pensar.</em></h2>
     <div class="list reveal">
-      <details><summary>O que acontece se alguém tentar copiar a minha marca? <span class="pm">+</span></summary><div class="body">O radar deteta o pedido no BPI e alerta-o em menos de 48h, com tempo para deduzir oposição dentro do prazo legal.</div></details>
-      <details><summary>Porque é que registar não chega? <span class="pm">+</span></summary><div class="body">Registar dá-lhe o direito, mas o INPI não o avisa quando publicam um pedido semelhante. Sem vigilância, só descobre quando já é tarde. Por isso os dois serviços encaixam.</div></details>
-      <details><summary>Fazem a defesa jurídica da marca em tribunal? <span class="pm">+</span></summary><div class="body">Não. O nosso serviço é a <strong>vigilância</strong> que o alerta a tempo e o <strong>registo</strong> da sua marca. Não fazemos representação jurídica nem contencioso — oposições, recursos ou ações em tribunal. Quando o radar deteta um conflito, avisamo-lo dentro do prazo para poder agir; se precisar de avançar juridicamente, pode fazê-lo com o seu advogado ou agente oficial da propriedade industrial.</div></details>
-      <details><summary>Quanto tempo demora o registo no INPI? <span class="pm">+</span></summary><div class="body">Depois de submetido, o processo no INPI costuma demorar alguns meses até decisão. Mantemo-lo informado em cada fase.</div></details>
-      <details><summary>E se já existir uma marca parecida? <span class="pm">+</span></summary><div class="body">É exatamente o que a pesquisa de anterioridades (grátis) deteta antes de submeter. Se houver risco, avisamo-lo e ajustamos a estratégia — para não gastar a taxa do Estado em vão.</div></details>
-      <details><summary>O pagamento é mesmo único? <span class="pm">+</span></summary><div class="body">Sim. A vigilância é €295,20 uma vez, e cobre 10 anos — sem mensalidades nem renovações. O registo é um pagamento único de €394,71.</div></details>
+      <details><summary>O que acontece se alguém tentar copiar a minha marca? <span class="pm" aria-hidden="true">+</span></summary><div class="body">O radar deteta o pedido no BPI e alerta-o em menos de 48h, com tempo para deduzir oposição dentro do prazo legal.</div></details>
+      <details><summary>Porque é que registar não chega? <span class="pm" aria-hidden="true">+</span></summary><div class="body">Registar dá-lhe o direito, mas o INPI não o avisa quando publicam um pedido semelhante. Sem vigilância, só descobre quando já é tarde. Por isso os dois serviços encaixam.</div></details>
+      <details><summary>Fazem a defesa jurídica da marca em tribunal? <span class="pm" aria-hidden="true">+</span></summary><div class="body">Não. O nosso serviço é a <strong>vigilância</strong> que o alerta a tempo e o <strong>registo</strong> da sua marca. Não fazemos representação jurídica nem contencioso — oposições, recursos ou ações em tribunal. Quando o radar deteta um conflito, avisamo-lo dentro do prazo para poder agir; se precisar de avançar juridicamente, pode fazê-lo com o seu advogado ou agente oficial da propriedade industrial.</div></details>
+      <details><summary>Quanto tempo demora o registo no INPI? <span class="pm" aria-hidden="true">+</span></summary><div class="body">Depois de submetido, o processo no INPI costuma demorar alguns meses até decisão. Mantemo-lo informado em cada fase.</div></details>
+      <details><summary>E se já existir uma marca parecida? <span class="pm" aria-hidden="true">+</span></summary><div class="body">É exatamente o que a pesquisa de anterioridades (grátis) deteta antes de submeter. Se houver risco, avisamo-lo e ajustamos a estratégia — para não gastar a taxa do Estado em vão.</div></details>
+      <details><summary>O pagamento da vigilância é mesmo único? <span class="pm" aria-hidden="true">+</span></summary><div class="body">Sim. A vigilância é €295,20 uma vez, e cobre 10 anos — sem mensalidades nem renovações.</div></details>
+      <details><summary>Quanto custa registar a minha marca? <span class="pm" aria-hidden="true">+</span></summary><div class="body">Depende do caso: número de classes, tipo de marca e estratégia de proteção. Por isso não vendemos pacotes — analisamos o seu caso gratuitamente e apresentamos um orçamento individualizado e fechado em 24h úteis, sem qualquer compromisso.</div></details>
     </div>
   </div>
 </section>
@@ -657,17 +716,24 @@
   <div class="wrap">
     <h2 class="section-title reveal">A sua marca,<br>protegida <em>desde hoje.</em></h2>
     <div class="locked reveal"><span class="dot"></span> VIGILÂNCIA PRONTA A ATIVAR · 10 ANOS</div>
-    <p class="lede reveal" style="margin:22px auto 0;text-align:center">Diga-nos a sua marca. O radar fica de olho por si durante uma década — e, se for preciso, tratamos também do registo.</p>
+    <p class="lede reveal" style="margin:22px auto 0;text-align:center">Diga-nos a sua marca. O radar fica de olho por si durante uma década — e, se ainda não a registou, preparamos um orçamento de registo à sua medida.</p>
     <form class="cform reveal" id="cform" action="https://formspree.io/f/xbdwbqov" method="POST">
+      <input type="hidden" name="_subject" value="Pedido Radar Marca (site)">
+      <fieldset class="field full intent" id="intentChips">
+        <legend>O que precisa?</legend>
+        <label class="chip"><input type="radio" name="interesse" value="vigilância" checked><span><b>Vigiar a minha marca</b><small>€295,20 · pagamento único · 10 anos</small></span></label>
+        <label class="chip"><input type="radio" name="interesse" value="registo — pedir orçamento"><span><b>Registar a minha marca</b><small>orçamento à medida, sem compromisso</small></span></label>
+      </fieldset>
       <div class="row">
-        <div class="field"><label for="f-name">Nome</label><input id="f-name" name="name" required autocomplete="name" placeholder="O seu nome"></div>
+        <div class="field"><label for="f-name">Nome</label><input id="f-name" name="name" required autocomplete="name" maxlength="80" placeholder="O seu nome"></div>
         <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" required autocomplete="email" placeholder="voce@empresa.pt"></div>
       </div>
       <div class="row">
-        <div class="field"><label for="f-phone">Telefone <span>(opcional)</span></label><input id="f-phone" type="tel" name="phone" autocomplete="tel" placeholder="+351 ..."></div>
-        <div class="field"><label for="f-brand">Nome da marca</label><input id="f-brand" name="brand" required maxlength="24" placeholder="A marca a registar ou proteger"></div>
+        <div class="field"><label for="f-phone">Telefone <span>(opcional)</span></label><input id="f-phone" type="tel" name="telefone" autocomplete="tel" placeholder="+351 ..."></div>
+        <div class="field"><label for="f-brand">Nome da marca</label><input id="f-brand" name="marca" required maxlength="24" placeholder="A marca a registar ou proteger"></div>
       </div>
-      <div class="field full"><label for="f-msg">Mensagem <span>(opcional)</span></label><textarea id="f-msg" name="msg" placeholder="Conte-nos um pouco sobre o seu caso..."></textarea></div>
+      <div class="field full"><label for="f-msg">Mensagem <span>(opcional)</span></label><textarea id="f-msg" name="mensagem" maxlength="2000" placeholder="Conte-nos um pouco sobre o seu caso..."></textarea></div>
+      <div class="hp" aria-hidden="true"><label for="f-web">Website</label><input id="f-web" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
       <button type="submit" class="submit" id="cform-submit">Enviar pedido</button>
       <div class="note">Respondemos em menos de 24h em dia útil. Os dados servem apenas para responder ao seu pedido — veja a nossa <a href="privacidade.html" style="text-decoration:underline">política de privacidade</a>.</div>
     </form>
@@ -691,1058 +757,8 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" defer></script>
-<script>
-'use strict';
-/* =====================================================================
-   RADAR VIVO CONTÍNUO
-   Um único radar em <canvas> fixo que se transforma ao longo do scroll:
-   hero → tese (alerta vermelho) → registo (target lock) → vigilância
-   (consola) → funil (feixe/timeline) → ambiente → final (lock verde).
-   ===================================================================== */
-(function(){
-  const reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  if(reduce) document.body.classList.add('no-motion');
-
-  const canvas = document.getElementById('radar');
-  const ctx = canvas.getContext('2d');
-  const isMobile = window.matchMedia('(max-width:760px)').matches;
-
-  /* ---------- V5 · estado partilhado entre o motor do radar e o DOM ---------- */
-  const RM = window.RM = {
-    brand:'',            // a marca do visitante (só vive no browser dele)
-    sosia:'',            // mutação determinística — o "pedido colidente" personalizado
-    act2:{p:0},          // progresso do mini-filme da tese (0..1), escrito pelo ScrollTrigger
-    ceremony:{on:false, t:0},
-    pulse:0              // pulso do blip dourado quando o visitante escreve
-  };
-
-  /* sósia: 1 edição determinística sobre o nome — sempre etiquetado "simulação" */
-  function makeSosia(name){
-    const up = name.toUpperCase();
-    let h = 0; for(let i=0;i<up.length;i++) h = (h*31 + up.charCodeAt(i)) >>> 0;
-    const subs = [['C','K'],['K','C'],['S','Z'],['Z','S'],['I','Y'],['Y','I'],['PH','F'],['F','PH'],['V','B'],['B','V'],['QU','K'],['X','CH']];
-    for(let i=0;i<subs.length;i++){
-      const pair = subs[(h+i) % subs.length];
-      if(up.indexOf(pair[0]) !== -1){
-        const s = up.replace(pair[0], pair[1]);
-        if(s !== up) return s;
-      }
-    }
-    const sufs = [' & CO', ' PLUS', ' PT', ' STUDIO'];
-    return up + sufs[h % sufs.length];
-  }
-
-  /* ---------- V5 · quality governor — mede FPS reais e desliga camadas ---------- */
-  const Q = { tier: isMobile ? 2 : 3, max: isMobile ? 2 : 3, ema: 60, last: 0, low: 0, hi: 0 };
-  function govern(now){
-    if(Q.last){
-      const dt = now - Q.last;
-      if(dt > 0 && dt < 250) Q.ema += (1000/dt - Q.ema) * 0.05;
-    }
-    Q.last = now;
-    if(Q.ema < 48){
-      Q.hi = 0;
-      if(++Q.low > 90 && Q.tier > 1){ Q.tier--; Q.low = 0; }
-    } else {
-      if(Q.low > 0) Q.low--;
-      /* recuperação simétrica — um hitch no load não degrada a sessão inteira */
-      if(Q.ema > 56 && Q.tier < Q.max){ if(++Q.hi > 300){ Q.tier++; Q.hi = 0; } }
-      else Q.hi = 0;
-    }
-  }
-
-  /* ---------- V5 · som da sala de operações (opt-in, 100% sintetizado) ---------- */
-  const SND = { on:false, ctx:null, master:null, hum:null, lastPing:0, lastTick:0 };
-  const sndBtn = document.getElementById('sndBtn');
-  function sndInit(){
-    if(SND.ctx) return true;
-    const AC = window.AudioContext || window.webkitAudioContext;
-    if(!AC) return false;
-    SND.ctx = new AC();
-    SND.master = SND.ctx.createGain();
-    SND.master.gain.value = 0.11;            /* ~-19dB — presença, nunca invasão */
-    SND.master.connect(SND.ctx.destination);
-    if(!isMobile){
-      const o1 = SND.ctx.createOscillator(), o2 = SND.ctx.createOscillator();
-      const f = SND.ctx.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 160;
-      const g = SND.ctx.createGain(); g.gain.value = 0;
-      o1.frequency.value = 55; o2.frequency.value = 55.6;
-      o1.connect(f); o2.connect(f); f.connect(g); g.connect(SND.master);
-      o1.start(); o2.start();
-      SND.hum = g;
-    }
-    return true;
-  }
-  function tone(freq, freqTo, dur, type, vol){
-    if(!SND.on || !SND.ctx) return;
-    const t0 = SND.ctx.currentTime;
-    const o = SND.ctx.createOscillator(), g = SND.ctx.createGain();
-    o.type = type; o.frequency.setValueAtTime(freq, t0);
-    if(freqTo) o.frequency.exponentialRampToValueAtTime(freqTo, t0 + dur);
-    g.gain.setValueAtTime(vol, t0);
-    g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
-    o.connect(g); g.connect(SND.master);
-    o.start(t0); o.stop(t0 + dur + 0.05);
-  }
-  function sndPing(){
-    const now = performance.now();
-    if(now - SND.lastPing < 140) return;
-    SND.lastPing = now;
-    tone(880, 440, 0.22, 'sine', 0.5);
-  }
-  function sndTick(){
-    const now = performance.now();
-    if(now - SND.lastTick < 90) return;
-    SND.lastTick = now;
-    tone(1700, 0, 0.025, 'square', 0.06);
-  }
-  function sndAlarm(){
-    tone(660, 0, 0.12, 'square', 0.22);
-    setTimeout(function(){ tone(880, 0, 0.16, 'square', 0.22); }, 170);
-    setTimeout(function(){ tone(55, 0, 0.7, 'sine', 0.5); }, 60);
-  }
-  function sndChord(){
-    tone(392, 0, 1.4, 'sine', 0.3);
-    setTimeout(function(){ tone(494, 0, 1.3, 'sine', 0.26); }, 90);
-    setTimeout(function(){ tone(587, 0, 1.2, 'sine', 0.24); }, 180);
-  }
-  function sndSetUI(){
-    if(!sndBtn) return;
-    sndBtn.setAttribute('aria-pressed', SND.on ? 'true' : 'false');
-    sndBtn.querySelector('.eq').textContent = SND.on ? '■' : '▶';
-    sndBtn.title = (SND.on ? 'Desligar' : 'Ligar') + ' o som ambiente da sala de operações';
-  }
-  function sndToggle(){
-    if(!sndInit()){ if(sndBtn) sndBtn.remove(); return; }
-    SND.on = !SND.on;
-    try{ localStorage.setItem('rm-snd', SND.on ? '1' : '0'); }catch(e){}
-    if(SND.on){ SND.ctx.resume(); if(SND.hum) SND.hum.gain.setTargetAtTime(0.05, SND.ctx.currentTime, 0.4); sndPing(); }
-    else{
-      if(SND.hum) SND.hum.gain.setTargetAtTime(0, SND.ctx.currentTime, 0.08);
-      /* suspende o contexto — os osciladores do hum não ficam a gastar CPU */
-      setTimeout(function(){ if(!SND.on && SND.ctx) SND.ctx.suspend(); }, 250);
-    }
-    sndSetUI();
-  }
-  if(sndBtn){
-    if(!(window.AudioContext || window.webkitAudioContext) || reduce){ sndBtn.remove(); }
-    else{
-      sndBtn.addEventListener('click', sndToggle);
-      let pref = null;
-      try{ pref = localStorage.getItem('rm-snd'); }catch(e){}
-      if(pref === '1'){
-        /* escolheu som na última visita: rearma no primeiro gesto (autoplay policy).
-           Se o gesto for no próprio botão, deixa o click tratar — evita double-toggle. */
-        const arm = function(e){
-          if(SND.on) return;
-          if(e && e.target && e.target.closest && e.target.closest('#sndBtn')) return;
-          sndToggle();
-        };
-        window.addEventListener('pointerdown', arm, {once:true});
-      }
-    }
-  }
-  document.addEventListener('visibilitychange', function(){
-    if(!SND.ctx) return;
-    if(document.hidden) SND.ctx.suspend();
-    else if(SND.on) SND.ctx.resume();
-  });
-
-  let W=0, H=0, dpr=1;
-  function resize(){
-    dpr = Math.min(window.devicePixelRatio||1, isMobile?1.5:2);
-    W = window.innerWidth; H = window.innerHeight;
-    canvas.width = W*dpr; canvas.height = H*dpr;
-    canvas.style.width = W+'px'; canvas.style.height = H+'px';
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-  }
-  resize(); window.addEventListener('resize', resize);
-
-  /* ---------- definição das cenas (parâmetros-alvo do radar) ---------- */
-  // x,y em fração do viewport · r em fração de min(W,H) · alpha global
-  // flags: label (a sua marca), red (alerta ignorado), green (lock final),
-  // reticle (mira S3), beam (feixe horizontal S5), rings (nº de anéis)
-  const SCENES = {
-    hero:      {x:.5,  y:.45, r:.62, alpha:1.00, sweep:0.008, label:1, red:0, green:0, reticle:0, beam:0, named:0},
-    tese:      {x:.5,  y:.5,  r:.85, alpha:0.34, sweep:0.004, label:0, red:1, green:0, reticle:0, beam:0, named:0},
-    vigilancia:{x:.5,  y:.5,  r:.44, alpha:1.00, sweep:0.018, label:0, red:0, green:0, reticle:0, beam:0, named:1, anchor:'#radarStage'},
-    registo:   {x:.72, y:.5,  r:.40, alpha:0.40, sweep:0.008, label:0, red:0, green:0, reticle:0, beam:0, named:0, anchor:'#priceboxRegisto'},
-    funil:     {x:.5,  y:.30, r:.34, alpha:0.50, sweep:0.012, label:0, red:0, green:0, reticle:0, beam:1, named:0},
-    ambient:   {x:.5,  y:.55, r:1.05, alpha:0.10, sweep:0.003, label:0, red:0, green:0, reticle:0, beam:0, named:0},
-    final:     {x:.5,  y:.38, r:.5,  alpha:0.85, sweep:0.010, label:1, red:0, green:1, reticle:0, beam:0, named:0}
-  };
-  const cur = Object.assign({}, SCENES.hero);   // estado interpolado
-  let activeScene = 'hero';
-
-  /* qual a secção dominante no viewport */
-  const sections = Array.from(document.querySelectorAll('[data-scene]'));
-  function dominantScene(){
-    const mid = H*0.5;
-    let best=null, bestDist=Infinity;
-    for(const s of sections){
-      const rc = s.getBoundingClientRect();
-      if(rc.bottom < 0 || rc.top > H) continue;
-      const center = rc.top + rc.height/2;
-      const d = Math.abs(center - mid);
-      // secções altas: se o meio do viewport está dentro, ganha já
-      if(rc.top <= mid && rc.bottom >= mid){ best = s; break; }
-      if(d < bestDist){ bestDist = d; best = s; }
-    }
-    return best;
-  }
-
-  /* alvo resolvido (anchors seguem elementos reais no viewport) */
-  function resolveTarget(){
-    const sec = dominantScene();
-    if(sec){
-      activeScene = sec.dataset.scene;
-      const hudScene = document.getElementById('hud-scene');
-      if(hudScene && sec.dataset.hud) hudScene.textContent = sec.dataset.hud;
-      document.body.classList.toggle('scene-final', activeScene==='final');
-    }
-    const t = Object.assign({}, SCENES[activeScene] || SCENES.ambient);
-    if(t.anchor){
-      const el = document.querySelector(t.anchor);
-      if(el){
-        const rc = el.getBoundingClientRect();
-        if(rc.bottom > -200 && rc.top < H+200){
-          t.x = (rc.left + rc.width/2) / W;
-          t.y = (rc.top + rc.height/2) / H;
-          t.r = (Math.min(rc.width, rc.height)/2.15) / Math.min(W,H);
-        }
-        if(t.anchor==='#radarStage') stageRect={x:rc.left, y:rc.top, w:rc.width, h:rc.height};
-      }
-    }
-    return t;
-  }
-
-  /* blips: posições polares fixas; índices com papéis especiais */
-  const blips=[];
-  const NB = isMobile ? 6 : 9;
-  for(let i=0;i<NB;i++){
-    blips.push({ a:(i/NB)*Math.PI*2 + 0.35, r:0.28+(i%4)*0.18, hot:i===2, threat:i===5 });
-  }
-
-  /* marcas nomeadas — vivem dentro do radar na cena de vigilância,
-     sincronizadas com as linhas da lista de deteções (#scopeList) */
-  const MARKS=[
-    {name:'NORTE FILMES, Lda', st:'clear',    a:-2.30, r:.58},
-    {name:'VINHO & PEDRA',     st:'conflict', a:-0.62, r:.55, pct:'87%'},
-    {name:'Oliveira & Co',     st:'clear',    a: 2.52, r:.62},
-    {name:'Estúdio Rebento',   st:'scan',     a: 0.95, r:.42}
-  ];
-  const markRowEls=document.querySelectorAll('#scopeList .scope-row:not(.user)');
-  MARKS.forEach((m,i)=>{ m.row=markRowEls[i]||null; m._rv=0; });
-  const NAMED = isMobile ? MARKS.filter((m,i)=>i!==2) : MARKS;
-
-  /* ---------- V5 · a marca do visitante entra no radar ---------- */
-  const UMARK = { name:'', st:'user', a:-1.42, r:.66, _rv:0, row:document.getElementById('userRow') };
-  const userRowName = document.getElementById('userRowName');
-  const sosiaLineEl = document.getElementById('sosiaLine');
-  let sosiaTimer = null;
-  function renderSosiaLine(){
-    if(!sosiaLineEl) return;
-    if(RM.sosia){
-      sosiaLineEl.innerHTML = '';
-      const b = document.createElement('b');
-      b.textContent = '«' + RM.sosia + '»';
-      sosiaLineEl.append('E se amanhã aparecesse ', b, ' no Boletim? Semelhança alta — e ninguém o avisava. ');
-      const s = document.createElement('span'); s.className = 'sim'; s.textContent = '· simulação ilustrativa';
-      sosiaLineEl.append(s);
-      sosiaLineEl.classList.add('on');
-    } else {
-      sosiaLineEl.classList.remove('on');
-      sosiaLineEl.textContent = '';
-    }
-  }
-  function setBrand(raw){
-    /* slice por code points — não parte emoji/surrogates na fronteira */
-    const clean = Array.from((raw||'').replace(/\s+/g,' ').trim()).slice(0,24).join('');
-    if(clean === RM.brand) return;
-    RM.brand = clean;
-    RM.sosia = Array.from(clean).length >= 3 ? makeSosia(clean) : '';
-    RM.pulse = clean ? 34 : 0;           /* o blip dourado reage à escrita */
-    UMARK.name = clean.toUpperCase();
-    UMARK._rv = reduce ? 1 : 0;          /* redescoberto letra a letra pelo feixe */
-    if(UMARK.row){
-      UMARK.row.classList.toggle('on', !!clean);
-      if(userRowName) userRowName.textContent = clean;
-    }
-    /* debounce do live region — sem spam de screen reader a cada tecla */
-    clearTimeout(sosiaTimer);
-    if(RM.sosia) sosiaTimer = setTimeout(renderSosiaLine, 650);
-    else renderSosiaLine();
-    try{ sessionStorage.setItem('rm-brand', clean); }catch(e){}
-    if(SND.on) sndTick();
-    if(reduce) requestAnimationFrame(draw);   /* re-renderiza o frame estático com o nome */
-  }
-  /* sincronização bidirecional hero ↔ formulário final */
-  const brandInput = document.getElementById('brandInput');
-  const formBrand = document.getElementById('f-brand');
-  if(brandInput){
-    brandInput.addEventListener('input', function(){
-      setBrand(brandInput.value);
-      if(formBrand && formBrand.value !== brandInput.value) formBrand.value = brandInput.value;
-    });
-  }
-  if(formBrand){
-    formBrand.addEventListener('input', function(){
-      setBrand(formBrand.value);
-      if(brandInput && brandInput.value !== formBrand.value) brandInput.value = formBrand.value;
-    });
-  }
-  try{
-    const saved = sessionStorage.getItem('rm-brand');
-    if(saved){ if(brandInput) brandInput.value = saved; if(formBrand) formBrand.value = saved; setBrand(saved); }
-  }catch(e){}
-
-  /* ---------- o drama da deteção: o feixe trava no conflito ---------- */
-  const stageEl=document.getElementById('radarStage');
-  const stageAlertEl=document.getElementById('stageAlert');
-  const stageScanEl=document.getElementById('stageScanning');
-  const drama={state:'idle', t:0, prog:0, cool:200};
-  let stageRect=null;
-  function startAlert(){
-    if(stageEl) stageEl.classList.add('alert');
-    if(stageAlertEl) stageAlertEl.classList.add('on');
-    if(stageScanEl){ stageScanEl.textContent='⚠ CONFLITO DETETADO · CL. 33'; stageScanEl.classList.add('alert'); }
-    if(MARKS[1].row) MARKS[1].row.classList.add('alarm');
-    if(SND.on) sndAlarm();
-  }
-  function endAlert(){
-    if(stageEl) stageEl.classList.remove('alert');
-    if(stageAlertEl) stageAlertEl.classList.remove('on');
-    if(stageScanEl){ stageScanEl.textContent='● BPI · varrimento semanal'; stageScanEl.classList.remove('alert'); }
-    if(MARKS[1].row) MARKS[1].row.classList.remove('alarm');
-  }
-  function updateDrama(){
-    const active = activeScene==='vigilancia' && cur.named>0.6;
-    if(!active){
-      if(drama.state!=='idle'){ endAlert(); drama.state='idle'; drama.prog=0; drama.cool=200; }
-      return 1;
-    }
-    if(drama.state==='idle'){
-      if(drama.cool>0){ drama.cool--; return 1; }
-      const conf=NAMED.find(m=>m.st==='conflict');
-      if(!conf) return 1;
-      const ca=((conf.a%TAU)+TAU)%TAU, sa=((sweep%TAU)+TAU)%TAU;
-      let diff=Math.abs(sa-ca); if(diff>Math.PI) diff=TAU-diff;
-      if(diff<0.06){ drama.state='lock'; drama.t=0; startAlert(); }
-      return 1;
-    }
-    if(drama.state==='lock'){
-      drama.t++;
-      drama.prog=Math.min(1, drama.t/50);
-      if(drama.t>230){ drama.state='release'; drama.t=0; endAlert(); }
-      return 0.12+(1-drama.prog)*0.88;   /* o tempo abranda */
-    }
-    /* release — o feixe retoma a velocidade */
-    drama.t++; drama.prog=Math.max(0, 1-drama.t/40);
-    if(drama.t>40){ drama.state='idle'; drama.cool=560; drama.prog=0; }
-    return 1;
-  }
-
-  /* faíscas no rasto do feixe */
-  const sparks=[];
-
-  /* crosshair interativo sobre o palco (desktop) */
-  let cx=-1, cy=-1;
-  if(stageEl && !isMobile){
-    stageEl.addEventListener('pointermove',(e)=>{cx=e.clientX; cy=e.clientY;},{passive:true});
-    stageEl.addEventListener('pointerleave',()=>{cx=-1;},{passive:true});
-  }
-  /* poeira de fundo — vida ambiente */
-  const dust=[];
-  if(!isMobile && !reduce){
-    for(let i=0;i<42;i++) dust.push({x:Math.random(), y:Math.random(), s:Math.random()*1.3+.4, v:(Math.random()*.00012+.00004)});
-  }
-
-  /* parallax do cursor (apenas hero) */
-  let mx=0,my=0;
-  if(!reduce){
-    window.addEventListener('pointermove',(e)=>{
-      mx=(e.clientX/W-.5)*16; my=(e.clientY/H-.5)*16;
-    },{passive:true});
-  }
-
-  let sweep=0, frame=0;
-  const TAU = Math.PI*2;
-
-  function lerp(a,b,k){ return a+(b-a)*k; }
-
-  /* V5 · brilho especular (latão gravado) — sprite pré-renderizado, zero alocação por frame */
-  let sheenC=null, shX=0, shY=0, tilt=0;
-  function sheenSprite(){
-    sheenC=document.createElement('canvas'); sheenC.width=sheenC.height=256;
-    const c=sheenC.getContext('2d');
-    const g=c.createRadialGradient(128,128,0,128,128,128);
-    g.addColorStop(0,'rgba(224,170,74,0.5)');
-    g.addColorStop(0.5,'rgba(224,170,74,0.1)');
-    g.addColorStop(1,'rgba(224,170,74,0)');
-    c.fillStyle=g; c.fillRect(0,0,256,256);
-  }
-
-  function draw(){
-    frame++;
-    govern(performance.now());
-    const t = reduce ? cur : resolveTarget();
-    const K = reduce ? 1 : 0.07;
-
-    /* V5 · Ato II — o mini-filme da tese comanda o radar */
-    const f2 = (activeScene==='tese' && !reduce) ? RM.act2.p : 0;
-    let filmMult=1, filmThreatR=null, filmRedBoost=0;
-    if(f2>0.001 && f2<0.999){
-      const appr=Math.min(1, Math.max(0,(f2-0.06)/0.34));
-      filmThreatR=1.45-appr*0.9;                 /* o pedido colidente aproxima-se vindo de fora */
-      if(f2>0.42 && f2<0.80){ filmMult=0.04; filmRedBoost=(f2-0.42)/0.38; }  /* o radar emudece */
-      else if(f2>=0.80){ filmMult=2.2; }         /* smash-cut: o feixe reacende */
-    }
-    cur.x=lerp(cur.x,t.x,K); cur.y=lerp(cur.y,t.y,K); cur.r=lerp(cur.r,t.r,K);
-    cur.alpha=lerp(cur.alpha,t.alpha,K); cur.sweep=lerp(cur.sweep,t.sweep,K);
-    cur.label=lerp(cur.label,t.label,K); cur.red=lerp(cur.red,t.red,K);
-    cur.green=lerp(cur.green,t.green,K); cur.reticle=lerp(cur.reticle,t.reticle,K);
-    cur.beam=lerp(cur.beam,t.beam,K); cur.named=lerp(cur.named,t.named||0,K);
-
-    ctx.clearRect(0,0,W,H);
-
-    /* poeira ambiente */
-    if(Q.tier>=3) for(const d of dust){
-      d.y -= d.v; if(d.y<0) d.y=1;
-      ctx.globalAlpha = .12;
-      ctx.fillStyle = '#C8973A';
-      ctx.fillRect(d.x*W, d.y*H, d.s, d.s);
-    }
-    ctx.globalAlpha = 1;
-
-    const parallaxOn = activeScene==='hero' ? 1 : 0;
-    let ox = cur.x*W + mx*parallaxOn;
-    let oy = cur.y*H + my*parallaxOn;
-    /* impacto: tremor curto quando o lock dispara */
-    if(drama.state==='lock' && drama.t<22){
-      const k=(22-drama.t)/22*5;
-      ox+=(Math.random()-.5)*k; oy+=(Math.random()-.5)*k;
-    }
-    /* V5 · degauss — wobble decadente de CRT nos primeiros instantes */
-    if(!reduce && frame<80){
-      const dk=(80-frame)/80;
-      ox+=Math.sin(frame*0.55)*dk*4.5; oy+=Math.cos(frame*0.43)*dk*2.5;
-    }
-    /* V5 · fonte do specular/parallaxe: cursor no desktop, deriva de scroll no mobile */
-    if(!reduce){
-      const sxT=isMobile?Math.sin(window.scrollY*0.0012):mx/8;
-      const syT=isMobile?Math.cos(window.scrollY*0.0009):my/8;
-      shX+=(sxT-shX)*0.04; shY+=(syT-shY)*0.04;
-    }
-    const R  = cur.r*Math.min(W,H);
-    const A  = cur.alpha;
-
-    /* V5 · plano de grua — entre cenas, a página atravessa o plano do radar */
-    if(!reduce){
-      const anchored=activeScene==='vigilancia'||activeScene==='registo';
-      const transit=Math.abs(cur.r-t.r)+Math.abs(cur.y-t.y)+Math.abs(cur.x-t.x);
-      const tTarget=(!isMobile && Q.tier>=3 && !anchored && transit>0.03 && f2===0)?Math.min(13,transit*46):0;
-      tilt+=(tTarget-tilt)*0.06;
-      if(tilt>0.25) canvas.style.transform='perspective(1100px) rotateX('+tilt.toFixed(2)+'deg)';
-      else if(canvas.style.transform) canvas.style.transform='';
-    }
-    if(A < 0.01){ if(!reduce) requestAnimationFrame(draw); return; }
-
-    /* anéis concêntricos — respiram suavemente na cena de vigilância */
-    ctx.lineWidth=1;
-    for(let i=1;i<=5;i++){
-      const br=1+cur.named*0.012*Math.sin(frame*0.04+i*1.7);
-      ctx.beginPath(); ctx.arc(ox,oy,R*i/5*br,0,TAU);
-      ctx.strokeStyle='rgba(200,151,58,'+((0.11-i*0.013)*A)+')'; ctx.stroke();
-    }
-    /* cruz */
-    ctx.strokeStyle='rgba(200,151,58,'+(0.07*A)+')';
-    ctx.beginPath(); ctx.moveTo(ox-R,oy); ctx.lineTo(ox+R,oy);
-    ctx.moveTo(ox,oy-R); ctx.lineTo(ox,oy+R); ctx.stroke();
-
-    /* marcas de graus no anel exterior — contra-rotação lenta em vigilância */
-    ctx.strokeStyle='rgba(200,151,58,'+(0.20*A)+')';
-    for(let g=0; g<36; g++){
-      const ga=g/36*TAU - sweep*0.07*cur.named;
-      const r1=R*0.985, r2= g%9===0 ? R*0.94 : R*0.965;
-      ctx.beginPath();
-      ctx.moveTo(ox+Math.cos(ga)*r1, oy+Math.sin(ga)*r1);
-      ctx.lineTo(ox+Math.cos(ga)*r2, oy+Math.sin(ga)*r2);
-      ctx.stroke();
-    }
-
-    /* V5 · specular sheen — luz a deslizar sobre o latão gravado dos anéis */
-    if(!reduce && Q.tier>=2 && cur.named<0.5 && A>0.15){
-      if(!sheenC) sheenSprite();
-      const sw=R*1.5;
-      ctx.save();
-      ctx.globalCompositeOperation='overlay';
-      ctx.globalAlpha=0.4*A;
-      ctx.drawImage(sheenC, ox-shX*R*0.8-sw/2, oy-shY*R*0.8-sw/2, sw, sw);
-      ctx.restore();
-    }
-
-    /* varredura — com rasto fosforescente e drama do lock */
-    if(!reduce) sweep += cur.sweep * updateDrama() * filmMult;
-    ctx.save(); ctx.translate(ox,oy); ctx.rotate(sweep);
-    if(ctx.createConicGradient){
-      /* rasto de fósforo: brilha atrás da agulha e decai */
-      const trail=0.22+cur.named*0.16;
-      const cg=ctx.createConicGradient(0,0,0);
-      cg.addColorStop(0,'rgba(200,151,58,'+(trail*1.4*A)+')');
-      cg.addColorStop(0.02,'rgba(200,151,58,0)');
-      cg.addColorStop(0.55,'rgba(200,151,58,0)');
-      cg.addColorStop(1,'rgba(200,151,58,'+(trail*A)+')');
-      ctx.beginPath(); ctx.arc(0,0,R,0,TAU);
-      ctx.fillStyle=cg; ctx.fill();
-    } else {
-      const g=ctx.createLinearGradient(0,0,R,0);
-      g.addColorStop(0,'rgba(200,151,58,'+(0.25*A)+')');
-      g.addColorStop(1,'rgba(200,151,58,0)');
-      ctx.beginPath(); ctx.moveTo(0,0); ctx.arc(0,0,R,-0.55,0.02); ctx.closePath();
-      ctx.fillStyle=g; ctx.fill();
-    }
-    /* agulha */
-    ctx.strokeStyle='rgba(224,170,74,'+(0.55*A)+')'; ctx.lineWidth=1.4;
-    ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(R,0); ctx.stroke();
-    ctx.restore();
-
-    /* faíscas no rasto (cena de vigilância) */
-    if(!reduce && cur.named>0.3 && Q.tier>=2){
-      const scap=Q.tier>=3?70:32;
-      if(sparks.length<scap && frame%2===0) sparks.push({a:sweep, r:Math.random()*0.92+0.05, life:1});
-    }
-    for(let i=sparks.length-1;i>=0;i--){
-      const s=sparks[i]; s.life-=0.012; s.r+=0.0012;
-      if(s.life<=0){ sparks.splice(i,1); continue; }
-      ctx.globalAlpha=s.life*0.45*cur.named*A;
-      ctx.fillStyle='#e0aa4a';
-      ctx.fillRect(ox+Math.cos(s.a)*R*s.r, oy+Math.sin(s.a)*R*s.r, 1.7, 1.7);
-    }
-    ctx.globalAlpha=1;
-
-    /* centro */
-    ctx.beginPath(); ctx.arc(ox,oy,4,0,TAU);
-    ctx.fillStyle='rgba(200,151,58,'+A+')';
-    ctx.shadowColor='#C8973A'; ctx.shadowBlur=18*A; ctx.fill(); ctx.shadowBlur=0;
-
-    /* blips */
-    const sweepA=((sweep%TAU)+TAU)%TAU;
-    const dim=1-cur.named*0.75;   /* os blips genéricos cedem o palco aos nomes */
-    for(const b of blips){
-      let bx=ox+Math.cos(b.a)*R*b.r+shX*6;
-      let by=oy+Math.sin(b.a)*R*b.r+shY*4;
-      let ba=((b.a%TAU)+TAU)%TAU;
-      let diff=Math.abs(sweepA-ba); if(diff>Math.PI) diff=TAU-diff;
-      const lit=Math.max(0,1-diff*1.6);
-      if(SND.on && (b.hot||b.threat) && lit>0.92 && !b._pg){ b._pg=true; sndPing(); }
-      if(diff>1) b._pg=false;
-
-      if(b.threat && cur.red>0.05){
-        /* o pedido colidente — vermelho, com ondas a expandir (ninguém avisa).
-           Com marca digitada, é o sósia DELA que se aproxima (Ato II). */
-        if(filmThreatR!==null){
-          bx=ox+Math.cos(b.a)*R*filmThreatR;
-          by=oy+Math.sin(b.a)*R*filmThreatR;
-        }
-        const ra=Math.min(1,cur.red*(1+filmRedBoost*0.5))*A;
-        const pw=140-Math.round(filmRedBoost*70);
-        const pulse=(frame%pw)/pw;
-        ctx.beginPath(); ctx.arc(bx,by,3.2+filmRedBoost*1.6,0,TAU);
-        ctx.fillStyle='rgba(229,96,74,'+(0.85*ra)+')';
-        ctx.shadowColor='#e5604a'; ctx.shadowBlur=(16+filmRedBoost*14)*ra; ctx.fill(); ctx.shadowBlur=0;
-        ctx.beginPath(); ctx.arc(bx,by,4+pulse*(26+filmRedBoost*18),0,TAU);
-        ctx.strokeStyle='rgba(229,96,74,'+((1-pulse)*0.7*ra)+')'; ctx.lineWidth=1.2; ctx.stroke();
-        if(cur.red>0.5 && activeScene==='tese'){
-          ctx.font='10px JetBrains Mono, monospace';
-          ctx.fillStyle='rgba(255,138,114,'+(0.8*ra)+')';
-          ctx.fillText(RM.sosia ? RM.sosia+' (simulação)' : 'pedido colidente', bx+12, by+3);
-        }
-        continue;
-      }
-
-      const hot=b.hot;
-      const base=hot?0.5:0.24;
-      const alpha=(base+lit*0.6)*A*dim;
-      const size=(hot?3.4:1.9)+lit*2.0;
-      let fill;
-      if(hot && cur.green>0.5) fill='rgba(93,214,160,'+alpha+')';
-      else if(hot) fill='rgba(224,170,74,'+alpha+')';
-      else fill='rgba(200,151,58,'+alpha+')';
-      ctx.beginPath(); ctx.arc(bx,by,size,0,TAU);
-      ctx.fillStyle=fill;
-      if(lit>0.3){ctx.shadowColor=hot&&cur.green>0.5?'#5dd6a0':'#e0aa4a'; ctx.shadowBlur=14*lit*A;}
-      ctx.fill(); ctx.shadowBlur=0;
-
-      if(hot){
-        const ringCol = cur.green>0.5 ? '93,214,160' : '224,170,74';
-        ctx.beginPath(); ctx.arc(bx,by,size+8+lit*8,0,TAU);
-        ctx.strokeStyle='rgba('+ringCol+','+((0.35+0.3*lit)*A)+')'; ctx.lineWidth=1.2; ctx.stroke();
-        if(cur.green>0.5){
-          /* lock verde: segundo anel fixo + ticks */
-          ctx.beginPath(); ctx.arc(bx,by,size+18,0,TAU);
-          ctx.strokeStyle='rgba(93,214,160,'+(0.5*A)+')'; ctx.stroke();
-        }
-        /* V5 · o blip dourado responde à escrita do visitante */
-        if(RM.pulse>0){
-          RM.pulse--;
-          const pp=RM.pulse/34;
-          ctx.beginPath(); ctx.arc(bx,by,size+10+(1-pp)*26,0,TAU);
-          ctx.strokeStyle='rgba(224,170,74,'+(pp*0.7*A)+')'; ctx.lineWidth=1.4; ctx.stroke();
-        }
-        /* V5 · cerimónia de fecho — mira verde + anéis após o pedido enviado */
-        if(RM.ceremony.on && cur.green>0.3){
-          const c2=RM.ceremony; c2.t++;
-          const pe=Math.min(1,c2.t/45), eo=1-Math.pow(1-pe,3);
-          const dist=14+(1-eo)*70, Lb=10;
-          ctx.strokeStyle='rgba(93,214,160,'+(0.95*eo*A)+')'; ctx.lineWidth=1.8;
-          [[-1,-1],[1,-1],[1,1],[-1,1]].forEach(function(cn){
-            ctx.beginPath();
-            ctx.moveTo(bx+cn[0]*dist-cn[0]*Lb, by+cn[1]*dist);
-            ctx.lineTo(bx+cn[0]*dist, by+cn[1]*dist);
-            ctx.lineTo(bx+cn[0]*dist, by+cn[1]*dist-cn[1]*Lb);
-            ctx.stroke();
-          });
-          const rp=(c2.t%70)/70;
-          ctx.beginPath(); ctx.arc(bx,by,dist+rp*46,0,TAU);
-          ctx.strokeStyle='rgba(93,214,160,'+((1-rp)*0.5*A)+')'; ctx.lineWidth=1.2; ctx.stroke();
-          if(c2.t>340){ c2.on=false; c2.done=true; }
-        }
-        if(cur.label>0.4){
-          ctx.font='10px JetBrains Mono, monospace';
-          ctx.fillStyle='rgba(244,238,222,'+((0.45+0.4*lit)*cur.label*A)+')';
-          let lbl;
-          if((RM.ceremony.on || RM.ceremony.done) && cur.green>0.3) lbl=(RM.brand?'«'+RM.brand+'»':'a sua marca')+' · PEDIDO RECEBIDO';
-          else if(RM.brand) lbl='«'+RM.brand+'»'+(cur.green>0.5?' · no radar · simulação':' · a sua marca');
-          else lbl=cur.green>0.5?'a sua marca · pronta a proteger':'a sua marca';
-          ctx.fillText(lbl, bx+size+12, by+3);
-        }
-      }
-    }
-
-    /* nomes dentro do radar — cena de vigilância (+ a marca do visitante) */
-    if(cur.named>0.04){
-      const na=cur.named*A;
-      const fName=isMobile?'10px':'12px', fSub=isMobile?'8px':'9px';
-      ctx.textBaseline='middle';
-      const NLIST = RM.brand ? NAMED.concat([UMARK]) : NAMED;
-      for(const m of NLIST){
-        const bx=ox+Math.cos(m.a)*R*m.r+shX*6;
-        const by=oy+Math.sin(m.a)*R*m.r+shY*4;
-        let ma=((m.a%TAU)+TAU)%TAU;
-        let diff=Math.abs(sweepA-ma); if(diff>Math.PI) diff=TAU-diff;
-        const lit=Math.max(0,1-diff*1.3);
-        if(SND.on && lit>0.92 && !m._pg){ m._pg=true; sndPing(); }
-        if(diff>1) m._pg=false;
-        const right=Math.cos(m.a)>=0;
-        ctx.textAlign=right?'left':'right';
-        let lx=bx+(right?15:-15);
-        /* manter a etiqueta dentro do palco do radar */
-        const line1=(m.st==='conflict')?(m.name+' · '+m.pct):m.name;
-        ctx.font=(m.st==='conflict'?'600 ':'')+fName+' JetBrains Mono, monospace';
-        const lw=ctx.measureText(line1).width;
-        if(right){ lx=Math.min(lx, ox+R*1.04-lw); }
-        else{ lx=Math.max(lx, ox-R*1.04+lw); }
-
-        /* o feixe "descobre" cada nome: typewriter à primeira passagem */
-        if(reduce) m._rv=1;
-        if(m.st==='conflict' && drama.prog>0) m._rv=1;
-        if(lit>0.5 && m._rv<1){ m._rv=Math.min(1, m._rv+0.055); if(SND.on) sndTick(); }
-        const txt1=m._rv>=1 ? line1 : (m._rv>0 ? line1.slice(0,Math.ceil(line1.length*m._rv))+'▌' : '');
-
-        /* linha de dados centro → blip enquanto o feixe o lê */
-        if(lit>0.5 && m._rv>0){
-          ctx.setLineDash([3,6]);
-          ctx.strokeStyle='rgba(224,170,74,'+((lit-0.5)*0.55*na)+')'; ctx.lineWidth=1;
-          ctx.beginPath(); ctx.moveTo(ox,oy); ctx.lineTo(bx,by); ctx.stroke();
-          ctx.setLineDash([]);
-        }
-
-        if(m.st==='conflict'){
-          /* o pedido colidente — vermelho, pulso e onda de alerta */
-          const pulse=(frame%120)/120;
-          ctx.beginPath(); ctx.arc(bx,by,4.4,0,TAU);
-          ctx.fillStyle='rgba(229,96,74,'+(0.95*na)+')';
-          ctx.shadowColor='#e5604a'; ctx.shadowBlur=22*na; ctx.fill(); ctx.shadowBlur=0;
-          ctx.beginPath(); ctx.arc(bx,by,6+pulse*32,0,TAU);
-          ctx.strokeStyle='rgba(229,96,74,'+((1-pulse)*0.75*na)+')'; ctx.lineWidth=1.3; ctx.stroke();
-          ctx.font='600 '+fName+' JetBrains Mono, monospace';
-          ctx.fillStyle='rgba(255,138,114,'+((0.7+0.3*lit)*na)+')';
-          if(txt1) ctx.fillText(txt1, lx, by-6);
-          if(m._rv>=1){
-            ctx.font=fSub+' JetBrains Mono, monospace';
-            ctx.fillStyle='rgba(255,138,114,'+(0.6*na)+')';
-            ctx.fillText('CONFLITO DETETADO', lx, by+9);
-          }
-          /* lock: a mira fecha-se sobre o conflito e o palco pisca */
-          if(drama.prog>0.01){
-            const pe=1-Math.pow(1-drama.prog,3);
-            const dist=12+(1-pe)*64, Lb=9;
-            ctx.strokeStyle='rgba(229,96,74,'+(0.95*pe*na)+')'; ctx.lineWidth=1.7;
-            [[-1,-1],[1,-1],[1,1],[-1,1]].forEach(function(c){
-              ctx.beginPath();
-              ctx.moveTo(bx+c[0]*dist-c[0]*Lb, by+c[1]*dist);
-              ctx.lineTo(bx+c[0]*dist, by+c[1]*dist);
-              ctx.lineTo(bx+c[0]*dist, by+c[1]*dist-c[1]*Lb);
-              ctx.stroke();
-            });
-            ctx.beginPath(); ctx.arc(bx,by,dist*1.5,0,TAU);
-            ctx.strokeStyle='rgba(229,96,74,'+(0.3*pe*na)+')'; ctx.lineWidth=1; ctx.stroke();
-            if(drama.state==='lock' && drama.t<16 && stageRect){
-              ctx.fillStyle='rgba(229,96,74,'+((16-drama.t)/16*0.10)+')';
-              ctx.fillRect(stageRect.x, stageRect.y, stageRect.w, stageRect.h);
-            }
-          }
-        } else if(m.st==='user'){
-          /* V5 · a marca do visitante — dourada, com anel próprio */
-          ctx.beginPath(); ctx.arc(bx,by,4.2,0,TAU);
-          ctx.fillStyle='rgba(224,170,74,'+((0.6+0.4*lit)*na)+')';
-          ctx.shadowColor='#e0aa4a'; ctx.shadowBlur=(14+8*lit)*na; ctx.fill(); ctx.shadowBlur=0;
-          ctx.beginPath(); ctx.arc(bx,by,9+lit*5,0,TAU);
-          ctx.strokeStyle='rgba(224,170,74,'+((0.4+0.3*lit)*na)+')'; ctx.lineWidth=1.2; ctx.stroke();
-          ctx.font='600 '+fName+' JetBrains Mono, monospace';
-          ctx.fillStyle='rgba(244,238,222,'+((0.5+0.5*lit)*na)+')';
-          if(txt1) ctx.fillText(txt1, lx, by-6);
-          if(m._rv>=1){
-            ctx.font=fSub+' JetBrains Mono, monospace';
-            ctx.fillStyle='rgba(224,170,74,'+((0.45+0.4*lit)*na)+')';
-            ctx.fillText('A SUA MARCA · SIMULAÇÃO', lx, by+9);
-          }
-        } else if(m.st==='scan'){
-          /* em análise — dourado, a piscar */
-          const tw=(frame%90)<55;
-          ctx.beginPath(); ctx.arc(bx,by,3.2,0,TAU);
-          ctx.fillStyle='rgba(224,170,74,'+((tw?0.9:0.4)*na)+')';
-          ctx.shadowColor='#e0aa4a'; ctx.shadowBlur=12*na; ctx.fill(); ctx.shadowBlur=0;
-          ctx.font=fName+' JetBrains Mono, monospace';
-          ctx.fillStyle='rgba(244,238,222,'+((0.4+0.5*lit)*na)+')';
-          if(txt1) ctx.fillText(txt1, lx, by-6);
-          if(m._rv>=1){
-            ctx.font=fSub+' JetBrains Mono, monospace';
-            ctx.fillStyle='rgba(224,170,74,'+((tw?0.7:0.35)*na)+')';
-            ctx.fillText('A ANALISAR…', lx, by+9);
-          }
-        } else {
-          /* sem conflito — verde, acende à passagem do feixe */
-          ctx.beginPath(); ctx.arc(bx,by,3.2,0,TAU);
-          ctx.fillStyle='rgba(93,214,160,'+((0.4+0.55*lit)*na)+')';
-          if(lit>0.3){ctx.shadowColor='#5dd6a0'; ctx.shadowBlur=12*lit*na;}
-          ctx.fill(); ctx.shadowBlur=0;
-          ctx.font=fName+' JetBrains Mono, monospace';
-          ctx.fillStyle='rgba(244,238,222,'+((0.35+0.55*lit)*na)+')';
-          if(txt1) ctx.fillText(txt1, lx, by-6);
-          if(m._rv>=1){
-            ctx.font=fSub+' JetBrains Mono, monospace';
-            ctx.fillStyle='rgba(93,214,160,'+((0.3+0.5*lit)*na)+')';
-            ctx.fillText('SEM CONFLITO', lx, by+9);
-          }
-        }
-        /* a linha correspondente da lista acende em sincronia com o feixe */
-        if(m.row) m.row.classList.toggle('lit', cur.named>0.5 && lit>0.55);
-      }
-
-      /* crosshair interativo — o visitante "opera" o radar */
-      if(cx>=0 && stageRect && cur.named>0.5){
-        const sr=stageRect;
-        if(cx>sr.x+8 && cx<sr.x+sr.w-8 && cy>sr.y+46 && cy<sr.y+sr.h-10){
-          ctx.strokeStyle='rgba(224,170,74,'+(0.16*na)+')'; ctx.lineWidth=1;
-          ctx.beginPath();
-          ctx.moveTo(sr.x+10,cy); ctx.lineTo(sr.x+sr.w-10,cy);
-          ctx.moveTo(cx,sr.y+48); ctx.lineTo(cx,sr.y+sr.h-10);
-          ctx.stroke();
-          const dx2=cx-ox, dy2=cy-oy;
-          const az=Math.round((Math.atan2(dy2,dx2)*180/Math.PI+360)%360);
-          const rr2=Math.sqrt(dx2*dx2+dy2*dy2)/Math.max(R,1);
-          ctx.font='9px JetBrains Mono, monospace'; ctx.textAlign='left';
-          ctx.fillStyle='rgba(224,170,74,'+(0.55*na)+')';
-          ctx.fillText('AZ '+az+'° · R '+rr2.toFixed(2), cx+10, cy-9);
-        }
-      }
-      ctx.textAlign='left'; ctx.textBaseline='alphabetic';
-    }
-
-    /* reticle — mira de target lock (S3) */
-    if(cur.reticle>0.03){
-      const ra=cur.reticle*A;
-      const rr=R*1.06;
-      const rot=sweep*0.25;
-      ctx.save(); ctx.translate(ox,oy); ctx.rotate(rot);
-      ctx.strokeStyle='rgba(224,170,74,'+(0.75*ra)+')'; ctx.lineWidth=1.6;
-      for(let q=0;q<4;q++){
-        ctx.beginPath(); ctx.arc(0,0,rr, q*Math.PI/2+0.18, q*Math.PI/2+Math.PI/2-0.18); ctx.stroke();
-      }
-      ctx.restore();
-      /* cantos fixos */
-      ctx.strokeStyle='rgba(224,170,74,'+(0.85*ra)+')'; ctx.lineWidth=2;
-      const c=rr*0.78, L=14;
-      [[-1,-1],[1,-1],[1,1],[-1,1]].forEach(([sx,sy])=>{
-        ctx.beginPath();
-        ctx.moveTo(ox+sx*c+(-sx*L), oy+sy*c); ctx.lineTo(ox+sx*c, oy+sy*c); ctx.lineTo(ox+sx*c, oy+sy*c+(-sy*L));
-        ctx.stroke();
-      });
-    }
-
-    /* feixe → timeline (S5): linha que sai do radar para o ecrã */
-    if(cur.beam>0.03){
-      const ba=cur.beam*A;
-      const bw=W*0.42*cur.beam;
-      const gg=ctx.createLinearGradient(ox,0,ox+bw,0);
-      gg.addColorStop(0,'rgba(224,170,74,'+(0.8*ba)+')');
-      gg.addColorStop(1,'rgba(224,170,74,0)');
-      ctx.strokeStyle=gg; ctx.lineWidth=2;
-      ctx.beginPath(); ctx.moveTo(ox,oy); ctx.lineTo(ox+bw,oy); ctx.stroke();
-      const gg2=ctx.createLinearGradient(ox,0,ox-bw,0);
-      gg2.addColorStop(0,'rgba(224,170,74,'+(0.8*ba)+')');
-      gg2.addColorStop(1,'rgba(224,170,74,0)');
-      ctx.strokeStyle=gg2;
-      ctx.beginPath(); ctx.moveTo(ox,oy); ctx.lineTo(ox-bw,oy); ctx.stroke();
-    }
-
-    /* V5 · choque de aberração cromática — o lock tem impacto físico */
-    if(!reduce && Q.tier>=3 && drama.state==='lock' && drama.t<24){
-      const k=(24-drama.t)/24;
-      ctx.save();
-      ctx.setTransform(1,0,0,1,0,0);
-      ctx.globalCompositeOperation='screen';
-      ctx.globalAlpha=0.16*k;
-      ctx.drawImage(canvas, 5*k*dpr, 0);
-      ctx.restore();
-    }
-
-    if(!reduce) requestAnimationFrame(draw);
-  }
-
-  if(reduce){
-    /* movimento reduzido: um único frame estático, discreto atrás do conteúdo */
-    sweep = -0.9;
-    Object.assign(cur, SCENES.hero, {alpha:0.3});
-  }
-  requestAnimationFrame(draw);
-
-  /* ---------- progress bar + HUD % + miniNav ---------- */
-  const progress=document.getElementById('progress');
-  const hudPct=document.getElementById('hud-pct');
-  const miniNav=document.getElementById('miniNav');
-  const hud=document.getElementById('hud');
-  function onScroll(){
-    const max=document.documentElement.scrollHeight-H;
-    const p=max>0?(window.scrollY/max):0;
-    if(progress) progress.style.transform='scaleX('+p+')';
-    if(hudPct) hudPct.textContent=String(Math.round(p*100)).padStart(3,'0')+'%';
-    const past=window.scrollY > H*0.85;
-    if(miniNav) miniNav.classList.toggle('on', past);
-    if(hud) hud.classList.toggle('on', past && !reduce);
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-
-  /* V5 · ponte para o script DOM (formulário → cerimónia sonora) */
-  RM.chord = function(){ if(SND.on) sndChord(); };
-})();
-
-/* =====================================================================
-   ANIMAÇÕES DOM — GSAP quando disponível; fallback elegante sem ele.
-   ===================================================================== */
-window.addEventListener('DOMContentLoaded', function(){
-  const reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  const hasGsap = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
-
-  function showAll(){
-    document.querySelectorAll('.reveal').forEach(e=>e.classList.add('visible'));
-    document.querySelectorAll('.steps .step').forEach(e=>e.classList.add('on'));
-    const line=document.getElementById('timelineLine');
-    if(line) line.style.transform='none';
-    const em=document.getElementById('heroEm'); if(em) em.classList.add('drawn');
-  }
-
-  /* contadores de preço (count-up) */
-  function fmtEUR(v){ return '€'+v.toFixed(2).replace('.',','); }
-  function animateCounters(){
-    document.querySelectorAll('.counter').forEach(el=>{
-      const to=parseFloat(el.dataset.to);
-      const obj={v:0};
-      gsap.to(obj,{v:to, duration:1.6, ease:'power2.out',
-        scrollTrigger:{trigger:el, start:'top 85%', once:true},
-        onUpdate:()=>{ el.textContent=fmtEUR(obj.v); },
-        onComplete:()=>{ el.textContent=fmtEUR(to); }
-      });
-    });
-  }
-
-  /* duplicar o ticker para loop contínuo sem salto */
-  const belt=document.getElementById('tickerBelt');
-  if(belt) belt.innerHTML += belt.innerHTML;
-
-  if(reduce || !hasGsap){
-    showAll();
-    const em=document.getElementById('heroEm'); if(em) em.classList.add('drawn');
-  } else {
-    document.body.classList.add('motion');
-    gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.config({ignoreMobileResize:true});
-
-    /* ===== V5 · ATO II — a tese vira mini-filme (o desastre em silêncio) =====
-       Desktop: pinned + scrub (o scroll é o projetor; voltar atrás re-projeta).
-       Mobile: sem pin — o filme corre uma vez quando a secção entra.        */
-    (function(){
-      const lbT=document.getElementById('lbTop'), lbB=document.getElementById('lbBot');
-      const stampEl=document.getElementById('teseStamp');
-      const teseWrap=document.querySelector('.tese .wrap');
-      const flashEl=document.getElementById('flash');
-      const alertEl=document.querySelector('.tese .alertline');
-      const STAMPS=['PEDIDO PUBLICADO NO BPI','O TITULAR NÃO FOI NOTIFICADO','O PRAZO LEGAL ESGOTA-SE…','— A MENOS QUE ALGUÉM ESTEJA A VIGIAR'];
-      let lastBeat=-2, flashed=false, primed=false;
-      /* lite=true (mobile): sem overlays fixed — o filme nunca pinta por cima
-         de outras secções em deep-links ou scroll rápido */
-      function filmUpdate(p, lite){
-        if(window.RM) window.RM.act2.p=p;
-        const first=!primed; primed=true;
-        if(!lite){
-          const inFilm=p>0.02&&p<0.98;
-          const lbk=inFilm?Math.min(1, Math.min(p/0.12,(1-p)/0.12)):0;
-          if(lbT){ lbT.style.transform='scaleY('+lbk+')'; lbB.style.transform='scaleY('+lbk+')'; }
-        }
-        if(teseWrap) teseWrap.style.filter=(p>0.15&&p<0.85)?'saturate('+(1-0.6*Math.min(1,(p-0.15)/0.2)).toFixed(3)+')':'';
-        /* enquanto o carimbo fala, a alertline estática cede o palco */
-        if(alertEl) alertEl.style.opacity=(p>0.16&&p<0.92)?'.18':'';
-        let beat=-1;
-        if(p>0.18)beat=0; if(p>0.40)beat=1; if(p>0.60)beat=2; if(p>0.80)beat=3;
-        if(beat!==lastBeat && stampEl){
-          lastBeat=beat;
-          if(beat>=0){
-            stampEl.textContent=STAMPS[beat];
-            stampEl.style.opacity=1;
-            stampEl.classList.toggle('gold', beat===3);
-            /* flash: 1× por sessão, nunca no primeiro update (load a meio da página) */
-            if(beat===3 && !flashed && flashEl && !lite && !first){
-              flashed=true;
-              flashEl.style.transition='none'; flashEl.style.opacity=.5;
-              requestAnimationFrame(function(){ flashEl.style.transition='opacity .55s ease'; flashEl.style.opacity=0; });
-            }
-          } else { stampEl.style.opacity=0; }
-        }
-      }
-      if(!window.matchMedia('(max-width:760px)').matches){
-        ScrollTrigger.create({
-          trigger:'.tese', pin:true, scrub:0.5, end:'+=220%', anticipatePin:1,
-          onUpdate:function(self){ filmUpdate(self.progress, false); }
-        });
-      } else {
-        ScrollTrigger.create({
-          trigger:'.tese', start:'top 60%', once:true,
-          onEnter:function(){
-            const tese=document.querySelector('.tese');
-            const rc=tese?tese.getBoundingClientRect():null;
-            /* deep-link/restauro de scroll: a tese já não está visível → salta ao estado final */
-            if(!rc || rc.bottom<0 || rc.top>window.innerHeight){ filmUpdate(1, true); return; }
-            const o={p:0};
-            gsap.to(o,{p:1, duration:7, ease:'none', onUpdate:function(){ filmUpdate(o.p, true); }});
-          }
-        });
-      }
-    })();
-
-    /* entrada do hero — kinetic type */
-    const words=document.querySelectorAll('#heroTitle .w');
-    gsap.from(words,{y:70, opacity:0, rotateX:25, duration:1, ease:'power3.out', stagger:.12, delay:.15});
-    const em=document.getElementById('heroEm');
-    gsap.from(em,{clipPath:'inset(0 100% 0 0)', duration:1.2, ease:'power3.inOut', delay:.7,
-      onComplete:()=>em.classList.add('drawn')});
-    gsap.from('.hero .eyebrow',{opacity:0, y:-12, duration:.8, delay:.1});
-    gsap.from('#heroLede',{opacity:0, y:24, duration:.9, delay:1.0});
-    gsap.from('#heroFork',{opacity:0, y:30, duration:.9, delay:1.25});
-    /* parallax suave do conteúdo hero */
-    const heroInner=document.getElementById('heroInner');
-    window.addEventListener('pointermove',(e)=>{
-      const dx=(e.clientX/window.innerWidth-.5), dy=(e.clientY/window.innerHeight-.5);
-      gsap.to(heroInner,{x:dx*-10, y:dy*-6, duration:.8, ease:'power2.out'});
-    },{passive:true});
-
-    /* reveals genéricos */
-    ScrollTrigger.batch('.reveal',{
-      start:'top 86%',
-      onEnter:batch=>{ batch.forEach((el,i)=>setTimeout(()=>el.classList.add('visible'), i*90)); },
-      once:true
-    });
-
-    /* contadores */
-    animateCounters();
-
-    /* timeline do funil — a linha desenha-se, os nós acendem em sequência */
-    const steps=document.querySelectorAll('.steps .step');
-    const line=document.getElementById('timelineLine');
-    const tl=gsap.timeline({
-      scrollTrigger:{trigger:'#timeline', start:'top 75%', end:'bottom 55%', scrub:.6}
-    });
-    const vertical=window.matchMedia('(max-width:760px)').matches;
-    tl.to(line,{[vertical?'scaleY':'scaleX']:1, ease:'none', duration:3});
-    steps.forEach((s,i)=>{
-      tl.call(()=>s.classList.add('on'), null, 0.6+i*1.1);
-    });
-    /* garante estado final se saltar a secção */
-    ScrollTrigger.create({trigger:'#timeline', start:'bottom 40%',
-      onEnter:()=>{ steps.forEach(s=>s.classList.add('on')); gsap.set(line,{scaleX:1, scaleY:1}); }});
-
-    /* CTA magnético */
-    document.querySelectorAll('.btn-gold').forEach(btn=>{
-      btn.addEventListener('pointermove',(e)=>{
-        const r=btn.getBoundingClientRect();
-        gsap.to(btn,{x:(e.clientX-r.left-r.width/2)*.18, y:(e.clientY-r.top-r.height/2)*.3, duration:.3});
-      });
-      btn.addEventListener('pointerleave',()=>gsap.to(btn,{x:0,y:0,duration:.45,ease:'elastic.out(1,.5)'}));
-    });
-  }
-
-  /* ---------- consola live-ops: contador de análise (a lista é sincronizada
-     pelo próprio feixe do radar, no draw loop do canvas) ---------- */
-  if(!reduce){
-    const statScan=document.getElementById('statScan');
-    if(statScan){
-      setInterval(()=>{
-        const v=815+Math.floor(Math.random()*55);
-        statScan.textContent=v+'/s';
-      }, 900);
-    }
-  }
-
-  /* ---------- formulário (Formspree) ---------- */
-  const form=document.getElementById('cform');
-  if(form){
-    const success=document.getElementById('cform-success');
-    const alt=document.querySelector('.cform-alt');
-    const btn=document.getElementById('cform-submit');
-    form.addEventListener('submit', async (e)=>{
-      e.preventDefault();
-      const data=Object.fromEntries(new FormData(form).entries());
-      if(!data.name||!data.email||!data.brand){ form.reportValidity(); return; }
-      const orig=btn.textContent; btn.disabled=true; btn.textContent='A enviar…';
-      try{
-        const fd=new FormData();
-        fd.append('name',data.name);
-        fd.append('email',data.email);
-        fd.append('_replyto',data.email);
-        fd.append('_subject','Pedido Radar Marca — '+data.brand);
-        fd.append('telefone',data.phone||'');
-        fd.append('marca',data.brand);
-        fd.append('mensagem',data.msg||'');
-        const res=await fetch('https://formspree.io/f/xbdwbqov',{method:'POST',headers:{'Accept':'application/json'},body:fd});
-        if(!res.ok) throw new Error('fail');
-        form.style.display='none'; if(alt) alt.style.display='none';
-        success.classList.add('show');
-        success.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
-        /* V5 · cerimónia de fecho — o radar trava a verde sobre o pedido recebido */
-        if(window.RM && !reduce){
-          window.RM.ceremony={on:true, t:0, done:false};
-          if(window.RM.chord) window.RM.chord();
-        }
-      }catch(err){
-        alert('Não foi possível enviar agora. Tente novamente ou contacte-nos em geral@radarmarca.pt');
-        btn.disabled=false; btn.textContent=orig;
-      }
-    });
-  }
-});
-</script>
+<script src="js/gsap.min.js" defer></script>
+<script src="js/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
