@@ -1016,10 +1016,10 @@ window.addEventListener('DOMContentLoaded', function(){
     const success=document.getElementById('cform-success');
     const alt=document.querySelector('.cform-alt');
     const btn=document.getElementById('cform-submit');
-    /* CTAs com data-intent pré-selecionam o interesse (vigilância / orçamento de registo) */
+    /* CTAs com data-intent pré-selecionam o interesse (vigilância / registo) */
     document.querySelectorAll('a[data-intent]').forEach(a=>{
       a.addEventListener('click', ()=>{
-        const v=a.dataset.intent==='registo' ? 'registo — pedir orçamento' : 'vigilância';
+        const v=a.dataset.intent==='registo' ? 'registo' : 'vigilância';
         const r=form.querySelector('input[name="interesse"][value="'+v+'"]');
         if(r) r.checked=true;
       });

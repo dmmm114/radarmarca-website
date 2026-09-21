@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self' https://formspree.io; form-action https://formspree.io; base-uri 'none'; object-src 'none'; frame-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Radar Marca — Nós vigiamos a sua marca</title>
-<meta name="description" content="O radar vigia o Boletim da Propriedade Industrial e alerta-o em menos de 48h se alguém tentar copiar a sua marca. Vigilância €295,20, pagamento único, 10 anos. Ainda não registou? Peça um orçamento à medida.">
+<meta name="description" content="O radar vigia o Boletim da Propriedade Industrial e alerta-o em menos de 48h se alguém tentar copiar a sua marca. Vigilância €295,20, pagamento único, 10 anos. Ainda não registou? Tratamos do registo no INPI por €200 + IVA, acrescendo as taxas legais do INPI.">
 <meta name="theme-color" content="#070f22">
 <meta name="google-site-verification" content="nCf9NAR__q5Dfg9529QOGOnUADooN_iL7gRzm4E-S0s">
 <link rel="canonical" href="https://www.radarmarca.pt/">
@@ -68,7 +68,7 @@
       "provider": { "@id": "https://www.radarmarca.pt/#organization" },
       "serviceType": "Registo de marca no INPI",
       "areaServed": "PT",
-      "description": "Pesquisa de anterioridades incluída e registo de marca no INPI por procuração. Orçamento individualizado."
+      "description": "Pesquisa de anterioridades incluída e registo de marca no INPI por procuração. Serviço €200 + IVA (€246,00 com IVA); acrescem as taxas legais devidas ao INPI."
     }
   ]
 }
@@ -264,11 +264,9 @@
   .permonth-note b{color:var(--gold-2); font-weight:700}
   .guarantee{margin-top:18px; background:rgba(93,214,160,.07); border:1px solid rgba(93,214,160,.25); border-radius:12px; padding:16px; font-size:13px; color:rgba(244,238,222,.82)}
   .guarantee b{color:var(--signal)}
-  /* caixa de orçamento à medida (registo) */
-  .quotebox .q-title{font-weight:800; font-size:clamp(26px,3.6vw,34px); line-height:1.05; letter-spacing:-.02em; color:var(--cream)}
-  .quotebox .q-title em{font-family:var(--serif); font-style:italic; font-weight:400; color:var(--gold)}
-  .quotebox .q-sub{margin-top:12px; font-size:14px; line-height:1.55; color:rgba(244,238,222,.7)}
-  .quotebox .break .row b{color:var(--gold-2)}
+  /* nota das taxas legais do INPI (registo) */
+  .fee-note{margin-top:14px; font-size:13px; line-height:1.55; color:rgba(244,238,222,.68)}
+  .fee-note b{color:var(--gold-2); font-weight:600}
   .btn-gold{display:inline-block; margin-top:22px; background:var(--gold); color:#1a1206; font-weight:700; font-size:15px; padding:14px 26px; border-radius:11px; transition:transform .2s, box-shadow .2s; will-change:transform}
   .btn-gold:hover{box-shadow:0 10px 28px rgba(200,151,58,.35)}
   @media(max-width:760px){ .service .grid{grid-template-columns:1fr} }
@@ -401,7 +399,7 @@
   .cform .submit:hover{transform:translateY(-2px); box-shadow:0 10px 28px rgba(200,151,58,.35)}
   .cform .submit:disabled{opacity:.6; cursor:default; transform:none}
   .cform .note{font-size:12px; color:rgba(244,238,222,.45); margin-top:14px; text-align:center}
-  /* chips de intenção — vigilância (foco) vs orçamento de registo */
+  /* chips de intenção — vigilância (foco) vs registo */
   .cform .intent{border:none; padding:0; margin-bottom:16px; display:grid; grid-template-columns:1fr 1fr; gap:12px}
   .cform .intent legend{grid-column:1/-1; font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; color:rgba(244,238,222,.6); margin-bottom:9px}
   .cform .chip{position:relative; display:block; cursor:pointer}
@@ -540,7 +538,7 @@
       <a class="path" href="#registo">
         <div class="k">COMEÇAR DO ZERO</div>
         <div class="t">Ainda não registei a&nbsp;minha marca</div>
-        <div class="s">Peça um orçamento à medida</div>
+        <div class="s">Tratamos do registo · €200 + IVA</div>
         <span class="arrow">→</span>
       </a>
     </div>
@@ -646,19 +644,21 @@
         <li class="reveal"><span class="ic">✓</span><div><b>Acompanhamento</b> do processo até decisão do INPI.</div></li>
       </ul>
     </div>
-    <div class="pricebox quotebox reveal" id="priceboxRegisto">
-      <div class="lock-tag">ORÇAMENTO À MEDIDA</div>
-      <div class="q-title">Cada marca é <em>um caso.</em></div>
-      <p class="q-sub">Número de classes, tipo de marca, estratégia de proteção — o registo certo não é um pacote. Diga-nos a sua marca e apresentamos-lhe um orçamento individualizado e fechado.</p>
+    <div class="pricebox reveal" id="priceboxRegisto">
+      <div class="lock-tag">SERVIÇO DE REGISTO</div>
+      <div class="total"><span class="counter" data-to="200" data-prefix="€">€200,00</span> <small>+ IVA · pagamento único</small></div>
+      <div class="permonth-note">serviço Radar Marca · <b>€246,00</b> com IVA</div>
       <div class="break">
-        <div class="row"><span>Análise do seu caso</span><b>personalizada</b></div>
         <div class="row"><span>Pesquisa de anterioridades</span><b>incluída</b></div>
-        <div class="row"><span>Orçamento individualizado</span><b>em 24h úteis</b></div>
+        <div class="row"><span>Submissão por procuração</span><b>incluída</b></div>
+        <div class="row"><span>Acompanhamento até decisão</span><b>incluído</b></div>
+        <div class="row"><span>Taxas legais do INPI</span><b>acrescem</b></div>
       </div>
+      <p class="fee-note">Ao valor do serviço <b>acrescem as taxas legais devidas ao INPI</b> pelo pedido de registo, que variam com o número de classes e o tipo de marca. Diga-nos a sua marca e indicamos-lhe o valor total antes de avançar.</p>
       <div class="guarantee">
         <b>E se o INPI não aceitar?</b> É para reduzir esse risco que pesquisamos primeiro — só avançamos quando as hipóteses de aprovação são sólidas. A decisão final é sempre do INPI, mas a pesquisa prévia é o que coloca o seu pedido em terreno firme.
       </div>
-      <a class="btn-gold" href="#contacto" data-intent="registo">Pedir orçamento de registo</a>
+      <a class="btn-gold" href="#contacto" data-intent="registo">Quero registar a minha marca</a>
     </div>
   </div>
 </section>
@@ -687,7 +687,7 @@
     <h2 class="section-title reveal" style="margin-top:16px">Transparência <em>a sério.</em></h2>
     <div class="cols">
       <div class="col reveal"><h3>Pesquisamos antes de submeter</h3><p>Não cobramos por um registo condenado à partida. Primeiro vemos se vale a pena.</p></div>
-      <div class="col reveal"><h3>Preço sem letras pequenas</h3><p>Vigilância com valor único, à vista. Registo com orçamento fechado e aprovado por si antes de avançarmos.</p></div>
+      <div class="col reveal"><h3>Preço sem letras pequenas</h3><p>Vigilância com valor único, à vista. Registo por €200 + IVA, com as taxas legais do INPI indicadas antes de avançar.</p></div>
       <div class="col reveal"><h3>Resposta humana &lt;24h</h3><p>Email, telefone ou formulário. Em dia útil, normalmente respondemos no próprio dia.</p></div>
     </div>
   </div>
@@ -705,7 +705,7 @@
       <details><summary>Quanto tempo demora o registo no INPI? <span class="pm" aria-hidden="true">+</span></summary><div class="body">Depois de submetido, o processo no INPI costuma demorar alguns meses até decisão. Mantemo-lo informado em cada fase.</div></details>
       <details><summary>E se já existir uma marca parecida? <span class="pm" aria-hidden="true">+</span></summary><div class="body">É exatamente o que a pesquisa de anterioridades, incluída no registo, deteta antes de submeter. Se houver risco, avisamo-lo e ajustamos a estratégia — para não gastar a taxa do Estado em vão.</div></details>
       <details><summary>O pagamento da vigilância é mesmo único? <span class="pm" aria-hidden="true">+</span></summary><div class="body">Sim. A vigilância é €295,20 uma vez, e cobre 10 anos — sem mensalidades nem renovações.</div></details>
-      <details><summary>Quanto custa registar a minha marca? <span class="pm" aria-hidden="true">+</span></summary><div class="body">Depende do caso: número de classes, tipo de marca e estratégia de proteção. Por isso não vendemos pacotes — analisamos o seu caso e apresentamos-lhe um orçamento individualizado e fechado em 24h úteis.</div></details>
+      <details><summary>Quanto custa registar a minha marca? <span class="pm" aria-hidden="true">+</span></summary><div class="body">O serviço de registo do Radar Marca custa €200 + IVA (€246,00) e inclui a pesquisa de anterioridades, a submissão por procuração e o acompanhamento até decisão. A este valor acrescem as taxas legais devidas ao INPI pelo pedido de registo, que dependem do número de classes e do tipo de marca. Contacte-nos e indicamos-lhe o valor total para o seu caso antes de avançar.</div></details>
     </div>
   </div>
 </section>
@@ -715,13 +715,13 @@
   <div class="wrap">
     <h2 class="section-title reveal">A sua marca,<br>protegida <em>desde hoje.</em></h2>
     <div class="locked reveal"><span class="dot"></span> VIGILÂNCIA PRONTA A ATIVAR · 10 ANOS</div>
-    <p class="lede reveal" style="margin:22px auto 0;text-align:center">Diga-nos a sua marca. O radar fica de olho por si durante uma década — e, se ainda não a registou, preparamos um orçamento de registo à sua medida.</p>
+    <p class="lede reveal" style="margin:22px auto 0;text-align:center">Diga-nos a sua marca. O radar fica de olho por si durante uma década — e, se ainda não a registou, tratamos do registo por €200 + IVA.</p>
     <form class="cform reveal" id="cform" action="https://formspree.io/f/xbdwbqov" method="POST">
       <input type="hidden" name="_subject" value="Pedido Radar Marca (site)">
       <fieldset class="field full intent" id="intentChips">
         <legend>O que precisa?</legend>
         <label class="chip"><input type="radio" name="interesse" value="vigilância" checked><span><b>Vigiar a minha marca</b><small>€295,20 · pagamento único · 10 anos</small></span></label>
-        <label class="chip"><input type="radio" name="interesse" value="registo — pedir orçamento"><span><b>Registar a minha marca</b><small>apresentamos orçamento à medida</small></span></label>
+        <label class="chip"><input type="radio" name="interesse" value="registo"><span><b>Registar a minha marca</b><small>€200 + IVA · acrescem taxas INPI</small></span></label>
       </fieldset>
       <div class="row">
         <div class="field"><label for="f-name">Nome</label><input id="f-name" name="name" required autocomplete="name" maxlength="80" placeholder="O seu nome"></div>
