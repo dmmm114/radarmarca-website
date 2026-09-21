@@ -1,24 +1,35 @@
 # Radar Marca
 
-> Serviço de vigilância de marca em Portugal. Monitoriza o Boletim da Propriedade Industrial (BPI) do INPI semanalmente e alerta o titular em até 48 horas quando é publicado um pedido de registo de marca semelhante — dentro do prazo legal de oposição de 2 meses.
+> Serviço de vigilância de marca em Portugal. Monitoriza o Boletim da Propriedade Industrial (BPI) do INPI semanalmente e alerta o titular em até 48 horas quando é publicado um pedido de registo de marca semelhante — dentro do prazo legal de oposição de 2 meses. Como serviço complementar, trata também do registo de marcas no INPI.
 
 ## O que é
 
 Radar Marca é um serviço de monitorização contínua de marcas registadas em Portugal, dirigido a titulares de marcas que precisam de ser alertados atempadamente sobre potenciais conflitos no INPI. O serviço analisa cada edição semanal do BPI e deteta semelhanças fonéticas, gráficas e conceptuais entre novos pedidos e a marca protegida.
+
+A vigilância é o serviço principal. Para quem ainda não tem marca registada, o Radar Marca trata também do registo no INPI (pesquisa de anterioridades, submissão por procuração e acompanhamento até decisão), ligando a vigilância a seguir.
 
 ## Para quem
 
 - Empresários e startups com marca registada em Portugal
 - Profissionais liberais com marca própria
 - Empresas com portefólio de marcas
+- Quem ainda não registou a marca e quer registá-la no INPI e vigiá-la desde o início
 
 ## Proposta de valor
+
+### Vigilância de marca (serviço principal)
 
 - Pagamento único de €240 + IVA (€295,20 total)
 - 10 anos de cobertura — 520 edições do BPI analisadas
 - Alertas em até 48 horas após publicação
 - Alertas ilimitados, sem renovações nem custos escondidos
 - Relatório detalhado por conflito: nome, titular, classes, número de processo, link ao BPI
+
+### Registo de marca no INPI (serviço complementar)
+
+- Serviço Radar Marca: €200 + IVA (€246,00 com IVA), pagamento único
+- Inclui pesquisa de anterioridades, submissão por procuração e acompanhamento até decisão do INPI
+- Ao valor do serviço acrescem as taxas legais devidas ao INPI pelo pedido de registo, que variam com o número de classes e o tipo de marca; o valor total é indicado ao cliente antes de avançar, mediante contacto
 
 ## Como se diferencia
 
@@ -29,7 +40,7 @@ Radar Marca é um serviço de monitorização contínua de marcas registadas em 
 | Alerta | 48 horas | Variável |
 | Cobertura | 10 anos | Contratual |
 
-O INPI não notifica automaticamente os titulares de marcas anteriores. O Radar Marca faz essa vigilância em substituição de um advogado especializado em propriedade industrial.
+O INPI não notifica automaticamente os titulares de marcas anteriores. O Radar Marca faz essa vigilância em substituição de um advogado especializado em propriedade industrial. Registar e vigiar encaixam: o registo dá o direito, a vigilância garante que ninguém o contorna sem o titular saber.
 
 ## Contacto
 
