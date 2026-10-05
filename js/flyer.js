@@ -10,13 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const regField = document.getElementById('reg-field');
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // UTM do QR (utm_source=flyer&utm_medium=print&utm_campaign=a5-2026); por omissão, "flyer"
+  // UTM do QR (utm_source=flyer&utm_medium=print&utm_campaign=a5-2026&utm_content=frente|verso); por omissão, "flyer"
   const qs = new URLSearchParams(location.search);
   const utm = {
     utm_source: qs.get('utm_source') || 'flyer',
     utm_medium: qs.get('utm_medium') || '',
     utm_campaign: qs.get('utm_campaign') || '',
+    utm_content: qs.get('utm_content') || '',   // frente (vigilância) | verso (registo)
   };
+
+  // o QR do verso do flyer é o do registo: chega com "Registar a minha marca" já escolhido
+  if (utm.utm_content === 'verso') {
+    const reg = form.querySelector('input[name="interesse"][value="registo"]');
+    if (reg) reg.checked = true;
+  }
 
   // o n.º de registo só faz sentido para quem já tem a marca registada (vigilância)
   const syncRegField = () => {
