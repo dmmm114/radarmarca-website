@@ -2,32 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.radarmarca.pt/</loc>
-    <lastmod>2026-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
-    <loc>https://www.radarmarca.pt/termos.html</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://www.radarmarca.pt/vigilancia-de-marca/</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
-    <loc>https://www.radarmarca.pt/privacidade.html</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://www.radarmarca.pt/registo-de-marca-inpi/</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
-    <loc>https://www.radarmarca.pt/reclamacoes.html</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://www.radarmarca.pt/quanto-custa-registar-uma-marca/</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
-    <loc>https://www.radarmarca.pt/optout.html</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <loc>https://www.radarmarca.pt/boletim-da-propriedade-industrial/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.radarmarca.pt/guias/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.radarmarca.pt/oposicao-a-marca-inpi/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.radarmarca.pt/renovacao-de-marca-inpi/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.radarmarca.pt/caducidade-de-marca/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.radarmarca.pt/pesquisa-de-anterioridades/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.radarmarca.pt/faq/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.radarmarca.pt/guias/como-registar-uma-marca-em-portugal/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.radarmarca.pt/guias/marca-semelhante-ja-registada-o-que-fazer/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.radarmarca.pt/guias/alguem-registou-a-minha-marca/</loc>
+    <lastmod>2026-10-14</lastmod>
   </url>
 </urlset>

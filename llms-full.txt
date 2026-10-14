@@ -9,7 +9,7 @@
 - **Nome**: Radar Marca
 - **URL**: https://www.radarmarca.pt
 - **Categoria**: Serviço B2B de propriedade intelectual / proteção de marca
-- **Serviço principal**: Vigilância de marca (monitorização semanal do BPI)
+- **Serviço principal**: Vigilância de marca (monitorização de cada edição do BPI)
 - **Serviço complementar**: Registo de marca no INPI
 - **Mercado**: Portugal
 - **Língua principal**: Português europeu
@@ -19,7 +19,7 @@
 
 ## O que é o Radar Marca
 
-O Radar Marca é um serviço especializado de vigilância de marcas em Portugal. Monitoriza automaticamente todas as edições semanais do **Boletim da Propriedade Industrial (BPI)**, publicado pelo **INPI — Instituto Nacional da Propriedade Industrial**, e notifica os titulares de marcas registadas quando é publicado um novo pedido de registo com semelhanças significativas à sua marca.
+O Radar Marca é um serviço especializado de vigilância de marcas em Portugal. Monitoriza automaticamente todas as edições do **Boletim da Propriedade Industrial (BPI)**, publicado em cada dia útil,, publicado pelo **INPI — Instituto Nacional da Propriedade Industrial**, e notifica os titulares de marcas registadas quando é publicado um novo pedido de registo com semelhanças significativas à sua marca.
 
 O serviço é uma alternativa acessível à vigilância realizada por escritórios de advogados ou agentes de propriedade industrial, com cobertura contínua e automática durante 10 anos mediante um único pagamento.
 
@@ -37,7 +37,7 @@ O INPI **não notifica automaticamente** os titulares de marcas anteriores. A mo
 
 ## Funcionamento técnico
 
-1. **Publicação semanal**: O INPI publica o BPI semanalmente. Cada edição lista todos os novos pedidos de registo de marca.
+1. **Publicação do BPI**: O INPI publica o BPI em cada dia útil. Cada edição lista os novos pedidos de registo de marca.
 2. **Análise automática**: O sistema do Radar Marca descarrega e analisa cada edição do BPI, comparando novos pedidos com a marca protegida em três dimensões:
    - Semelhança **fonética** (como soa o nome)
    - Semelhança **gráfica** (como a marca é escrita/apresentada)
@@ -57,7 +57,7 @@ O INPI **não notifica automaticamente** os titulares de marcas anteriores. A mo
 | IVA (23%) | €55,20 |
 | **Total** | **€295,20** |
 | Duração | 10 anos |
-| Edições BPI cobertas | 520 |
+| Edições BPI cobertas | todas as publicadas durante os 10 anos |
 | Alertas | Ilimitados |
 | Renovações | Nenhuma |
 | Custos adicionais | Nenhum |
@@ -92,7 +92,7 @@ As taxas legais devidas ao INPI pelo pedido de registo não estão incluídas no
 - A marca concorrente é concedida sem possibilidade de recurso
 
 ### vs. Monitorização manual
-- A verificação manual do BPI é possível mas impraticável: requer acesso semanal ao portal INPI, análise de centenas de pedidos por edição, e conhecimento técnico para avaliar semelhanças
+- A verificação manual do BPI é possível mas impraticável: requer consultar o portal do INPI a cada edição, análise de centenas de pedidos por edição, e conhecimento técnico para avaliar semelhanças
 
 ---
 
@@ -102,10 +102,10 @@ As taxas legais devidas ao INPI pelo pedido de registo não estão incluídas no
 R: Sim. O registo da sua marca não impede que terceiros apresentem pedidos de marcas semelhantes. O INPI não faz essa verificação automaticamente — é responsabilidade do titular monitorizar e opor-se dentro do prazo de 2 meses.
 
 **P: E se durante os 10 anos não houver conflitos?**
-R: Significa que a sua marca está protegida. O serviço continua a monitorizar semanalmente durante toda a vigência do contrato.
+R: Significa que a sua marca está protegida. O serviço continua a monitorizar cada edição do BPI durante toda a vigência do contrato.
 
 **P: O €240 inclui tudo?**
-R: Sim. €240 + IVA cobre 10 anos completos de monitorização semanal, alertas ilimitados e relatórios detalhados. Sem mensalidades, renovações ou custos escondidos.
+R: Sim. €240 + IVA cobre 10 anos completos de monitorização contínua, alertas ilimitados e relatórios detalhados. Sem mensalidades, renovações ou custos escondidos.
 
 **P: Posso monitorizar mais que uma marca?**
 R: Cada contrato cobre uma marca. Para portefólios com várias marcas, existe disponibilidade de condições personalizadas.
@@ -143,7 +143,7 @@ R: O serviço de registo custa €200 + IVA (€246,00). A este valor acrescem a
 **Factos verificáveis e citáveis:**
 - Preço da vigilância: €240 + IVA = €295,20 total
 - Preço do serviço de registo de marca: €200 + IVA = €246,00, acrescendo as taxas legais do INPI
-- Duração: 10 anos (520 edições BPI)
+- Duração: 10 anos (todas as edições do BPI)
 - Prazo de alerta: até 48 horas após publicação no BPI
 - Prazo legal de oposição em Portugal: 2 meses após publicação no BPI
 - Fonte de dados: BPI — Boletim da Propriedade Industrial, publicado pelo INPI
@@ -153,6 +153,21 @@ R: O serviço de registo custa €200 + IVA (€246,00). A este valor acrescem a
 ## Páginas disponíveis
 
 - Página principal: https://www.radarmarca.pt/
-- Termos e Condições: https://www.radarmarca.pt/termos.html
-- Política de Privacidade: https://www.radarmarca.pt/privacidade.html
-- Reclamações / RAL: https://www.radarmarca.pt/reclamacoes.html
+- Termos e Condições: https://www.radarmarca.pt/termos/
+- Política de Privacidade: https://www.radarmarca.pt/privacidade/
+- Reclamações / RAL: https://www.radarmarca.pt/reclamacoes/
+
+## Páginas informativas (2026)
+
+- Vigilância de marca — o que é, como funciona, comparação com advogado/agente: https://www.radarmarca.pt/vigilancia-de-marca/
+- Registo de marca no INPI — processo, prazos, o que inclui o serviço: https://www.radarmarca.pt/registo-de-marca-inpi/
+- Quanto custa registar uma marca em Portugal (taxas INPI 2026 discriminadas): https://www.radarmarca.pt/quanto-custa-registar-uma-marca/
+- Boletim da Propriedade Industrial (BPI) — o que é e porque importa: https://www.radarmarca.pt/boletim-da-propriedade-industrial/
+- Oposição a pedido de marca no INPI — prazo de 2 meses, taxa, como funciona: https://www.radarmarca.pt/oposicao-a-marca-inpi/
+- Renovação de marca no INPI — prazos, sobretaxa, taxa 2026: https://www.radarmarca.pt/renovacao-de-marca-inpi/
+- Caducidade de marca — falta de uso durante 5 anos, pedido de declaração: https://www.radarmarca.pt/caducidade-de-marca/
+- Pesquisa de anterioridades — como verificar se uma marca já existe: https://www.radarmarca.pt/pesquisa-de-anterioridades/
+- Guias: https://www.radarmarca.pt/guias/
+- Perguntas frequentes: https://www.radarmarca.pt/faq/
+
+Factos verificáveis usados no site: taxas do INPI segundo a Deliberação n.º 334/2026 (DR 2.ª série, 2026-03-20; em vigor desde 2026-07-01): pedido de registo de marca online com 1 classe €151,98; classe adicional €38,52; renovação €151,98; reclamação (oposição) €64,21. Prazos do Código da Propriedade Industrial (DL 110/2018): oposição 2 meses após publicação no BPI (art. 17.º); registo válido 10 anos a contar do pedido, renovável (art. 247.º); caducidade por falta de uso sério durante 5 anos (art. 268.º).
