@@ -11,12 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // UTM do QR (utm_source=flyer&utm_medium=print&utm_campaign=a5-2026&utm_content=frente|verso); por omissão, "flyer"
+  // Os UTM vêm do URL, que qualquer pessoa pode escrever: ficam só letras, números, "_" e "-", até 40 caracteres
+  // (sem espaços nem pontos, para um link forjado não conseguir pôr frases ou domínios no pedido que chega à caixa interna).
   const qs = new URLSearchParams(location.search);
+  const limpo = (v) => (v || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40);
   const utm = {
-    utm_source: qs.get('utm_source') || 'flyer',
-    utm_medium: qs.get('utm_medium') || '',
-    utm_campaign: qs.get('utm_campaign') || '',
-    utm_content: qs.get('utm_content') || '',   // frente (vigilância) | verso (registo)
+    utm_source: limpo(qs.get('utm_source')) || 'flyer',
+    utm_medium: limpo(qs.get('utm_medium')),
+    utm_campaign: limpo(qs.get('utm_campaign')),
+    utm_content: limpo(qs.get('utm_content')),   // frente (vigilância) | verso (registo)
   };
 
   // o QR do verso do flyer é o do registo: chega com "Registar a minha marca" já escolhido
